@@ -43,5 +43,6 @@ $$x^{2} + y^{2} = z^{2}$$
 
 [baidu](www.baidu.com)
 
+{{< image src="/image/fig.png" caption="文章摘要预览" width="1740" height="870" >}}
 
 
