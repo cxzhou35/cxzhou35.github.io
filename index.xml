@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Zicx&#39;s Blog</title>
+        <link>https://xuer04.github.io/</link>
+        <description>Zicx&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</lastBuildDate>
+            <atom:link href="https://xuer04.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>First posts</title>
+    <link>https://xuer04.github.io/posts/first_posts/</link>
+    <pubDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://xuer04.github.io/posts/first_posts/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>
