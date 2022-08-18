@@ -3,7 +3,14 @@
         <title>所有文章 - Zicx&#39;s Blog</title>
         <link>https://xuer04.github.io/posts/</link>
         <description>所有文章 | Zicx&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 18 Aug 2022 10:36:48 &#43;0800</lastBuildDate><atom:link href="https://xuer04.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 18 Aug 2022 10:54:47 &#43;0800</lastBuildDate><atom:link href="https://xuer04.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Third_post</title>
+    <link>https://xuer04.github.io/posts/third_post/</link>
+    <pubDate>Thu, 18 Aug 2022 10:54:47 &#43;0800</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://xuer04.github.io/posts/third_post/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Second post</title>
     <link>https://xuer04.github.io/posts/second_post/</link>
     <pubDate>Thu, 18 Aug 2022 10:36:48 &#43;0800</pubDate><author>
