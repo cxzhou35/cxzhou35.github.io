@@ -1,11 +1,11 @@
-# Setup your awesome Ubuntu
+# Setup your awesome Ubuntu.
 
 
 <!--more-->
 
-# 这是一篇 Ubuntu 安装之后的配置教程（以 ubuntu20.04 为例）
+## 这是一篇 Ubuntu 安装之后的配置教程（以 ubuntu20.04 为例）
 
-### 1. 换源
+### 换源
 
 ```bash
 cd /etc/apt
@@ -28,14 +28,14 @@ deb http://mirrors.aliyun.com/ubuntu/ focal-security universe
 deb http://mirrors.aliyun.com/ubuntu/ focal-security multiverse
 
 # 保存退出(vim)
-:wq 
+:wq
 
 # 更新一下源
-sudo apt update 
+sudo apt update
 sudo apt upgrade   # 有提示输入 Y
 ```
 
-### 2. 安装基本环境
+### 安装基本环境
 
 ```bash
 sudo apt install gcc gdb cmake build-essential 
@@ -43,7 +43,7 @@ sudo apt install wget htop aptitude neofetch
 sudo apt install curl perl zip unzip
 ```
 
-### 3. 安装 zsh && 配置 oh-my-zsh
+### 安装 zsh && 配置 oh-my-zsh
 
 ```bash
 # 查看当前的sehll
@@ -64,12 +64,12 @@ echo $SHELL
 # 下载 oh-my-zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-# 下载完之后配置文件在.zshrc, 主目录下会有一个.oh-my-zsh 的文件夹
-cd
-vim .zshrc  
+# 下载完之后配置文件在.zshrc, 家目录下会有一个.oh-my-zsh 的文件夹
+cd ~
+vim .zshrc
 
 # 修改主题
-ZSH_THEME="ys"  
+ZSH_THEME="ys"
 
 # 配置插件
 # 1. zsh-syntax-highlighting
@@ -79,7 +79,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # 3. git-open
 git clone https://github.com/paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
 # 在配置文件中添加插件
-vim .zshrc 
+vim .zshrc
 plugins=(git z sudo extract zsh-syntax-highlighting zsh-autosuggestions git-open)
 source .zshrc
 
@@ -89,7 +89,7 @@ DISABLE_AUTO_UPDATE="true"
 source .zshrc
 ```
 
-### 4. 安装配置 git
+### 安装配置 git
 
 ```bash
 # 安装 git
@@ -114,47 +114,48 @@ ssh -T  git@github.com
 # 输入 yes 后回车
 ```
 
-### 5. 安装配置 vim
+### 安装配置 vim
 
-vim 的配置文件有两个，分别是 User 和 root，对应 主目录下的 ~/.vimrc 和 /etc/vim/vimrc ，一般普通用户修改 ~/.vimrc
+vim 的配置文件有两个，分别对应 User 和 root，位于家目录下的 ~/.vimrc 和 /etc/vim/vimrc，一般普通用户修改 ~/.vimrc.
 
 ```bash
-# clone 我的配置
-cd
-git clone https://github.com/Xuer04/Mydotfiles.git 
+# 可以 clone 我的配置
+cd ~
+git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles
 mkdir -p ~/.vim/autoload
-cp Mydotfiles/vim/plug.vim  ~/.vim/autoload/
-cp Mydotfiles/vim/.vimrc ~
+cp ~/dotfiles/vim/plug.vim  ~/.vim/autoload/
+cp ~/dotfiles/vim/.vimrc ~
 
 # 打开 vim
 vim
+
 # 安装配置
 :PlugInstall  # 会自动安装插件
 
 # 更换主题
-cp Mydotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
+cp ~/dotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
 ```
 
-### 6. 安装配置 tmux
+### 安装配置 tmux
 
 ```bash
 # 安装 tmux
 sudo apt install tmux
 
 # 配置
-git clone https://github.com/Xuer04/Mydotfiles.git  # 前面操作中clone过的不需要再clone
-cp -r ~/Mydotfiles/tmux ~/.tmux
+git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles # 前面操作中 clone 过的不需要再 clone
+cp -r ~/dotfiles/tmux ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf
-cp ~/Mydotfiles/tmux/.tmux.conf.local ~
+cp ~/dotfiles/tmux/.tmux.conf.local ~
 
 # 测试
 tmux 
 
-# 如果有乱码的话，是字体的问题，需要安装 Nerd Font
-https://github.com/ryanoasis/nerd-fonts  # 去这里下载
+# 如果有乱码的话，是字体的问题，推荐安装 Nerd Font
+https://github.com/ryanoasis/nerd-fonts  # 在这里下载
 ```
 
-### 7. 安装配置 Python
+### 安装配置 Python 环境
 
 ``` bash
 sudo apt install python3 python3-dev python3-pip
@@ -165,6 +166,7 @@ mkdir ~/.pip
 cd ~/.pip
 touch pip.conf
 sudo vi ~/.pip/pip.conf
+
 # 添加以下内容
 [global]
 index-url=http://mirrors.aliyun.com/pypi/simple/
@@ -198,7 +200,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # 更换miniconda的源
-cd .conda 
+cd ~/.conda 
 vim .condarc
 
 # 添加以下内容
@@ -214,11 +216,13 @@ show_channel_urls: true
 conda clean -a
 ```
 
-### 8. 安装配置终端工具
+### 安装配置终端工具
 
 ```bash
 # 1. thefuck
 sudo pip3 install thefuck
+
+# 配置 zsh 的环境变量
 vim .zshrc
 eval "$(thefuck --alias fuck)"  # 添加缩写
 source .zshrc
@@ -236,18 +240,20 @@ sudo dpkg -i bat_0.21.0_amd64.deb
 ## ubuntu18.04 用musl版本的
 wget https://github.com/sharkdp/bat/releases/download/v0.21.0/bat-musl_0.21.0_amd64.deb
 rm bat_0.21.0_amd64.deb
+
+# 在 zsh 中添加配置
 vim .zshrc
 alias cat="bat"  # 添加缩写
 export BAT_THEME="Solarized (light)"  # 更改主题
 source .zshrc
 
-# 4. fzf (结合vim使用无敌)
-## 通过git安装
+# 4. fzf (结合 vim 使用无敌)
+## 通过 git 安装
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 cd ~/.fzf/ 
 ./install
 
-## 通过dpkg安装
+## 通过 dpkg 安装
 cd ~/Downloads
 wget http://cn.archive.ubuntu.com/ubuntu/pool/universe/f/fzf/fzf_0.30.0-1_amd64.deb
 sudo dpkg -i fzf_0.30.0-1_amd64.deb
@@ -280,6 +286,7 @@ sudo mv exa /usr/local/bin/
 
 # 验证exa
 exa -v
+
 # 替换ls
 vim .zshrc
 alias ls="exa" 
@@ -304,14 +311,15 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 
 # 图标显示
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-git clone https://github.com/Xuer04/Mydotfiles.git  # 前面操作中clone过的不需要再clone
-cp ~/Mydotfiles/ranger/rc.conf ~/.config/ranger/conf
+git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles  # 前面操作中clone过的不需要再clone
+cp ~/dotfiles/ranger/rc.conf ~/.config/ranger/conf
 
 # 10. lazygit
 ```bash
 sudo add-apt-repository ppa:lazygit-team/release
 sudo apt update
 sudo apt install lazygit
+
 # 添加缩写
 echo "alias lg="lazygit"" >> ~/.zshrc
 ```
@@ -327,13 +335,15 @@ sudo apt install aview  # ascii格式打开图片
 asciiview test.png
 
 sudo apt install lolcat  # 终端颜色真值输出
+
 neofetch | lolcat
 
 sudo apt install figlet  # 字符串转字符画
 
 ```
 
-
 Continuously updated...... 📆 
+
+想要了解更多**其他系统**的配置内容，可以到这个[Github Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki) 查看哦🫰🏼
 
 
