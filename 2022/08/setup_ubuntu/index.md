@@ -4,7 +4,7 @@
 <!--more-->
 
 {{< admonition abstract>}}
-这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 ubuntu20.04 为例）
+这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 Ubuntu20.04 为例）
 {{< /admonition >}}
 
 ### 1. 换源
