@@ -7,7 +7,7 @@
 这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 Ubuntu 20.04 为例）
 {{< /admonition >}}
 
-### 1. 换源
+## 1. 换源
 
 ```bash
 cd /etc/apt
@@ -38,7 +38,7 @@ sudo apt upgrade   # 有提示输入 Y
 ```
 
 
-### 2. 基本环境和常用工具
+## 2. 基本环境和常用工具
 
 ```bash
 sudo apt install gcc gdb cmake build-essential
@@ -47,7 +47,7 @@ sudo apt install curl perl zip unzip aptitude
 ```
 
 
-### 3. Zsh & oh-my-zsh
+## 3. Zsh & oh-my-zsh
 
 ```bash
 # 查看当前的sehll
@@ -94,7 +94,7 @@ source .zshrc
 ```
 
 
-### 4. Git
+## 4. Git
 
 ```bash
 # 安装 git
@@ -120,7 +120,7 @@ ssh -T  git@github.com
 ```
 
 
-### 5. Vim
+## 5. Vim
 
 vim 的配置文件有两个，分别对应 User 和 root，位于家目录下的 ~/.vimrc 和 /etc/vim/vimrc，一般普通用户修改 ~/.vimrc.
 
@@ -149,7 +149,7 @@ cp ~/dotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
 {{< /admonition >}}
 
 
-### 6. Tmux
+## 6. Tmux
 
 ```bash
 # 安装 tmux
@@ -174,7 +174,7 @@ https://github.com/ryanoasis/nerd-fonts  # 在这里下载
 {{< /admonition >}}
 
 
-### 7. Python
+## 7. Python
 
 ``` bash
 sudo apt install python3 python3-dev python3-pip
@@ -192,7 +192,7 @@ index-url=http://mirrors.aliyun.com/pypi/simple/
 trusted-host=mirrors.aliyun.com
 ```
 
-### 8. Conda (optional)
+## 8. Conda (optional)
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
@@ -237,7 +237,7 @@ conda clean -a
 ```
 
 
-### 9. 其他命令行工具
+## 9. 其他命令行工具
 
 ```bash
 # 1. thefuck
@@ -346,7 +346,7 @@ echo "alias lg="lazygit"" >> ~/.zshrc
 ```
 
 
-### 番外
+## 番外
 
 **一些有意思的终端工具**
 
