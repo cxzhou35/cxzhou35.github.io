@@ -5,7 +5,7 @@
         <description>安装配置 - 标签 - Zicx の Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
             <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</lastBuildDate><atom:link href="https://xuer04.github.io/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" rel="self" type="application/rss+xml" /><item>
-    <title>从 0 搭建 Ubuntu 系统环境</title>
+    <title>从 0 开始搭建 Ubuntu 开发环境</title>
     <link>https://xuer04.github.io/2022/08/setup_ubuntu/</link>
     <pubDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</pubDate><author>
                     <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2022/08/setup_ubuntu/</guid>
