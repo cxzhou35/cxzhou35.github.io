@@ -346,9 +346,9 @@ echo "alias lg="lazygit"" >> ~/.zshrc
 ```
 
 
-### 番外：
+### 番外
 
-**1. 一些有意思的终端工具**
+**一些有意思的终端工具**
 
 ```bash
 sudo apt install sl  # 小火车
