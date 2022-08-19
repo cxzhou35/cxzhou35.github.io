@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Markdown 教程与 Hugo 中的简单应用 - Zicx の Blog</title><meta name="Description" content="这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。"><meta property="og:title" content="Markdown 教程与 Hugo 中的简单应用" />
+<meta property="og:description" content="这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xuer04.github.io/2022/08/markdown_use/" /><meta property="og:image" content="https://xuer04.github.io/image/fig.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-18T09:43:12+08:00" />
+<meta property="article:modified_time" content="2022-08-18T09:43:12+08:00" /><meta property="og:site_name" content="Zicx" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xuer04.github.io/image/fig.png"/>
+
+<meta name="twitter:title" content="Markdown 教程与 Hugo 中的简单应用"/>
+<meta name="twitter:description" content="这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。"/>
+<meta name="application-name" content="Zicx の Blog">
+<meta name="apple-mobile-web-app-title" content="Zicx の Blog">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2022/08/markdown_use/" /><link rel="next" href="https://xuer04.github.io/2022/08/setup_ubuntu/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Markdown 教程与 Hugo 中的简单应用",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xuer04.github.io\/2022\/08\/markdown_use\/"
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Markdown, Hugo","wordcount":  1988 ,
+        "url": "https:\/\/xuer04.github.io\/2022\/08\/markdown_use\/","datePublished": "2022-08-18T09:43:12+08:00","dateModified": "2022-08-18T09:43:12+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Zicx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/xuer04.github.io\/images\/avatar.webp",
+                    "width":  528 ,
+                    "height":  560 
+                }},"authors": [{
+                    "@type": "Person",
+                    "name": "Zicx"
+                }],"description": "这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。"
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('light' === 'light' || 'light' === 'dark' || 'light' === 'black') setTheme('light'), saveTheme('light'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Zicx の Blog"><img
+        class="lazyload logo"
+        data-src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        data-srcset="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 1.5x, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 2x"
+        data-sizes="auto"
+        alt="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        title="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"><i class='fas fa-book-open'></i> 文章 </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tag'></i> 标签 </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-shapes'></i> 分类 </a><a class="menu-item" href="/abouts/" title="关于"><i class='fab fa-envira'></i> 关于 </a><a class="menu-item" href="/links/" title="友链"><i class='fas fa-link'></i> 友链 </a><a class="menu-item" href="https://github.com/Xuer04" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Zicx の Blog"><img
+        class="lazyload logo"
+        data-src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        data-srcset="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 1.5x, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 2x"
+        data-sizes="auto"
+        alt="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        title="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="文章"><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tag'></i>标签</a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-shapes'></i>分类</a><a class="menu-item" href="/abouts/" title="关于"><i class='fab fa-envira'></i>关于</a><a class="menu-item" href="/links/" title="友链"><i class='fas fa-link'></i>友链</a><a class="menu-item" href="https://github.com/Xuer04" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-标题">1. 标题</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#level-2">Level 2</a>
+      <ul>
+        <li><a href="#level-3">Level 3</a>
+          <ul>
+            <li><a href="#level-4">Level 4</a>
+              <ul>
+                <li><a href="#level-5">Level 5</a>
+                  <ul>
+                    <li><a href="#level-6">Level 6</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-字体及段落">2. 字体及段落</a>
+      <ul>
+        <li><a href="#21-斜体">2.1 斜体</a></li>
+        <li><a href="#22-加粗">2.2 加粗</a></li>
+        <li><a href="#23-删除线">2.3 删除线</a></li>
+        <li><a href="#24-高亮">2.4 高亮</a></li>
+        <li><a href="#25-下划线">2.5 下划线</a></li>
+        <li><a href="#26-上标">2.6 上标</a></li>
+        <li><a href="#27-下标">2.7 下标</a></li>
+        <li><a href="#28-按键">2.8 按键</a></li>
+        <li><a href="#29-链接">2.9 链接</a></li>
+        <li><a href="#210-admonition">2.10 Admonition</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-列表">3. 列表</a>
+      <ul>
+        <li><a href="#31--无序列表">3.1  无序列表</a></li>
+        <li><a href="#32-有序列表">3.2 有序列表</a></li>
+        <li><a href="#33-任务列表">3.3 任务列表</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-引用块">4. 引用块</a></li>
+    <li><a href="#5-代码块">5. 代码块</a></li>
+    <li><a href="#6-图片">6. 图片</a></li>
+    <li><a href="#7-表格">7. 表格</a></li>
+    <li><a href="#8-公式">8. 公式</a>
+      <ul>
+        <li><a href="#81-行内公式">8.1 行内公式</a></li>
+        <li><a href="#82-行间公式">8.2 行间公式</a></li>
+        <li><a href="#83-矩阵">8.3 矩阵</a>
+          <ul>
+            <li><a href="#a-普通矩阵">a. 普通矩阵</a></li>
+            <li><a href="#b-圆括号矩阵">b. 圆括号矩阵</a></li>
+            <li><a href="#c-方括号矩阵">c. 方括号矩阵</a></li>
+            <li><a href="#c-大括号矩阵">c. 大括号矩阵</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#9-分割线">9. 分割线</a></li>
+    <li><a href="#总结">总结：</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Markdown 教程与 Hugo 中的简单应用</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw"></i>工具</a>&nbsp;<a href="/categories/%E5%86%99%E4%BD%9C/"><i class="far fa-folder fa-fw"></i>写作</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1988 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/2022/08/markdown_use/" class="leancloud_visitors" data-flag-title="Markdown 教程与 Hugo 中的简单应用">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/2022/08/markdown_use/" class="comment_count" data-flag-title="Markdown 教程与 Hugo 中的简单应用">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        data-src="/image/markdown_use/markdown.png"
+        data-srcset="/image/markdown_use/markdown.png, /image/markdown_use/markdown.png 1.5x, /image/markdown_use/markdown.png 2x"
+        data-sizes="auto"
+        alt="/image/markdown_use/markdown.png"
+        title="这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。" height="auto" width="auto"></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-标题">1. 标题</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#level-2">Level 2</a>
+      <ul>
+        <li><a href="#level-3">Level 3</a>
+          <ul>
+            <li><a href="#level-4">Level 4</a>
+              <ul>
+                <li><a href="#level-5">Level 5</a>
+                  <ul>
+                    <li><a href="#level-6">Level 6</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-字体及段落">2. 字体及段落</a>
+      <ul>
+        <li><a href="#21-斜体">2.1 斜体</a></li>
+        <li><a href="#22-加粗">2.2 加粗</a></li>
+        <li><a href="#23-删除线">2.3 删除线</a></li>
+        <li><a href="#24-高亮">2.4 高亮</a></li>
+        <li><a href="#25-下划线">2.5 下划线</a></li>
+        <li><a href="#26-上标">2.6 上标</a></li>
+        <li><a href="#27-下标">2.7 下标</a></li>
+        <li><a href="#28-按键">2.8 按键</a></li>
+        <li><a href="#29-链接">2.9 链接</a></li>
+        <li><a href="#210-admonition">2.10 Admonition</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-列表">3. 列表</a>
+      <ul>
+        <li><a href="#31--无序列表">3.1  无序列表</a></li>
+        <li><a href="#32-有序列表">3.2 有序列表</a></li>
+        <li><a href="#33-任务列表">3.3 任务列表</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-引用块">4. 引用块</a></li>
+    <li><a href="#5-代码块">5. 代码块</a></li>
+    <li><a href="#6-图片">6. 图片</a></li>
+    <li><a href="#7-表格">7. 表格</a></li>
+    <li><a href="#8-公式">8. 公式</a>
+      <ul>
+        <li><a href="#81-行内公式">8.1 行内公式</a></li>
+        <li><a href="#82-行间公式">8.2 行间公式</a></li>
+        <li><a href="#83-矩阵">8.3 矩阵</a>
+          <ul>
+            <li><a href="#a-普通矩阵">a. 普通矩阵</a></li>
+            <li><a href="#b-圆括号矩阵">b. 圆括号矩阵</a></li>
+            <li><a href="#c-方括号矩阵">c. 方括号矩阵</a></li>
+            <li><a href="#c-大括号矩阵">c. 大括号矩阵</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#9-分割线">9. 分割线</a></li>
+    <li><a href="#总结">总结：</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-标题" class="headerLink">
+    <a href="#1-%e6%a0%87%e9%a2%98" class="header-mark"></a>1. 标题</h2><p>多级标题使用 <em># 号</em> 来定义，一个 # 号表示一级标题，两个 # 号表示二级标题， 依次类推，最多支持六级标题。</p>
+<p>下面是一些例子：</p>
+<h1 id="level-1" class="headerLink">
+    <a href="#level-1" class="header-mark"></a>Level 1</h1><h2 id="level-2" class="headerLink">
+    <a href="#level-2" class="header-mark"></a>Level 2</h2><h3 id="level-3" class="headerLink">
+    <a href="#level-3" class="header-mark"></a>Level 3</h3><h4 id="level-4" class="headerLink">
+    <a href="#level-4" class="header-mark"></a>Level 4</h4><h5 id="level-5" class="headerLink">
+    <a href="#level-5" class="header-mark"></a>Level 5</h5><h6 id="level-6" class="headerLink">
+    <a href="#level-6" class="header-mark"></a>Level 6</h6><h2 id="2-字体及段落" class="headerLink">
+    <a href="#2-%e5%ad%97%e4%bd%93%e5%8f%8a%e6%ae%b5%e8%90%bd" class="header-mark"></a>2. 字体及段落</h2><h3 id="21-斜体" class="headerLink">
+    <a href="#21-%e6%96%9c%e4%bd%93" class="header-mark"></a>2.1 斜体</h3><p>在需要使用 <em>斜体</em> 部分的前后使用一个 * 号或者下划线 _ 标记，可以使字体表现为 <em>斜体</em> 。</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">需要注意的是，在使用中文字体时，* 号或者下划线 _ 和正常字体中间需要一个空格，否则最后会表现为_斜体_。</div>
+        </div>
+    </div>
+<h3 id="22-加粗" class="headerLink">
+    <a href="#22-%e5%8a%a0%e7%b2%97" class="header-mark"></a>2.2 加粗</h3><p>在需要使用 <strong>加粗</strong> 部分的前后使用两个 * 号标记，可以使字体表现为 <strong>加粗</strong> 。</p>
+<h3 id="23-删除线" class="headerLink">
+    <a href="#23-%e5%88%a0%e9%99%a4%e7%ba%bf" class="header-mark"></a>2.3 删除线</h3><p>在需要使用 <del>删除线</del> 部分的前后使用两个~号标记，可以使字体表现为 <del>删除线</del> 。</p>
+<h3 id="24-高亮" class="headerLink">
+    <a href="#24-%e9%ab%98%e4%ba%ae" class="header-mark"></a>2.4 高亮</h3><p>在需要使用 ==高亮== 部分的前后使用一个  = 号标记，可以使字体表现为  ==高亮== 。</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>提示<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">上面提到的4种标记方式可以一起使用，比如使用三个 * 号标记，可以使字体表现为 <em><strong>粗斜体</strong></em>。</div>
+        </div>
+    </div>
+<h3 id="25-下划线" class="headerLink">
+    <a href="#25-%e4%b8%8b%e5%88%92%e7%ba%bf" class="header-mark"></a>2.5 下划线</h3><p><ins>下划线部分</ins>，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>下划线部分<span class="p">&lt;/</span><span class="nt">ins</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="26-上标" class="headerLink">
+    <a href="#26-%e4%b8%8a%e6%a0%87" class="header-mark"></a>2.6 上标</h3><p>上标<sup>内容</sup>，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>上标的内容<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="27-下标" class="headerLink">
+    <a href="#27-%e4%b8%8b%e6%a0%87" class="header-mark"></a>2.7 下标</h3><p>下标<sub>内容</sub>，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">sub</span><span class="p">&gt;</span>下标的内容<span class="p">&lt;/</span><span class="nt">sub</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="28-按键" class="headerLink">
+    <a href="#28-%e6%8c%89%e9%94%ae" class="header-mark"></a>2.8 按键</h3><p><kbd>按键</kbd>，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">kbd</span><span class="p">&gt;</span>按键<span class="p">&lt;/</span><span class="nt">kbd</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="29-链接" class="headerLink">
+    <a href="#29-%e9%93%be%e6%8e%a5" class="header-mark"></a>2.9 链接</h3><p>插入链接 <a href="www.baidu.com" rel="">百度</a>，其语法为 [文字] (链接)</p>
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">] 和 ( 之间没有空格，这里是为了方便说明语法，避免渲染</div>
+        </div>
+    </div>
+<p>使用尖括号 &lt; &gt;可以很方便地把 URL 或者 Email 地址变成可点击的链接。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;https://baidu.cn&gt;
+</span></span><span class="line"><span class="cl">&lt;xxx@example.com&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="210-admonition" class="headerLink">
+    <a href="#210-admonition" class="header-mark"></a>2.10 Admonition</h3><p><code>admonition</code> 是 Hugo 的特殊 <code>Markdown shortcut</code>，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><div class="details admonition tip">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">content</div>
+        </div>
+    </div>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>admonition</code> shortcode 有以下命名参数：</p>
+<ul>
+<li>
+<p><strong>type</strong> <em>[必需]</em>（<strong>第一个</strong>位置参数）</p>
+<p><code>admonition</code> 横幅的类型，默认值是 <code>note</code>。</p>
+<p>可以用以下的 <code>tpye</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tip：提示
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">note：笔记
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">abstract：摘要
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">info：信息
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">success：成功
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">failure：失败
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">question：问题
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">warning：警告
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">danger：危险
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">bug：bug
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">example：示例
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">quote： 引用
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>title</strong> <em>[可选]</em>（<strong>第二个</strong>位置参数）</p>
+<p><code>admonition</code> 横幅的标题，默认值是 <strong>type</strong> 参数的值。（支持 markdown）</p>
+</li>
+<li>
+<p><strong>open</strong> <em>[可选]</em>（<strong>第三个</strong>位置参数）</p>
+<p>横幅内容是否默认展开，默认值是 <code>true</code></p>
+</li>
+</ul>
+<h2 id="3-列表" class="headerLink">
+    <a href="#3-%e5%88%97%e8%a1%a8" class="header-mark"></a>3. 列表</h2><h3 id="31--无序列表" class="headerLink">
+    <a href="#31--%e6%97%a0%e5%ba%8f%e5%88%97%e8%a1%a8" class="header-mark"></a>3.1  无序列表</h3><ul>
+<li>level 1.1
+<ul>
+<li>level 2.1
+<ul>
+<li>level 3.1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>无序列表支持多级显示，可以使用 * 或者 - 来实现，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 可以使用 - 或者 * ，- 或者 * 也可以混用
+</span></span><span class="line"><span class="cl">- level 1.1
+</span></span><span class="line"><span class="cl">    - level 2.1
+</span></span><span class="line"><span class="cl">        - level 3.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">* level 1.1
+</span></span><span class="line"><span class="cl">    * level 2.1
+</span></span><span class="line"><span class="cl">        * level 3.1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="32-有序列表" class="headerLink">
+    <a href="#32-%e6%9c%89%e5%ba%8f%e5%88%97%e8%a1%a8" class="header-mark"></a>3.2 有序列表</h3><ol>
+<li>level 1.1
+<ol>
+<li>level 2.1
+<ol>
+<li>level 3.1</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>有序列表支持多级显示，使用 数字 + . 来实现，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. level 1.1
+</span></span><span class="line"><span class="cl">    1. level 2.1
+</span></span><span class="line"><span class="cl">        1. level 3.1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="33-任务列表" class="headerLink">
+    <a href="#33-%e4%bb%bb%e5%8a%a1%e5%88%97%e8%a1%a8" class="header-mark"></a>3.3 任务列表</h3><ul>
+<li><i class="far fa-square fa-fw"></i> aaa
+<ul>
+<li><i class="far fa-square fa-fw"></i> bbb</li>
+<li><i class="far fa-check-square fa-fw"></i> ccc</li>
+</ul>
+</li>
+</ul>
+<p>任务列表也支持多级显示，使用 - [ ] 或者 - [x] 来实现，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">- [ ] aaa
+</span></span><span class="line"><span class="cl">    - [ ] bbb
+</span></span><span class="line"><span class="cl">    - [x] ccc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="4-引用块" class="headerLink">
+    <a href="#4-%e5%bc%95%e7%94%a8%e5%9d%97" class="header-mark"></a>4. 引用块</h2><blockquote>
+<p>1</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>引用可以支持多级引用，使用 &gt; 来实现，其语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 每级引用需要有空行
+</span></span><span class="line"><span class="cl">&gt; 1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt;&gt; 2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; 3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="5-代码块" class="headerLink">
+    <a href="#5-%e4%bb%a3%e7%a0%81%e5%9d%97" class="header-mark"></a>5. 代码块</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp"># include&lt;stdio.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World!</span><span class="se">\n</span><span class="s">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>对于代码块，需要在代码块前后使用三个 ` 来将代码块围起来，并且可以在开始的 ``` 后指定语言，例如 C、Python、Java 等。</p>
+<h2 id="6-图片" class="headerLink">
+    <a href="#6-%e5%9b%be%e7%89%87" class="header-mark"></a>6. 图片</h2><p>Markdown 的图片的格式为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">![ ]( )
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>提示<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Markdown 支持 HTML 语法，可以对多种对象操作，下面是一个图片居中的例子</div>
+        </div>
+    </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">align</span><span class="o">=</span><span class="s">center</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ![ ](image.png)
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>提示<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Hugo 也有特殊的语法，可以对多种对象操作，下面是一个用 Hugo 插入图片的例子</div>
+        </div>
+    </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"># 可以添加图片名称
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;center&#34;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;images.png&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="na">alt</span><span class="o">=</span><span class="s">&#34;图1&#34;</span><span class="p">/&gt;&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>图1<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="7-表格" class="headerLink">
+    <a href="#7-%e8%a1%a8%e6%a0%bc" class="header-mark"></a>7. 表格</h2><p>Markdown 中表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行，通过 : 号和 - 的相对位置可以来设置表格的对齐方式。</p>
+<ul>
+<li>
+<p>:- 左对齐</p>
+</li>
+<li>
+<p>-: 右对齐</p>
+</li>
+<li>
+<p>:-: 居中</p>
+</li>
+</ul>
+<p>下面是一个表格的例子</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">右对齐</th>
+<th style="text-align:right">居中</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+<p>源码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">| 左对齐 | 右对齐 | 居中 |
+</span></span><span class="line"><span class="cl">|:------ |:------:| ----:|
+</span></span><span class="line"><span class="cl">| 1      | 1      | 1    |
+</span></span><span class="line"><span class="cl">| 2      | 2      | 2    |
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="8-公式" class="headerLink">
+    <a href="#8-%e5%85%ac%e5%bc%8f" class="header-mark"></a>8. 公式</h2><h3 id="81-行内公式" class="headerLink">
+    <a href="#81-%e8%a1%8c%e5%86%85%e5%85%ac%e5%bc%8f" class="header-mark"></a>8.1 行内公式</h3><p>$\partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x$，行内公式的语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$\partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="82-行间公式" class="headerLink">
+    <a href="#82-%e8%a1%8c%e9%97%b4%e5%85%ac%e5%bc%8f" class="header-mark"></a>8.2 行间公式</h3><p>$$
+\begin{align}
+\partial_t v - \frac{1}{\rho}\partial_x \tau = 0
+\end{align}
+$$</p>
+<p>行间公式的语法为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">\begin{align}
+</span></span><span class="line"><span class="cl">\partial_t v - \frac{1}{\rho}\partial_x \tau = 0 
+</span></span><span class="line"><span class="cl">\end{align}
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="83-矩阵" class="headerLink">
+    <a href="#83-%e7%9f%a9%e9%98%b5" class="header-mark"></a>8.3 矩阵</h3><h4 id="a-普通矩阵" class="headerLink">
+    <a href="#a-%e6%99%ae%e9%80%9a%e7%9f%a9%e9%98%b5" class="header-mark"></a>a. 普通矩阵</h4><p>$$
+\begin{matrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{matrix}
+$$</p>
+<p>源码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">\begin{matrix}
+</span></span><span class="line"><span class="cl">0 &amp; 1 \\\\ 1 &amp; 0
+</span></span><span class="line"><span class="cl">\end{matrix}
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="b-圆括号矩阵" class="headerLink">
+    <a href="#b-%e5%9c%86%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>b. 圆括号矩阵</h4><p>$$
+\begin{pmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{pmatrix}
+$$</p>
+<p>源码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">\begin{pmatrix}
+</span></span><span class="line"><span class="cl">0 &amp; 1 \\\\ 1 &amp; 0
+</span></span><span class="line"><span class="cl">\end{pmatrix}
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="c-方括号矩阵" class="headerLink">
+    <a href="#c-%e6%96%b9%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>c. 方括号矩阵</h4><p>$$
+\begin{bmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{bmatrix}
+$$</p>
+<p>源码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">\begin{bmatrix}
+</span></span><span class="line"><span class="cl">0 &amp; 1 \\\\ 1 &amp; 0
+</span></span><span class="line"><span class="cl">\end{bmatrix}
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="c-大括号矩阵" class="headerLink">
+    <a href="#c-%e5%a4%a7%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>c. 大括号矩阵</h4><p>$$
+\begin{Bmatrix}
+0 &amp; 1 \\ 1 &amp; 0
+\end{Bmatrix}
+$$</p>
+<p>源码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$
+</span></span><span class="line"><span class="cl">\begin{Bmatrix}
+</span></span><span class="line"><span class="cl">0 &amp; 1 \\\\ 1 &amp; 0
+</span></span><span class="line"><span class="cl">\end{Bmatrix}
+</span></span><span class="line"><span class="cl">$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">LaTeX 的换行符为 \，但是这里使用的是 \\，主要是因为 Markdown中 的 \ 才表示一个 \，因此在换行是需要使用4个 \。</div>
+        </div>
+    </div>
+<h2 id="9-分割线" class="headerLink">
+    <a href="#9-%e5%88%86%e5%89%b2%e7%ba%bf" class="header-mark"></a>9. 分割线</h2><p>通过使用三个 - 来表示分割线</p>
+<hr>
+<h2 id="总结" class="headerLink">
+    <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结：</h2><blockquote>
+<p><code>Markdown</code> 是一种<strong>轻量级标记语言</strong>，相较于 LaTeX，排版语法简洁，可广泛用于笔记、文档、博客。</p>
+<p>本文涵盖了大部分的 Markdown 语法，其中部分语法为 <code>Hugo</code> 的扩展语法，相信这些简单的标记符号可以帮助你更好地编写文档，<strong>简洁而不失优雅，高效而不失规范</strong>。</p>
+<p>如果你是第一次了解 Markdown，可以通过这个 <a href="https://markdown.com.cn/editor/" target="_blank" rel="noopener noreffer">在线编辑器</a> 体验一下！</p>
+<p>觉得本文不错可以在评论区留下你的评论哦！👻</p>
+</blockquote></div>
+
+        
+
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-08-18</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/2022/08/markdown_use/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2022/08/markdown_use/" data-title="Markdown 教程与 Hugo 中的简单应用" data-via="Zicx3566" data-hashtags="Markdown,Hugo"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2022/08/markdown_use/" data-title="Markdown 教程与 Hugo 中的简单应用" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/markdown/">Markdown</a>,&nbsp;<a href="/tags/hugo/">Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/2022/08/setup_ubuntu/" class="next" rel="next" title="Setup your awesome Ubuntu">Setup your awesome Ubuntu<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/Xuer04" target="_blank" rel="noopener noreferrer">Zicx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://doit-docs-comment-twikoo.vercel.app/","lang":"zh-cn"}},"data":{"desktop-header-typeit":"Zicx の Blog","mobile-header-typeit":"Zicx の Blog"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true},"twemoji":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script></div>
+</body>
+
+</html>
