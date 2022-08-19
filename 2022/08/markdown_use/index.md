@@ -95,9 +95,9 @@
 `admonition` 是 Hugo 的特殊 `Markdown shortcut`，其语法为
 
 ```html
-{{< admonition type=tip title="This is a tip" open=false >}}
+{{ < admonition type=tip title="This is a tip" open=false >}}
 content
-{{< /admonition >}}
+{{ < /admonition >}}
 ```
 
 `admonition` shortcode 有以下命名参数：
@@ -214,7 +214,7 @@ content
 ## 5. 代码块
 
 ```c
-# include<stdio.h>
+#include<stdio.h>
 int main(void){
 	printf("Hello World!\n);
 	return 0;
@@ -248,7 +248,7 @@ Hugo 也有特殊的语法，可以对多种对象操作，下面是一个用 Hu
 
 ```html
 # 可以添加图片名称
-{{% figure class="center" src="images.png" alt="图1" title="图1" %}}
+{{ % figure class="center" src="images.png" alt="图1" title="图1" %}}
 ```
 
 ## 7. 表格
@@ -388,16 +388,6 @@ LaTeX 的换行符为 \\，但是这里使用的是 \\\\，主要是因为 Markd
 通过使用三个 - 来表示分割线
 
 ---
-
-## 10. 目录
-
-目录的语法如下
-
-```
-[toc]
-```
-
-[toc]
 
 ## 总结
 
