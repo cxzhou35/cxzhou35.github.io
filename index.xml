@@ -14,13 +14,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/image/setup_ubuntu/ubuntu.jpg" referrerpolicy="no-referrer">
             </div>这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 Ubuntu 20.04 为例）]]></description>
-</item><item>
-    <title>Markdown 教程与 Hugo 中的简单应用</title>
-    <link>https://xuer04.github.io/2022/08/markdown_use/</link>
-    <pubDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2022/08/markdown_use/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/image/markdown_use/markdown.png" referrerpolicy="no-referrer">
-            </div>这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。]]></description>
 </item></channel>
 </rss>

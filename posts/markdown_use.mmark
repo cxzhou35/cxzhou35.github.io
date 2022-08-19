@@ -1,5 +1,26 @@
-# Markdown 教程与 Hugo 中的简单应用
+---
+title: "Markdown 教程与 Hugo 中的简单应用"
+date: 2022-08-18T09:43:12+08:00
+draft: false
+tags: ["Markdown", "Hugo"]
+categories: ["技术文档", "写作"]
+authors: [Zicx]
+description: "这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。"
 
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+featuredImage: "/image/markdown_use/markdown.png"
+featuredImagePreview: "/image/markdown_use/markdown.png"
+
+toc:
+  enable: true
+math:
+  enable: false
+
+lightgallery: false
+license: ""
+---
 
 <!--more-->
 
@@ -420,5 +441,4 @@ LaTeX 的换行符为 \\，但是这里使用的是 \\\\，主要是因为 Markd
 > 如果你是第一次了解 Markdown，可以通过这个 [在线编辑器](https://markdown.com.cn/editor/) 体验一下！
 >
 > 觉得本文不错可以在评论区留下你的评论哦！😝
-
 
