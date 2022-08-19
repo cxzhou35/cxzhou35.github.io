@@ -192,8 +192,8 @@ index-url=http://mirrors.aliyun.com/pypi/simple/
 trusted-host=mirrors.aliyun.com
 ```
 
-# 8. Conda (optional)
-```
+### 8. Conda (optional)
+```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
@@ -359,7 +359,7 @@ asciiview test.png
 
 sudo apt install lolcat  # 终端颜色真值输出
 
-neofetch | lolcat
+neofetch | lolcat  # 测试
 
 sudo apt install figlet  # 字符串转字符画
 ```
