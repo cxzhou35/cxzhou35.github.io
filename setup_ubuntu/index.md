@@ -3,7 +3,9 @@
 
 <!--more-->
 
-## 这是一篇 Ubuntu 安装之后的配置教程（以 ubuntu20.04 为例）
+{{< admonition abstract>}}
+这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 ubuntu20.04 为例）
+{{< /admonition >}}
 
 ### 换源
 
@@ -135,6 +137,11 @@ vim
 # 更换主题
 cp ~/dotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
 ```
+{{< admonition tip >}}
+`nvim` 集成了 `vim` 的特性，是一个比较好的 `vim` 替代品，而且支持用 `lua` 语言配置。
+
+链接🔗 在这里: [neovim](https://neovim.io/)
+{{< /admonition >}}
 
 ### 安装配置 tmux
 
@@ -151,9 +158,13 @@ cp ~/dotfiles/tmux/.tmux.conf.local ~
 # 测试
 tmux 
 
-# 如果有乱码的话，是字体的问题，推荐安装 Nerd Font
 https://github.com/ryanoasis/nerd-fonts  # 在这里下载
 ```
+{{< admonition tip >}}
+如果有乱码的话，是字体的问题，推荐安装 `Nerd Font`
+
+链接🔗 在这里: [Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+{{< /admonition >}}
 
 ### 安装配置 Python 环境
 
@@ -326,7 +337,9 @@ echo "alias lg="lazygit"" >> ~/.zshrc
 
 
 ### 番外：
-#### 1. 一些有意思的终端工具
+
+**1. 一些有意思的终端工具**
+
 ```bash
 sudo apt install sl  # 小火车
 sudo apt install cmatrix  # 字符雨
@@ -339,11 +352,12 @@ sudo apt install lolcat  # 终端颜色真值输出
 neofetch | lolcat
 
 sudo apt install figlet  # 字符串转字符画
-
 ```
 
-Continuously updated...... 📆 
+> Continuously updated...... 📆 
 
+{{< admonition info >}}
 想要了解更多**其他系统**的配置内容，可以到这个[Github Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki) 查看哦🫰🏼
+{{< /admonition >}}
 
 
