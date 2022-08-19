@@ -288,7 +288,7 @@ Markdown 中表格使用 | 来分隔不同的单元格，使用 - 来分隔表�
 
 ### 8.1 行内公式
 
-$ \partial_{x}=\left(x_{i+1}-x_{i-1}\right) //  2 d x $，行内公式的语法为
+行内公式的语法为
 
 ```
 $\partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x$
@@ -296,20 +296,12 @@ $\partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x$
 
 ### 8.2 行间公式
 
-$$
-\begin{align}
-\partial_t v - \frac{1}{\rho}\partial_x \tau = 0
-\end{align}
-$$
+$$ \partial_t v - \frac{1}{\rho}\partial_x \tau = 0 $$
 
 行间公式的语法为
 
 ```
-$$
-\begin{align}
-\partial_t v - \frac{1}{\rho}\partial_x \tau = 0
-\end{align}
-$$
+$$ \partial_t v - \frac{1}{\rho}\partial_x \tau = 0 $$
 ```
 
 ### 8.3 矩阵
