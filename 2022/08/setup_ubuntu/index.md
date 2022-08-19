@@ -1,4 +1,4 @@
-# Setup your awesome Ubuntu
+# 从 0 搭建 Ubuntu 系统环境
 
 
 <!--more-->
