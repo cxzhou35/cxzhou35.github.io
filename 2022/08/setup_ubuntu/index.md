@@ -1,4 +1,4 @@
-# Setup your awesome Ubuntu.
+# Setup your awesome Ubuntu
 
 
 <!--more-->
