@@ -7,7 +7,7 @@
 这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 ubuntu20.04 为例）
 {{< /admonition >}}
 
-### 换源
+### 1. 换源
 
 ```bash
 cd /etc/apt
@@ -37,15 +37,17 @@ sudo apt update
 sudo apt upgrade   # 有提示输入 Y
 ```
 
-### 安装基本环境
+
+### 2. 基本环境和常用工具
 
 ```bash
-sudo apt install gcc gdb cmake build-essential 
+sudo apt install gcc gdb cmake build-essential
 sudo apt install wget htop aptitude neofetch
-sudo apt install curl perl zip unzip
+sudo apt install curl perl zip unzip aptitude
 ```
 
-### 安装 zsh && 配置 oh-my-zsh
+
+### 3. Zsh & oh-my-zsh
 
 ```bash
 # 查看当前的sehll
@@ -61,7 +63,7 @@ reboot
 
 # 再次查看当前的sehll
 echo $SHELL
-/bin/zsh  # 说明完成安装
+/bin/zsh  # 出现则说明完成安装
 
 # 下载 oh-my-zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -91,7 +93,8 @@ DISABLE_AUTO_UPDATE="true"
 source .zshrc
 ```
 
-### 安装配置 git
+
+### 4. Git
 
 ```bash
 # 安装 git
@@ -116,7 +119,8 @@ ssh -T  git@github.com
 # 输入 yes 后回车
 ```
 
-### 安装配置 vim
+
+### 5. Vim
 
 vim 的配置文件有两个，分别对应 User 和 root，位于家目录下的 ~/.vimrc 和 /etc/vim/vimrc，一般普通用户修改 ~/.vimrc.
 
@@ -137,13 +141,15 @@ vim
 # 更换主题
 cp ~/dotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
 ```
+
 {{< admonition tip >}}
 `nvim` 集成了 `vim` 的特性，是一个比较好的 `vim` 替代品，而且支持用 `lua` 语言配置。
 
 链接🔗 在这里: [neovim](https://neovim.io/)
 {{< /admonition >}}
 
-### 安装配置 tmux
+
+### 6. Tmux
 
 ```bash
 # 安装 tmux
@@ -160,19 +166,20 @@ tmux
 
 https://github.com/ryanoasis/nerd-fonts  # 在这里下载
 ```
+
 {{< admonition tip >}}
 如果有乱码的话，是字体的问题，推荐安装 `Nerd Font`
 
 链接🔗 在这里: [Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 {{< /admonition >}}
 
-### 安装配置 Python 环境
+
+### 7. Python
 
 ``` bash
 sudo apt install python3 python3-dev python3-pip
-sudo apt install aptitude
 
-# 设置 pip 的镜像
+# 设置 pip 的镜像源
 mkdir ~/.pip
 cd ~/.pip
 touch pip.conf
@@ -183,8 +190,10 @@ sudo vi ~/.pip/pip.conf
 index-url=http://mirrors.aliyun.com/pypi/simple/
 [install]
 trusted-host=mirrors.aliyun.com
+```
 
-# 安装 miniconda (可选)
+# 8. Conda (optional)
+```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
@@ -227,7 +236,8 @@ show_channel_urls: true
 conda clean -a
 ```
 
-### 安装配置终端工具
+
+### 9. 其他命令行工具
 
 ```bash
 # 1. thefuck
@@ -354,7 +364,8 @@ neofetch | lolcat
 sudo apt install figlet  # 字符串转字符画
 ```
 
-> Continuously updated...... 📆 
+> 持续更新中...... 📆
+
 
 {{< admonition info >}}
 想要了解更多**其他系统**的配置内容，可以到这个[Github Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki) 查看哦🫰🏼
