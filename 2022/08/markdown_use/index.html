@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2022\/08\/markdown_use\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Markdown, Hugo","wordcount":  1960 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Markdown, Hugo","wordcount":  1949 ,
         "url": "https:\/\/xuer04.github.io\/2022\/08\/markdown_use\/","datePublished": "2022-08-18T09:43:12+08:00","dateModified": "2022-08-18T09:43:12+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -200,7 +200,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"><i class="far fa-folder fa-fw"></i>技术文档</a>&nbsp;<a href="/categories/%E5%86%99%E4%BD%9C/"><i class="far fa-folder fa-fw"></i>写作</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1960 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1949 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/2022/08/markdown_use/" class="leancloud_visitors" data-flag-title="Markdown 教程与 Hugo 中的简单应用">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
                     </span>&nbsp;<span id="/2022/08/markdown_use/" class="comment_count" data-flag-title="Markdown 教程与 Hugo 中的简单应用">
@@ -308,7 +308,15 @@
 <h3 id="23-删除线" class="headerLink">
     <a href="#23-%e5%88%a0%e9%99%a4%e7%ba%bf" class="header-mark"></a>2.3 删除线</h3><p>在需要使用 <del>删除线</del> 部分的前后使用两个~号标记，可以使字体表现为 <del>删除线</del> 。</p>
 <h3 id="24-高亮" class="headerLink">
-    <a href="#24-%e9%ab%98%e4%ba%ae" class="header-mark"></a>2.4 高亮</h3><p>在需要使用 ~高亮~ 部分的前后使用一个 ~ 号标记，可以使字体表现为  ~高亮~ 。</p>
+    <a href="#24-%e9%ab%98%e4%ba%ae" class="header-mark"></a>2.4 高亮</h3><p>在需要使用 ==高亮== 部分的前后使用两个 == 号标记，可以使字体表现为  ==高亮== 。</p>
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告⚠️ <i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这个高亮语法是 Typora 里面才有的，不在 Markdown 官方语法中。</div>
+        </div>
+    </div>
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw"></i>提示<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -588,7 +596,7 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World!</span><span class="se">\n</span><span class="s">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -623,7 +631,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">align</span><span class="o">=</span><span class="s">center</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    ![ ](image.png)
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition tip open">
@@ -696,21 +704,23 @@
 </div>
 </div><h2 id="8-公式" class="headerLink">
     <a href="#8-%e5%85%ac%e5%bc%8f" class="header-mark"></a>8. 公式</h2><h3 id="81-行内公式" class="headerLink">
-    <a href="#81-%e8%a1%8c%e5%86%85%e5%85%ac%e5%bc%8f" class="header-mark"></a>8.1 行内公式</h3><p>$\partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x$，行内公式的语法为</p>
+    <a href="#81-%e8%a1%8c%e5%86%85%e5%85%ac%e5%bc%8f" class="header-mark"></a>8.1 行内公式</h3><p>$ \partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x $，行内公式的语法为</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$\partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x$
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ \partial_{x}=\left(x_{i+1}-x_{i-1}\right) / 2 d x $
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="82-行间公式" class="headerLink">
-    <a href="#82-%e8%a1%8c%e9%97%b4%e5%85%ac%e5%bc%8f" class="header-mark"></a>8.2 行间公式</h3><p>$$
+    <a href="#82-%e8%a1%8c%e9%97%b4%e5%85%ac%e5%bc%8f" class="header-mark"></a>8.2 行间公式</h3>
+$$
 \begin{align}
 \partial_t v - \frac{1}{\rho}\partial_x \tau = 0
 \end{align}
-$$</p>
+$$
+
 <p>行间公式的语法为</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -723,18 +733,20 @@ $$</p>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$
 </span></span><span class="line"><span class="cl">\begin{align}
-</span></span><span class="line"><span class="cl">\partial_t v - \frac{1}{\rho}\partial_x \tau = 0 
+</span></span><span class="line"><span class="cl">\partial_t v - \frac{1}{\rho}\partial_x \tau = 0
 </span></span><span class="line"><span class="cl">\end{align}
 </span></span><span class="line"><span class="cl">$$
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="83-矩阵" class="headerLink">
     <a href="#83-%e7%9f%a9%e9%98%b5" class="header-mark"></a>8.3 矩阵</h3><h4 id="a-普通矩阵" class="headerLink">
-    <a href="#a-%e6%99%ae%e9%80%9a%e7%9f%a9%e9%98%b5" class="header-mark"></a>a. 普通矩阵</h4><p>$$
+    <a href="#a-%e6%99%ae%e9%80%9a%e7%9f%a9%e9%98%b5" class="header-mark"></a>a. 普通矩阵</h4>
+$$
 \begin{matrix}
-0 &amp; 1 \\ 1 &amp; 0
+0 & 1 \\\\ 1 & 0
 \end{matrix}
-$$</p>
+$$
+
 <p>源码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -753,11 +765,13 @@ $$</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="b-圆括号矩阵" class="headerLink">
-    <a href="#b-%e5%9c%86%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>b. 圆括号矩阵</h4><p>$$
+    <a href="#b-%e5%9c%86%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>b. 圆括号矩阵</h4>
+$$
 \begin{pmatrix}
-0 &amp; 1 \\ 1 &amp; 0
+0 & 1 \\\\ 1 & 0
 \end{pmatrix}
-$$</p>
+$$
+
 <p>源码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -776,11 +790,13 @@ $$</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="c-方括号矩阵" class="headerLink">
-    <a href="#c-%e6%96%b9%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>c. 方括号矩阵</h4><p>$$
+    <a href="#c-%e6%96%b9%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>c. 方括号矩阵</h4>
+$$
 \begin{bmatrix}
-0 &amp; 1 \\ 1 &amp; 0
+0 & 1 \\\\ 1 & 0
 \end{bmatrix}
-$$</p>
+$$
+
 <p>源码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -799,11 +815,13 @@ $$</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="c-大括号矩阵" class="headerLink">
-    <a href="#c-%e5%a4%a7%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>c. 大括号矩阵</h4><p>$$
+    <a href="#c-%e5%a4%a7%e6%8b%ac%e5%8f%b7%e7%9f%a9%e9%98%b5" class="header-mark"></a>c. 大括号矩阵</h4>
+$$
 \begin{Bmatrix}
-0 &amp; 1 \\ 1 &amp; 0
+0 & 1 \\\\ 1 & 0
 \end{Bmatrix}
-$$</p>
+$$
+
 <p>源码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
