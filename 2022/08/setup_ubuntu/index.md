@@ -143,9 +143,9 @@ cp ~/dotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
 ```
 
 {{< admonition tip >}}
-`nvim` 集成了 `vim` 的特性，是一个比较好的 `vim` 替代品，而且支持用 `lua` 语言配置。
+`Neovim` 集成了 `vim` 的特性，是一个比较好的 `vim` 替代品，而且支持用 `lua` 语言配置。
 
-链接🔗 在这里: [neovim](https://neovim.io/)
+链接🔗 在这里: [Neovim](https://neovim.io/)
 {{< /admonition >}}
 
 
