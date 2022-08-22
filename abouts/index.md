@@ -45,9 +45,9 @@ I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).
 
 ### :fire: My Github Stats :
 
-<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=Xuer04&show_icons=true&include_all_commits=true&theme=nord&hide_border=true" alt="Anurag's github stats" /></a>
+<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=Xuer04&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a>
 
-<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Xuer04&layout=compact&theme=nord&hide_border=true" /></a> |
+<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Xuer04&layout=compact&theme=buefy&hide_border=true" /></a>
 
 
 
