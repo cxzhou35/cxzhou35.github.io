@@ -16,9 +16,9 @@ I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).
 
 - :telescope: Working on computer vision research. 🖥️
 
-- :seedling: Exploring Technical Content Writing. ✍️
+- :seedling: Exploring technical content writing. ✍️
 
-- :zap: Watching movies of Marvel Studio. 🎥
+- :zap: Watching movies of [Marvel Studio](https://www.marvel.com/). 🎥
 
 - :mailbox: How to reach me: [Email](zjajzcx3566@gmail.com) 📧
 
@@ -26,19 +26,17 @@ I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).
 
 ### :hammer_and_wrench: Languages and Tools :
 <div>
+  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="pyton" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="pytorch" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/cmake/cmake-ar21.svg" alt="cmake" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="docker" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="linux" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/lua/lua-ar21.svg" alt="lua" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="opencv" width="40" height="40"/> &nbsp;
+  <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-ar21.svg" alt="bash" width="40" height="40"/> &nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> &nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg" title="C" alt="C" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/rust/rust-plain.svg" title="Rust" alt="Rust" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/matlab/matlab-original.svg" title="Matlab" alt="Matlab" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/markdown/markdown-original.svg" title="Markdown" alt="Markdown" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/opencv/opencv-original.svg" title="Opencv" alt="Opencv" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" title="Bash" alt="Bash" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker" alt="Docker" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-plain.svg" title="Linux" alt="Linux" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="Vscode" alt="Vscode" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg" title="Github" alt="Github" width="40" height="40"/>&nbsp;
-  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg" title="C" alt="C" width="40" height="40"/>
 </div>
 
 ---
