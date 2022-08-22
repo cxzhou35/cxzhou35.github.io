@@ -244,12 +244,12 @@ Markdown 的图片的格式为
 ```
 
 {{% admonition tip "提示" %}}
-Markdown 支持 HTML 语法，可以对多种对象操作，下面是一个图片居中的例子
+Markdown 支持 HTML 语法，可以对多种对象操作，下面是一个图片设置居中的例子
 {{% /admonition %}}
 
 ```html
 <div align=center>
-    ![ ](image.png)
+<img src="path"/>
 </div>
 ```
 
