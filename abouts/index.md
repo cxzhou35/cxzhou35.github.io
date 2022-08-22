@@ -1,6 +1,6 @@
 # 
 
-## Hi 👋, I'm Zicx, welcome to my blog! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50">
+## Hi 👋, I'm Zicx! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50">
 
 
 [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/Xuer04)
@@ -26,17 +26,15 @@ I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).
 
 ### :hammer_and_wrench: Languages and Tools :
 <div>
-  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="pyton" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="pytorch" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/cmake/cmake-ar21.svg" alt="cmake" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="docker" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="linux" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/lua/lua-ar21.svg" alt="lua" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="opencv" width="40" height="40"/> &nbsp;
-  <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-ar21.svg" alt="bash" width="40" height="40"/> &nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> &nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg" title="C" alt="C" width="40" height="40"/>
+  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="pyton" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="pytorch" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/cmake/cmake-ar21.svg" alt="cmake" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="docker" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="linux" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/lua/lua-ar21.svg" alt="lua" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="opencv" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-ar21.svg" alt="bash" width="60" height="60"/>
 </div>
 
 ---
