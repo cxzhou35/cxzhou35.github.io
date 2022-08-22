@@ -88,7 +88,7 @@
 
 ### 2.9 链接
 
-插入链接 [百度](www.baidu.com)，其语法为 [文字] (链接)
+插入链接 [百度](https://www.baidu.com/)，其语法为 [文字] (链接)   点击一下试试 [404 not Found](404_not_found)
 
 {{% admonition warning "注意" %}}
 ] 和 ( 之间没有空格，这里是为了方便说明语法，避免渲染
