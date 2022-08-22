@@ -26,15 +26,19 @@ I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).
 
 ### :hammer_and_wrench: Languages and Tools :
 <div>
-  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="pyton" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="pytorch" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/cmake/cmake-ar21.svg" alt="cmake" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="docker" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="linux" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/lua/lua-ar21.svg" alt="lua" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="opencv" width="60" height="60"/>
-  <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-ar21.svg" alt="bash" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="github" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="linux" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-ar21.svg" alt="nodejs" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="docker" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/vim/vim-ar21.svg" alt="vim" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-ar21.svg" alt="bash" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="pyton" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="pytorch" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/numpy/numpy-ar21.svg" alt="numpy" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="opencv" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/cmake/cmake-ar21.svg" alt="cmake" width="80" height="80"/>
+  <img src="https://www.vectorlogo.zone/logos/lua/lua-ar21.svg" alt="lua" width="80" height="80"/>
 </div>
 
 ---
