@@ -17,4 +17,5 @@
             <loc>https://xuer04.github.io/abouts/</loc><priority>0</priority></url><url>
             <loc>https://xuer04.github.io/links/</loc><priority>0</priority></url><url>
             <loc>https://xuer04.github.io/series/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xuer04.github.io/cat/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://xuer04.github.io/cat/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://xuer04.github.io/music/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
