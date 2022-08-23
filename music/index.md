@@ -3,7 +3,7 @@
 
 <br/>
 
-{{< music server="netbase" type="playlist" id="7372782128" >}}
+{{< music "https://music.163.com/#/playlist?id=7372782128" >}}
 
 <br/>
 
