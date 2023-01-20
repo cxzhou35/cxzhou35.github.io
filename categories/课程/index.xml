@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>课程 - 分类 - Zicx の Blog</title>
+        <link>https://xuer04.github.io/categories/%E8%AF%BE%E7%A8%8B/</link>
+        <description>课程 - 分类 - Zicx の Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
+            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</lastBuildDate><atom:link href="https://xuer04.github.io/categories/%E8%AF%BE%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec01_welcome/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec01_welcome/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/CS106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item></channel>
+</rss>
