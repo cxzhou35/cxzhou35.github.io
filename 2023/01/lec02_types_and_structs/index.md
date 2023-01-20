@@ -150,6 +150,6 @@ auto spliceString(const string& s);
 ```
 
 {{< admonition >}}
-auto doesn't mean that the variable doesn't have a type, it means that the type is ==deduced by the compiler==.
+auto doesn't mean that the variable doesn't have a type, it means that the type is **deduced by the compiler**.
 {{< /admonition >}}
 
