@@ -3,12 +3,7 @@
 
 <!--more-->
 
-# TOC
-- [[#Predicate Functions|Predicate Functions]]
-- [[#Lambdas|Lambdas]]
-- [[#Functors|Functors]]
-
-## Predicate Functions
+# Predicate Functions
 
 Any function that **returns a boolean** value is a `predicate.` A predicate can have **any amount of parameters**.
 
@@ -32,15 +27,18 @@ int count_occurrences(InputIt begin, InputIt end, UniPred pred){
 std::string str = "xadia";
 count_occurrences(str.begin(), str.end(), isVowel);
 ```
+{{< /admonition >}}
 
 Here `UniPred` is called a `function pointer`.
+
 - Function pointers can be treated just like other pointers.
 - They can be passed around like variables as parameters or in template functions.
 - They can be called like functions.
 
-## Lambdas
+# Lambdas
 
 `Lambdas` are **inline,** **anonymous** functions that can know about variables declared in their same scope.
+
 ![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png)
 
 {{< admonition example >}}
@@ -62,6 +60,7 @@ auto funb = [] { cout << "B" << endl; };
 funa = funb;   // error
 auto func = funa;   // ok, copy is permitted
 ```
+{{< /admonition >}}
 
 Lambdas can capture any outside variable by using `[]`, **both by reference and by value**.
 
@@ -81,8 +80,9 @@ public:
     ReturnType operator(params) const { body };
 };
 ```
+{{< /admonition >}}
 
-## Functors
+# Functors
 
 A `functor` is any **class** that provides an implementation of **operator().** They can create **closures** of "customized" functions.
 
@@ -96,4 +96,5 @@ A `functor` is any **class** that provides an implementation of **operator().** 
 ```cpp
 std::function<return_type(param_types)> func;
 ```
+{{< /admonition >}}
 

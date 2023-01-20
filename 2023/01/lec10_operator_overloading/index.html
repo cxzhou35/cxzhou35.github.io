@@ -74,7 +74,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec10_operator_overloading\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  477 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  444 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec10_operator_overloading\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,19 +175,16 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#operators">Operators</a>
-      <ul>
-        <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
-        <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
-      </ul>
-    </li>
+    <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
+    <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
+    <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec10 Operator Overloading</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/cs106l/"><i class="far fa-folder fa-fw"></i>CS106L</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 477 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 444 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -202,40 +199,27 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#operators">Operators</a>
-      <ul>
-        <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
-        <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
-      </ul>
-    </li>
+    <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
+    <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
+    <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
-    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
-<li>[[#Operators|Operators]]
-<ul>
-<li>[[#Operators#Operators can&rsquo;t be overloaded|Operators can&rsquo;t be overloaded]]</li>
-<li>[[#Operators#The way of overloading operators|The way of overloading operators]]</li>
-<li>[[#Operators#Rules and Philosophy|Rules and Philosophy]]</li>
-</ul>
-</li>
-</ul>
-<h2 id="operators" class="headerLink">
-    <a href="#operators" class="header-mark"></a>Operators</h2><ul>
+            </div><div class="content" id="content"><h1 id="operators" class="headerLink">
+    <a href="#operators" class="header-mark"></a>Operators</h1><ul>
 <li>Just like declaring functions in a class, we can declare operator functionality.</li>
 <li>When we use the operator with our new object, it <strong>performs a custom function or operation</strong>.</li>
 <li>Just like in function overloading, if we give it the same name, it will override the operator’s behavior.</li>
 </ul>
-<h3 id="operators-cant-be-overloaded" class="headerLink">
-    <a href="#operators-cant-be-overloaded" class="header-mark"></a>Operators can&rsquo;t be overloaded</h3><ul>
+<h2 id="operators-cant-be-overloaded" class="headerLink">
+    <a href="#operators-cant-be-overloaded" class="header-mark"></a>Operators can&rsquo;t be overloaded</h2><ul>
 <li>Scope Resolution: <code>::</code></li>
 <li>Ternary: <code>?</code></li>
 <li>Member Access: <code>.</code></li>
 <li>Pointer-to-member access: <code>.*</code></li>
 <li>Object size, type, and casting: <code>sizeof()</code>、<code>typeid()</code>、<code>cast()</code></li>
 </ul>
-<h3 id="the-way-of-overloading-operators" class="headerLink">
-    <a href="#the-way-of-overloading-operators" class="header-mark"></a>The way of overloading operators</h3><ul>
+<h2 id="the-way-of-overloading-operators" class="headerLink">
+    <a href="#the-way-of-overloading-operators" class="header-mark"></a>The way of overloading operators</h2><ul>
 <li>Member functions
 <ul>
 <li>With member function overloading, we <strong>have access to this-&gt; and its private variables</strong>.</li>
@@ -322,7 +306,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Non-member function(global function) of operator overloading(global overloading)</strong></p>
+</div></div>
+        </div>
+    </div>
+<p><strong>Non-member function(global function) of operator overloading(global overloading)</strong></p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -360,7 +347,10 @@
 </span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t1</span><span class="p">;</span> <span class="c1">// 12:20:56
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>The implementation of <code>&lt;&lt;</code> operator in STL <code>basic_ostream</code>.</strong></p>
+</div></div>
+        </div>
+    </div>
+<p><strong>The implementation of <code>&lt;&lt;</code> operator in STL <code>basic_ostream</code>.</strong></p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -394,7 +384,10 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="details admonition warning open">
+</div></div>
+        </div>
+    </div>
+<div class="details admonition warning open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
@@ -403,31 +396,19 @@
 Certain operators, like <code>new</code> and <code>delete,</code> don’t require a specific type.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
+<pre tabindex="0" class="chroma"><code></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### Rules and Philosophy
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">- Meaning should be obvious when you see it.
-</span></span><span class="line"><span class="cl">- Functionality should be **reasonably similar** to corresponding arithmetic operations
-</span></span><span class="line"><span class="cl">- When the meaning isn&#39;t obvious, give it a **normal name** instead.
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
-    </div></div>
-        </div>
-    </div></div>
-        </div>
-    </div></div>
-        </div>
-    </div></div>
+    </div>
+<h2 id="rules-and-philosophy" class="headerLink">
+    <a href="#rules-and-philosophy" class="header-mark"></a>Rules and Philosophy</h2><ul>
+<li>Meaning should be obvious when you see it.</li>
+<li>Functionality should be <strong>reasonably similar</strong> to corresponding arithmetic operations</li>
+<li>When the meaning isn&rsquo;t obvious, give it a <strong>normal name</strong> instead.</li>
+</ul></div>
 
         
 

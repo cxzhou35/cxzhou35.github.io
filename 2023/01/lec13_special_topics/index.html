@@ -74,7 +74,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec13_special_topics\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  255 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  250 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec13_special_topics\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -173,17 +173,12 @@
 <main class="main">
             <div class="container"><div class="toc" id="toc-auto">
         <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#rall">RALL</a></li>
-    <li><a href="#smart-pointers">Smart Pointers</a></li>
-  </ul>
-</nav></div>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents"></nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec13 Special Topics</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/cs106l/"><i class="far fa-folder fa-fw"></i>CS106L</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 255 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 250 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -196,19 +191,9 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#rall">RALL</a></li>
-    <li><a href="#smart-pointers">Smart Pointers</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
-    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
-<li>[[#RALL|RALL]]</li>
-<li>[[#Smart Pointers|Smart Pointers]]</li>
-</ul>
-<h2 id="rall" class="headerLink">
-    <a href="#rall" class="header-mark"></a>RALL</h2><p><code>Code path</code>: A single run-through of the code that the computer would see.</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><h1 id="rall" class="headerLink">
+    <a href="#rall" class="header-mark"></a>RALL</h1><p><code>Code path</code>: A single run-through of the code that the computer would see.</p>
 <p><img
         class="lazyload"
         data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171548872.png"
@@ -238,15 +223,15 @@ However, we can write code to handle these to let us continue.</li>
         data-sizes="auto"
         alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171552097.png"
         title="f|C|550"></p>
-<p><code>RAII</code>: Resource Acquisition is Initialization
-In RAII</p>
+<p><code>RAII</code>: Resource Acquisition is Initialization</p>
+<p>In RAII</p>
 <ul>
 <li>All resources used by a class <strong>should be acquired in the constructor</strong></li>
 <li>All resources used by a class <strong>should be released in the destructor</strong></li>
 <li>Avoid calling <code>new</code> and <code>delete</code> explicitly</li>
 </ul>
-<h2 id="smart-pointers" class="headerLink">
-    <a href="#smart-pointers" class="header-mark"></a>Smart Pointers</h2><p>There are three types of <code>smart (RAII-safe) pointers</code>:</p>
+<h1 id="smart-pointers" class="headerLink">
+    <a href="#smart-pointers" class="header-mark"></a>Smart Pointers</h1><p>There are three types of <code>smart (RAII-safe) pointers</code>:</p>
 <ul>
 <li>std::unique_ptr
 <ul>

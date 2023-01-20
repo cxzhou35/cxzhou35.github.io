@@ -3,10 +3,8 @@
 
 <!--more-->
 
-# TOC
-- [[#Type safety|Type safety]]
 
-## Type safety
+# Type safety
 
 `Type Safety`: The extent to which a language prevents typing errors and guarantees the behavior of programs.
 
@@ -25,21 +23,21 @@ int main(){
 	return 0;
 }
 ```
+{{< /admonition >}}
 
- `std::optional` interface
- - .value()
-	 - returns the **contained value** or throws `bad_optional_access` error
+`std::optional` interface
+- .value()
+	- returns the **contained value** or throws `bad_optional_access` error
 - .value_or(valueType val)
 	- returns the contained value or default value(parameter val)
 - .has_value()
 	- returns true if contained value exists, false otherwise
 
- `std::optional` "monadic" interface(C++23)
- - .and_then(function f)
-	 - returns the result of calling f(value) if contained value exists, otherwise null_opt (f must return optional)
+`std::optional` "monadic" interface(C++23)
+- .and_then(function f)
+	- returns the result of calling f(value) if contained value exists, otherwise null_opt (f must return optional)
 - .or_else(function f)
 	- returns value if it exists, otherwise returns result of calling f
 - .transform(function f)
 	- returns the result of calling f(value) if contained value exists, otherwise null_opt (f must return optional<valueType>)
-
 
