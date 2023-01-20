@@ -1,4 +1,4 @@
-# CS106L: Lec03 Initialization and Reference
+# CS106L: Lec04 Initialization and Reference
 
 
 <!--more-->
