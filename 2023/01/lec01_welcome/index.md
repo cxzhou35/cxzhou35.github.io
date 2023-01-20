@@ -3,13 +3,13 @@
 
 <!--more-->
 
-## About CS106L
+# About CS106L
 
 - Focus is on **code:** What makes it good, what powerful and elegant code looks like
 - The real deal: No Stanford libraries, only STL
 - Understand how and why C++ was made
 
-## C++ History
+# C++ History
 
 ### Assembly
 
@@ -44,8 +44,9 @@ Weakness
 - Do not waste time or space
 - **Enforce safety at compile time whenever possible**
 
-{{< admonition note>}}
+{{< admonition tip>}}
 C++: Basic Syntax + the STL
+
 Standard C++: Basic Syntax + std(standard) library
 {{< /admonition >}}
 
