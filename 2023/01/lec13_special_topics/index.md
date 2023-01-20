@@ -5,7 +5,7 @@
 
 <meta name="referrer" content="no-referrer" />
 
-## RALL
+## RAII
 
 `Code path`: A single run-through of the code that the computer would see.
 
