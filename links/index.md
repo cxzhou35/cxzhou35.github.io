@@ -1,4 +1,4 @@
-# 友链
+# Link
 
 
 ## Here are some links of my friends.
