@@ -1,60 +1,125 @@
-# CS106L: Lec08 Templates
+# CS106L: Lec01 Welcome
 
 
 <!--more-->
 
-# About CS106L
+# TOC
+- [[#Template|Template]]
+	- [[#Template#Function Template|Function Template]]
+	- [[#Template#Class Template|Class Template]]
+	- [[#Template#Generic Programming|Generic Programming]]
+	- [[#Template#Template Metaprogramming|Template Metaprogramming]]
 
-- Focus is on **code:** What makes it good, what powerful and elegant code looks like
-- The real deal: No Stanford libraries, only STL
-- Understand how and why C++ was made
+## Template
 
-# C++ History
+### Function Template
 
-### Assembly
+`Function Template`: A function template defines a family of functions. The simple idea is to **pass data type as a parameter** so that we don’t need to write the same code for different data types.
 
-Benefits
-- Unbelievably **simple** instructions
-- Extremely **fast** (when well-written)
-- **Complete control** over your program
+```ad-example
+```cpp
+// we need `typename` or `class` keyword 
+template <typename T>
+// default parameter types
+template <typename T=int>
+T myMax(T x, T y) {
+  return (x > y) ? x : y;
+}
 
-Drawbacks
-- A lot of code to do simple tasks
-- Very hard to understand
-- Extremely unportable (hard to make work across all systems)
+// function call
+int int_max = myMax<int>(2, 7); // int_max = 7
+double double_max = MyMax<double>(2.4, 5.1); // double_max = 5.1
 
-### Invention of C
+// template arguments deduction
+myMax(1, 2); // infers that T is of type `int`
+myMax(1.2, 3.9); // infers that T is of type `double`
+myMax('a', 'i'); // infers that T is of type `char`
+```
 
-C made it easy to write code that was
-- Fast
-- Simple
-- Cross-platform
+**Explicit instantiation**
+- specify the type T
+- `cout << myMax<int>(2, 3) << endl;`
 
-Weakness
-- **No objects or classes**
-- Diﬃcult to write **generic code**
-- **Tedious** when writing large programs
+**Implicit instantiation**
+- leave the type for the compiler to deduce
+- `cout << myMax(2, 3) << endl`
 
-### Design Philosophy of C++
+```ad-hint
+**template functions are not compiled until used!**
+For each instantiation with different parameters, the compiler generates a new specific version of your template at compile time.
+Template code is instantiated at compile time.
+```
 
-[Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- **Only add features if they solve an actual problem**
-- Express ideas and intent directly in code
-- **Compartmentalization(区块化)** is key
-- Do not waste time or space
-- **Enforce safety at compile time whenever possible**
+### Class Template 
 
-{{< admonition note>}}
-C++: Basic Syntax + the STL
+`Class Template`: A class that is parametrized over some number of types. A class that is comprised of member variables of a general type/types. Use generic typenames as **placeholders.**
 
-Standard C++: Basic Syntax + std(standard) library
-{{< /admonition >}}
+```ad-example
+```cpp
+template<typename F, typename S>
+// we can specify a default value for template arguments
+// etc. template<typename F, typename S=int>
+class MyPair {
+	public:
+		First getFirst();
+		Second getSecond();
+		void setFirst(First f);
+		void setSecond(Second f);
+ 
+	private:
+		First first;
+		Second second;
+};
 
-### The STL
+// must announce every member function is templated
+template<typename F, typename S>
+First MyPair::getFirst(){
+	return first;
+}
 
-- Tons at of EOL general functionality
-- Built in classes like maps, sets, vectors
-- Accessed through the namespace std::
-- **Extremely powerful and wel-maintained**
+// nested dependent type 
+template<typename F, typename S>
+typename MyPair<F, S>::iterator MyPair<F, S>::begin() {...}
+// here iterator is a `dependent type` in namespace Mypair<F, S>::
+// we must add `typename` prior
+```
 
+Templated code implementation **should never be in a .cpp file**: your compiler has to see them at the same time as it sees the code that calls them.
+
+### Generic Programming
+
+**Generic Programming** is a programming paradigm for developing **efficient**, **reusable** software libraries.
+Generics is the idea to **allow type (Integer, String, … etc) to be a parameter** to methods, classes and interfaces.
+Generics can be implemented in C++ using [Templates](https://www.geeksforgeeks.org/templates-cpp/).
+
+The **advantages** of Generic Programming are
+- Code Reusability
+- Avoid Function Overloading
+- Once written it can be used for multiple times and cases.
+
+### Template Metaprogramming
+
+Normally, code runs during runtime. But with `template metaprogramming(TMP)`, code **runs once during compile time**. Something runs once during compiling and can be used as many times as you like during runtime.
+
+```ad-example
+```cpp
+template <unsigned n>
+struct Factorial {
+	enum {value = n * Factorial<n-1>::value};
+};
+
+template<> // template class `specialization`
+struct Factorial<0> {
+	enum {value = 1};
+};
+
+cout << Factorial<10>::value << endl; // print 3628800
+```
+
+`struct` is similar to `class` in that it can contain both member variables and member functions.
+
+**the difference of struct and class**
+- When using class, the **members of a class are all private by default**, while when using struct, the **members of a struct are all public by default**.
+- class can be used as a **template keyword**, while struct cannot.
+- class inheritance is **private inheritance** by default, while struct inheritance is **public inheritance** by default
 

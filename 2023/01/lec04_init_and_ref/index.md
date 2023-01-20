@@ -1,60 +1,213 @@
-# CS106L: Lec04 Initialization and Reference
+# CS106L: Lec03 Initialization and Reference
 
 
 <!--more-->
 
-# About CS106L
+# Initialization
 
-- Focus is on **code:** What makes it good, what powerful and elegant code looks like
-- The real deal: No Stanford libraries, only STL
-- Understand how and why C++ was made
+**Initialization: How we provide initial values to variables.**
 
-# C++ History
+## Uniform initialization
 
-### Assembly
+Initialization while we declare a variable.
 
-Benefits
-- Unbelievably **simple** instructions
-- Extremely **fast** (when well-written)
-- **Complete control** over your program
+`Uniform initialization`: Curly bracket initialization. Available for **all types**, immediate initialization on declaration!
+- Use uniform initialization to initialize every ﬁeld of **non-primitive typed variables**.
 
-Drawbacks
-- A lot of code to do simple tasks
-- Very hard to understand
-- Extremely unportable (hard to make work across all systems)
+```ad-example
+```cpp
+Student s{"Sarah", "CA", 21}; // struct
 
-### Invention of C
+std::pair<int, string> numSuffix{1, "st"}; // pair
 
-C made it easy to write code that was
-- Fast
-- Simple
-- Cross-platform
+std::vector<int> vec{1, 3, 5}; // vector
 
-Weakness
-- **No objects or classes**
-- Diﬃcult to write **generic code**
-- **Tedious** when writing large programs
+int x{5}; // int
+string str{"Name"}; //string
+```
 
-### Design Philosophy of C++
+## Structured binding
 
-[Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- **Only add features if they solve an actual problem**
-- Express ideas and intent directly in code
-- **Compartmentalization(区块化)** is key
-- Do not waste time or space
-- **Enforce safety at compile time whenever possible**
+Initialize dierctly from the contens of a struct.
 
-{{< admonition note>}}
-C++: Basic Syntax + the STL
+{{< admonition example>}}
+```cpp
+// pair
+auto p = std::make_pair("str", 5);
+auto [a, b] = p;
 
-Standard C++: Basic Syntax + std(standard) library
+// struct
+Student s{"Sarah", 20, "TA"};
+auto [name, age, staff] = s;
+```
 {{< /admonition >}}
 
-### The STL
+# References
 
-- Tons at of EOL general functionality
-- Built in classes like maps, sets, vectors
-- Accessed through the namespace std::
-- **Extremely powerful and wel-maintained**
+**References: An alias(another name) for a named variable.**
+
+- We can only create references to **variables**.
+- The cpp compiler does not allocate separate memory space for references.
+- References must have **initialization.**
+
+{{< admonition example>}}
+```cpp
+void change_x(int& x){
+	x = 0; // changes to x will persist
+}
+
+void keep_x(int x){
+	x = 0;
+}
+
+change_x(a); // a becomes a reference to x 
+keep_x(b); // b becomes a copy of x 
+cout << a << endl; // 0
+cout << b << endl; // 100
+
+std::vector<int> original{1, 2};
+std::vector<int> copy = original;
+std::vector<int>& ref = original;
+// `=` automatically makes a copy, must use `&` to avoid this
+```
+{{< /admonition >}}
+
+## L-values and R-values
+
+#### L-values
+
+- L-values can appear on the **left or right** of an `=`
+- L-values **have names**
+- L-values are **not temporary**
+- L-values live until the **end of the scope**
+
+#### R-values
+
+- R-values can only appear on the **right** of an `=`
+- R-values **don't have names**
+- R-values are **temporary**
+- R-values live until **the end of the line**
+
+# Const 
+
+`const`: keyword indicating a variable, function or parameter **can't be modiﬁed**.
+
+{{< admonition example >}}
+```cpp
+std::vector<int> vec{1, 2, 3};
+const std::vector<int> c_vec{7, 8}; // a const variable
+std::vector<int>& ref = vec; // a regular reference
+const std::vector<int>& c_ref = vec; // a const reference
+
+vec.push_back(3); // OK
+c_vec.push_back(3); // BAD - const
+ref.push_back(3); // OK
+c_ref.push_back(3); // BAD - const
+```
+{{< /admonition >}}
+
+## Const References
+
+Can't declare **non-const reference to const variable**.
+
+{{< admonition example >}}
+```cpp
+const std::vector<int> c_vec{7, 8}; // a const variable
+
+std::vector<int>& bad_ref = c_vec; // BAD
+const std::vector<int>& good_ref = c_vec; // Fixed
+```
+{{< /admonition >}}
+
+When do we use **references/const references**
+
+- If we’re working with a variable that takes up little space in memory (e.g. int, double), we don’t need to use a reference and can just copy the variable.
+- If we need to alias the variable to modify it(e.g. in a function), we can use references.
+- If we don’t need to modify the variable, but it’s a **big variable (e.g. std::vector)**, we can use const references.
+
+We can return references as well, but note that **the parameter must be a non-const reference to return.**
+
+{{< admonition example >}}
+```cpp
+int& front(std::vector<int> & vec){
+	return vec[0];
+}
+
+int main(void){
+	std::vector<int> nums{1, 2, 3};
+	front(nums) = 4; // vec = {4, 2, 3}
+	return 0;
+}
+```
+{{< /admonition >}}
+
+**R-values can be bound to const reference**.
+
+{{< admonition example >}}
+```cpp
+int foo(const int &a){
+	return a + 3;
+}
+
+int main(void){
+	foo(1 + 2); // `1+2` is a r-value, but can be passed in
+			    // as const reference.
+}
+```
+{{< /admonition >}}
+
+## Const pointers
+
+**Const pointer means this pointer is unchangeable, but what the pointer points to is changeable.**
+
+{{< admonition example >}}
+```cpp
+using iterator = std::string*;
+using const_iterator = const std::string*;
+
+// string * const, const ptr to non-const obj
+const iterator it_c = str.begin();
+// ok! it_c is a const pointer to non-const object
+*it_c = "hi" ;
+//not ok! can’t change where a const pointer points
+it_c++; 
+
+// const string*, a non-const ptr to const obj
+const_iterator c_it = str.begin();
+// totally ok! the pointer itself is non-const
+c_it++; 
+// not ok! can’t change underlying const object
+*c_it = "hi";
+// allowed! can always read a const object, just can't change
+cout << *c_it << endl; 
+```
+{{< /admonition >}}
+
+## Const functions
+
+`const-interface:` All member functions marked **const** in a class deﬁnition. Objects of type const ClassName may only use the **const-interface.**
+**Can't call a non-const function in a const function.**
+
+Every member function of a class that doesn't change its member variables should be marked const.
+
+{{< admonition example >}}
+```cpp
+class Str {
+	public:
+		size_t size() const;
+		bool empty() const;
+		const std::string& at(size_t index) const;
+	...
+}
+```
+{{< /admonition >}}
+
+## Parameter passing rules
+
+Basic parameter passing rules
+![f|C|550](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png)
+
+Advanced parameter passing rules
+![f|C|550](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110922497.png)
 
 

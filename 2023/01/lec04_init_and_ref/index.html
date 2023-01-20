@@ -49,7 +49,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">CS106L: Lec04 Initialization and Reference - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec04 Initialization and Reference" />
+    <title class="pjax-title">CS106L: Lec03 Initialization and Reference - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec03 Initialization and Reference" />
 <meta property="og:description" content="CS106L 课程笔记" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xuer04.github.io/2023/01/lec04_init_and_ref/" /><meta property="og:image" content="https://xuer04.github.io/image/fig.png"/><meta property="article:section" content="posts" />
@@ -58,23 +58,23 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://xuer04.github.io/image/fig.png"/>
 
-<meta name="twitter:title" content="CS106L: Lec04 Initialization and Reference"/>
+<meta name="twitter:title" content="CS106L: Lec03 Initialization and Reference"/>
 <meta name="twitter:description" content="CS106L 课程笔记"/>
 <meta name="application-name" content="Zicx の Blog">
 <meta name="apple-mobile-web-app-title" content="Zicx の Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec04_init_and_ref/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec05_containers/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec03_streams/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec04_init_and_ref/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec03_streams/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec02_types_and_structs/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "CS106L: Lec04 Initialization and Reference",
+        "headline": "CS106L: Lec03 Initialization and Reference",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec04_init_and_ref\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  205 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  824 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec04_init_and_ref\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,22 +175,36 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#uniform-initialization">Uniform initialization</a></li>
+    <li><a href="#structured-binding">Structured binding</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#l-values-and-r-values">L-values and R-values</a>
       <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
+        <li>
+          <ul>
+            <li><a href="#l-values">L-values</a></li>
+            <li><a href="#r-values">R-values</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li><a href="#const-references">Const References</a></li>
+    <li><a href="#const-pointers">Const pointers</a></li>
+    <li><a href="#const-functions">Const functions</a></li>
+    <li><a href="#parameter-passing-rules">Parameter passing rules</a></li>
+  </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec04 Initialization and Reference</h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec03 Initialization and Reference</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%AF%BE%E7%A8%8B/"><i class="far fa-folder fa-fw"></i>课程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 205 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 824 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         data-src="/image/cs106L/title.png"
@@ -204,75 +218,391 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#uniform-initialization">Uniform initialization</a></li>
+    <li><a href="#structured-binding">Structured binding</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#l-values-and-r-values">L-values and R-values</a>
       <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
+        <li>
+          <ul>
+            <li><a href="#l-values">L-values</a></li>
+            <li><a href="#r-values">R-values</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li><a href="#const-references">Const References</a></li>
+    <li><a href="#const-pointers">Const pointers</a></li>
+    <li><a href="#const-functions">Const functions</a></li>
+    <li><a href="#parameter-passing-rules">Parameter passing rules</a></li>
+  </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="about-cs106l" class="headerLink">
-    <a href="#about-cs106l" class="header-mark"></a>About CS106L</h1><ul>
-<li>Focus is on <strong>code:</strong> What makes it good, what powerful and elegant code looks like</li>
-<li>The real deal: No Stanford libraries, only STL</li>
-<li>Understand how and why C++ was made</li>
-</ul>
-<h1 id="c-history" class="headerLink">
-    <a href="#c-history" class="header-mark"></a>C++ History</h1><h3 id="assembly" class="headerLink">
-    <a href="#assembly" class="header-mark"></a>Assembly</h3><p>Benefits</p>
+            </div><div class="content" id="content"><h1 id="initialization" class="headerLink">
+    <a href="#initialization" class="header-mark"></a>Initialization</h1><p><strong>Initialization: How we provide initial values to variables.</strong></p>
+<h2 id="uniform-initialization" class="headerLink">
+    <a href="#uniform-initialization" class="header-mark"></a>Uniform initialization</h2><p>Initialization while we declare a variable.</p>
+<p><code>Uniform initialization</code>: Curly bracket initialization. Available for <strong>all types</strong>, immediate initialization on declaration!</p>
 <ul>
-<li>Unbelievably <strong>simple</strong> instructions</li>
-<li>Extremely <strong>fast</strong> (when well-written)</li>
-<li><strong>Complete control</strong> over your program</li>
+<li>Use uniform initialization to initialize every ﬁeld of <strong>non-primitive typed variables</strong>.</li>
 </ul>
-<p>Drawbacks</p>
-<ul>
-<li>A lot of code to do simple tasks</li>
-<li>Very hard to understand</li>
-<li>Extremely unportable (hard to make work across all systems)</li>
-</ul>
-<h3 id="invention-of-c" class="headerLink">
-    <a href="#invention-of-c" class="header-mark"></a>Invention of C</h3><p>C made it easy to write code that was</p>
-<ul>
-<li>Fast</li>
-<li>Simple</li>
-<li>Cross-platform</li>
-</ul>
-<p>Weakness</p>
-<ul>
-<li><strong>No objects or classes</strong></li>
-<li>Diﬃcult to write <strong>generic code</strong></li>
-<li><strong>Tedious</strong> when writing large programs</li>
-</ul>
-<h3 id="design-philosophy-of-c" class="headerLink">
-    <a href="#design-philosophy-of-c" class="header-mark"></a>Design Philosophy of C++</h3><p><a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines" target="_blank" rel="noopener noreffer">Cpp Core Guidelines</a></p>
-<ul>
-<li><strong>Only add features if they solve an actual problem</strong></li>
-<li>Express ideas and intent directly in code</li>
-<li><strong>Compartmentalization(区块化)</strong> is key</li>
-<li>Do not waste time or space</li>
-<li><strong>Enforce safety at compile time whenever possible</strong></li>
-</ul>
-<div class="details admonition note open">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
+</span></span><span class="line"><span class="cl">Student s{&#34;Sarah&#34;, &#34;CA&#34;, 21}; // struct
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">std::pair&lt;int, string&gt; numSuffix{1, &#34;st&#34;}; // pair
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">std::vector&lt;int&gt; vec{1, 3, 5}; // vector
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">int x{5}; // int
+</span></span><span class="line"><span class="cl">string str{&#34;Name&#34;}; //string
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="structured-binding" class="headerLink">
+    <a href="#structured-binding" class="header-mark"></a>Structured binding</h2><p>Initialize dierctly from the contens of a struct.</p>
+<div class="details admonition example open">
         <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content"><p>C++: Basic Syntax + the STL</p>
-<p>Standard C++: Basic Syntax + std(standard) library</p>
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// pair
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">auto</span> <span class="n">p</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="s">&#34;str&#34;</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// struct
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Student</span> <span class="n">s</span><span class="p">{</span><span class="s">&#34;Sarah&#34;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s">&#34;TA&#34;</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="p">[</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">staff</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div></div>
         </div>
     </div>
-<h3 id="the-stl" class="headerLink">
-    <a href="#the-stl" class="header-mark"></a>The STL</h3><ul>
-<li>Tons at of EOL general functionality</li>
-<li>Built in classes like maps, sets, vectors</li>
-<li>Accessed through the namespace std::</li>
-<li><strong>Extremely powerful and wel-maintained</strong></li>
-</ul></div>
+<h1 id="references" class="headerLink">
+    <a href="#references" class="header-mark"></a>References</h1><p><strong>References: An alias(another name) for a named variable.</strong></p>
+<ul>
+<li>We can only create references to <strong>variables</strong>.</li>
+<li>The cpp compiler does not allocate separate memory space for references.</li>
+<li>References must have <strong>initialization.</strong></li>
+</ul>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">change_x</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// changes to x will persist
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">keep_x</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">change_x</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="c1">// a becomes a reference to x 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">keep_x</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="c1">// b becomes a copy of x 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 100
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">original</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">copy</span> <span class="o">=</span> <span class="n">original</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">ref</span> <span class="o">=</span> <span class="n">original</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// `=` automatically makes a copy, must use `&amp;` to avoid this
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="l-values-and-r-values" class="headerLink">
+    <a href="#l-values-and-r-values" class="header-mark"></a>L-values and R-values</h2><h4 id="l-values" class="headerLink">
+    <a href="#l-values" class="header-mark"></a>L-values</h4><ul>
+<li>L-values can appear on the <strong>left or right</strong> of an <code>=</code></li>
+<li>L-values <strong>have names</strong></li>
+<li>L-values are <strong>not temporary</strong></li>
+<li>L-values live until the <strong>end of the scope</strong></li>
+</ul>
+<h4 id="r-values" class="headerLink">
+    <a href="#r-values" class="header-mark"></a>R-values</h4><ul>
+<li>R-values can only appear on the <strong>right</strong> of an <code>=</code></li>
+<li>R-values <strong>don&rsquo;t have names</strong></li>
+<li>R-values are <strong>temporary</strong></li>
+<li>R-values live until <strong>the end of the line</strong></li>
+</ul>
+<h1 id="const" class="headerLink">
+    <a href="#const" class="header-mark"></a>Const</h1><p><code>const</code>: keyword indicating a variable, function or parameter <strong>can&rsquo;t be modiﬁed</strong>.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">c_vec</span><span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">};</span> <span class="c1">// a const variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">ref</span> <span class="o">=</span> <span class="n">vec</span><span class="p">;</span> <span class="c1">// a regular reference
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">c_ref</span> <span class="o">=</span> <span class="n">vec</span><span class="p">;</span> <span class="c1">// a const reference
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// OK
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">c_vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// BAD - const
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ref</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// OK
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">c_ref</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// BAD - const
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="const-references" class="headerLink">
+    <a href="#const-references" class="header-mark"></a>Const References</h2><p>Can&rsquo;t declare <strong>non-const reference to const variable</strong>.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">c_vec</span><span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">};</span> <span class="c1">// a const variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">bad_ref</span> <span class="o">=</span> <span class="n">c_vec</span><span class="p">;</span> <span class="c1">// BAD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">good_ref</span> <span class="o">=</span> <span class="n">c_vec</span><span class="p">;</span> <span class="c1">// Fixed
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<p>When do we use <strong>references/const references</strong></p>
+<ul>
+<li>If we’re working with a variable that takes up little space in memory (e.g. int, double), we don’t need to use a reference and can just copy the variable.</li>
+<li>If we need to alias the variable to modify it(e.g. in a function), we can use references.</li>
+<li>If we don’t need to modify the variable, but it’s a <strong>big variable (e.g. std::vector)</strong>, we can use const references.</li>
+</ul>
+<p>We can return references as well, but note that <strong>the parameter must be a non-const reference to return.</strong></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">&amp;</span> <span class="n">front</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">vec</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">vec</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nums</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">	<span class="n">front</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// vec = {4, 2, 3}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<p><strong>R-values can be bound to const reference</strong>.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">foo</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// `1+2` is a r-value, but can be passed in
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			    <span class="c1">// as const reference.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="const-pointers" class="headerLink">
+    <a href="#const-pointers" class="header-mark"></a>Const pointers</h2><p><strong>Const pointer means this pointer is unchangeable, but what the pointer points to is changeable.</strong></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">using</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">*</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="n">const_iterator</span> <span class="o">=</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">*</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// string * const, const ptr to non-const obj
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="n">iterator</span> <span class="n">it_c</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ok! it_c is a const pointer to non-const object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">*</span><span class="n">it_c</span> <span class="o">=</span> <span class="s">&#34;hi&#34;</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//not ok! can’t change where a const pointer points
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">it_c</span><span class="o">++</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// const string*, a non-const ptr to const obj
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">const_iterator</span> <span class="n">c_it</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// totally ok! the pointer itself is non-const
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">c_it</span><span class="o">++</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// not ok! can’t change underlying const object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">*</span><span class="n">c_it</span> <span class="o">=</span> <span class="s">&#34;hi&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// allowed! can always read a const object, just can&#39;t change
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">c_it</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="const-functions" class="headerLink">
+    <a href="#const-functions" class="header-mark"></a>Const functions</h2><p><code>const-interface:</code> All member functions marked <strong>const</strong> in a class deﬁnition. Objects of type const ClassName may only use the <strong>const-interface.</strong>
+<strong>Can&rsquo;t call a non-const function in a const function.</strong></p>
+<p>Every member function of a class that doesn&rsquo;t change its member variables should be marked const.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Str</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">size_t</span> <span class="n">size</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">bool</span> <span class="nf">empty</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">at</span><span class="p">(</span><span class="n">size_t</span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="parameter-passing-rules" class="headerLink">
+    <a href="#parameter-passing-rules" class="header-mark"></a>Parameter passing rules</h2><p>Basic parameter passing rules
+<img
+        class="lazyload"
+        data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png"
+        data-srcset="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png 1.5x, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png"
+        title="f|C|550"></p>
+<p>Advanced parameter passing rules
+<img
+        class="lazyload"
+        data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110922497.png"
+        data-srcset="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110922497.png, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110922497.png 1.5x, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110922497.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110922497.png"
+        title="f|C|550"></p></div>
 
         
 
@@ -294,32 +624,6 @@
         </div>
     <div class="related-item-container">
             <div class="related-image">
-                <a href="/2023/01/lec02_types_and_structs/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec02_types_and_structs/">CS106L: Lec02 Types and Structs</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/2023/01/lec03_streams/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec03_streams/">CS106L: Lec03 Streams</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
                 <a href="/2023/01/lec05_containers/"><img
         class="lazyload"
         data-src="/image/cs106L/title.png"
@@ -328,7 +632,7 @@
         alt="/image/cs106L/title.png"
         title="CS106L 课程笔记" height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/2023/01/lec05_containers/">CS106L: Lec05 Containers</a>
+                <a href="/2023/01/lec05_containers/">CS106L: Lec01 Welcome</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -341,7 +645,33 @@
         alt="/image/cs106L/title.png"
         title="CS106L 课程笔记" height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/2023/01/lec06_iterators_and_pointers/">CS106L: Lec06 Iterators and Pointers</a>
+                <a href="/2023/01/lec06_iterators_and_pointers/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec07_classes/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec07_classes/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec08_templates/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec08_templates/">CS106L: Lec01 Welcome</a>
             </h2>
         </div>
     
@@ -360,7 +690,7 @@
             <div class="post-info-md"><span><a class="link-to-mardown" href=/2023/01/lec04_init_and_ref/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec04_init_and_ref/" data-title="CS106L: Lec04 Initialization and Reference" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec04_init_and_ref/" data-title="CS106L: Lec04 Initialization and Reference" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec04_init_and_ref/" data-title="CS106L: Lec03 Initialization and Reference" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec04_init_and_ref/" data-title="CS106L: Lec03 Initialization and Reference" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -372,8 +702,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2023/01/lec05_containers/" class="prev" rel="prev" title="CS106L: Lec05 Containers"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec05 Containers</a>
-            <a href="/2023/01/lec03_streams/" class="next" rel="next" title="CS106L: Lec03 Streams">CS106L: Lec03 Streams<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/2023/01/lec03_streams/" class="prev" rel="prev" title="CS106L: Lec03 Streams"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec03 Streams</a>
+            <a href="/2023/01/lec02_types_and_structs/" class="next" rel="next" title="CS106L: Lec02 Types and Structs">CS106L: Lec02 Types and Structs<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.

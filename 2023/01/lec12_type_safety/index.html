@@ -49,7 +49,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">CS106L: Lec12 Type Safety - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec12 Type Safety" />
+    <title class="pjax-title">CS106L: Lec01 Welcome - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec01 Welcome" />
 <meta property="og:description" content="CS106L 课程笔记" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xuer04.github.io/2023/01/lec12_type_safety/" /><meta property="og:image" content="https://xuer04.github.io/image/fig.png"/><meta property="article:section" content="posts" />
@@ -58,7 +58,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://xuer04.github.io/image/fig.png"/>
 
-<meta name="twitter:title" content="CS106L: Lec12 Type Safety"/>
+<meta name="twitter:title" content="CS106L: Lec01 Welcome"/>
 <meta name="twitter:description" content="CS106L 课程笔记"/>
 <meta name="application-name" content="Zicx の Blog">
 <meta name="apple-mobile-web-app-title" content="Zicx の Blog">
@@ -69,12 +69,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "CS106L: Lec12 Type Safety",
+        "headline": "CS106L: Lec01 Welcome",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec12_type_safety\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  205 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  212 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec12_type_safety\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,21 +175,14 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
-      </ul>
-    </li>
+    <li><a href="#type-safety">Type safety</a></li>
   </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec12 Type Safety</h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec01 Welcome</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%AF%BE%E7%A8%8B/"><i class="far fa-folder fa-fw"></i>课程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 205 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 212 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -204,74 +197,76 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
-      </ul>
-    </li>
+    <li><a href="#type-safety">Type safety</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="about-cs106l" class="headerLink">
-    <a href="#about-cs106l" class="header-mark"></a>About CS106L</h1><ul>
-<li>Focus is on <strong>code:</strong> What makes it good, what powerful and elegant code looks like</li>
-<li>The real deal: No Stanford libraries, only STL</li>
-<li>Understand how and why C++ was made</li>
+            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
+    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
+<li>[[#Type safety|Type safety]]</li>
 </ul>
-<h1 id="c-history" class="headerLink">
-    <a href="#c-history" class="header-mark"></a>C++ History</h1><h3 id="assembly" class="headerLink">
-    <a href="#assembly" class="header-mark"></a>Assembly</h3><p>Benefits</p>
-<ul>
-<li>Unbelievably <strong>simple</strong> instructions</li>
-<li>Extremely <strong>fast</strong> (when well-written)</li>
-<li><strong>Complete control</strong> over your program</li>
-</ul>
-<p>Drawbacks</p>
-<ul>
-<li>A lot of code to do simple tasks</li>
-<li>Very hard to understand</li>
-<li>Extremely unportable (hard to make work across all systems)</li>
-</ul>
-<h3 id="invention-of-c" class="headerLink">
-    <a href="#invention-of-c" class="header-mark"></a>Invention of C</h3><p>C made it easy to write code that was</p>
-<ul>
-<li>Fast</li>
-<li>Simple</li>
-<li>Cross-platform</li>
-</ul>
-<p>Weakness</p>
-<ul>
-<li><strong>No objects or classes</strong></li>
-<li>Diﬃcult to write <strong>generic code</strong></li>
-<li><strong>Tedious</strong> when writing large programs</li>
-</ul>
-<h3 id="design-philosophy-of-c" class="headerLink">
-    <a href="#design-philosophy-of-c" class="header-mark"></a>Design Philosophy of C++</h3><p><a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines" target="_blank" rel="noopener noreffer">Cpp Core Guidelines</a></p>
-<ul>
-<li><strong>Only add features if they solve an actual problem</strong></li>
-<li>Express ideas and intent directly in code</li>
-<li><strong>Compartmentalization(区块化)</strong> is key</li>
-<li>Do not waste time or space</li>
-<li><strong>Enforce safety at compile time whenever possible</strong></li>
-</ul>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>C++: Basic Syntax + the STL</p>
-<p>Standard C++: Basic Syntax + std(standard) library</p>
+<h2 id="type-safety" class="headerLink">
+    <a href="#type-safety" class="header-mark"></a>Type safety</h2><p><code>Type Safety</code>: The extent to which a language prevents typing errors and guarantees the behavior of programs.</p>
+<p><code>Undeﬁned Behavior(UB)</code>: Function could crash, could give us garbage, could accidentally give us some actual value.</p>
+<p><code>std::optional&lt;T&gt;</code>: A template class which will either contain a value of type T or contain nothing (expressed as <code>nullopt</code>). <code>std::optional</code> is a tool that could make this happen: you can return either a value or nothing.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
+</span></span><span class="line"><span class="cl">int main(){
+</span></span><span class="line"><span class="cl">	std::optional&lt;int&gt; num1 = {}; // num1 does not have a value
+</span></span><span class="line"><span class="cl">	// std::optional num1 = {2};     // type deduction
+</span></span><span class="line"><span class="cl">	num1 = std::optional&lt;int&gt;{1}; // now it does!
+</span></span><span class="line"><span class="cl">	num1 = std::nullopt; // now it doesn&#39;t anymore
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">	return 0;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
-        </div>
-    </div>
-<h3 id="the-stl" class="headerLink">
-    <a href="#the-stl" class="header-mark"></a>The STL</h3><ul>
-<li>Tons at of EOL general functionality</li>
-<li>Built in classes like maps, sets, vectors</li>
-<li>Accessed through the namespace std::</li>
-<li><strong>Extremely powerful and wel-maintained</strong></li>
+</div><p><code>std::optional</code> interface</p>
+<ul>
+<li>.value()
+<ul>
+<li>returns the <strong>contained value</strong> or throws <code>bad_optional_access</code> error</li>
+</ul>
+</li>
+<li>.value_or(valueType val)
+<ul>
+<li>returns the contained value or default value(parameter val)</li>
+</ul>
+</li>
+<li>.has_value()
+<ul>
+<li>returns true if contained value exists, false otherwise</li>
+</ul>
+</li>
+</ul>
+<p><code>std::optional</code> &ldquo;monadic&rdquo; interface(C++23)</p>
+<ul>
+<li>.and_then(function f)
+<ul>
+<li>returns the result of calling f(value) if contained value exists, otherwise null_opt (f must return optional)</li>
+</ul>
+</li>
+<li>.or_else(function f)
+<ul>
+<li>returns value if it exists, otherwise returns result of calling f</li>
+</ul>
+</li>
+<li>.transform(function f)
+<ul>
+<li>returns the result of calling f(value) if contained value exists, otherwise null_opt (f must return optional<valueType>)</li>
+</ul>
+</li>
 </ul></div>
 
         
@@ -294,45 +289,6 @@
         </div>
     <div class="related-item-container">
             <div class="related-image">
-                <a href="/2023/01/lec02_types_and_structs/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec02_types_and_structs/">CS106L: Lec02 Types and Structs</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/2023/01/lec03_streams/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec03_streams/">CS106L: Lec03 Streams</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/2023/01/lec04_init_and_ref/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec04_init_and_ref/">CS106L: Lec04 Initialization and Reference</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
                 <a href="/2023/01/lec05_containers/"><img
         class="lazyload"
         data-src="/image/cs106L/title.png"
@@ -341,7 +297,46 @@
         alt="/image/cs106L/title.png"
         title="CS106L 课程笔记" height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/2023/01/lec05_containers/">CS106L: Lec05 Containers</a>
+                <a href="/2023/01/lec05_containers/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec06_iterators_and_pointers/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec06_iterators_and_pointers/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec07_classes/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec07_classes/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec08_templates/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec08_templates/">CS106L: Lec01 Welcome</a>
             </h2>
         </div>
     
@@ -360,7 +355,7 @@
             <div class="post-info-md"><span><a class="link-to-mardown" href=/2023/01/lec12_type_safety/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec12_type_safety/" data-title="CS106L: Lec12 Type Safety" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec12_type_safety/" data-title="CS106L: Lec12 Type Safety" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec12_type_safety/" data-title="CS106L: Lec01 Welcome" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec12_type_safety/" data-title="CS106L: Lec01 Welcome" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -372,8 +367,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2023/01/lec13_special_topics/" class="prev" rel="prev" title="CS106L: Lec13 Special Topics"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec13 Special Topics</a>
-            <a href="/2023/01/lec11_special_member_functions/" class="next" rel="next" title="CS106L: Lec11 Special Member Functions">CS106L: Lec11 Special Member Functions<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/2023/01/lec13_special_topics/" class="prev" rel="prev" title="CS106L: Lec01 Welcome"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec01 Welcome</a>
+            <a href="/2023/01/lec11_special_member_functions/" class="next" rel="next" title="CS106L: Lec01 Welcome">CS106L: Lec01 Welcome<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.

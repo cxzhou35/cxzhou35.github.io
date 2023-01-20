@@ -1,60 +1,59 @@
-# CS106L: Lec13 Special Topics
+# CS106L: Lec01 Welcome
 
 
 <!--more-->
 
-# About CS106L
+# TOC
+- [[#RALL|RALL]]
+- [[#Smart Pointers|Smart Pointers]]
 
-- Focus is on **code:** What makes it good, what powerful and elegant code looks like
-- The real deal: No Stanford libraries, only STL
-- Understand how and why C++ was made
+## RALL
 
-# C++ History
+`Code path`: A single run-through of the code that the computer would see.
 
-### Assembly
+![f|C|600](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171548872.png)
 
-Benefits
-- Unbelievably **simple** instructions
-- Extremely **fast** (when well-written)
-- **Complete control** over your program
+When a function has an error, it can crash the program.
+- This is known as **"throwing an exception"**.
+However, we can write code to handle these to let us continue.
+- This is **"catching an exception"**.
 
-Drawbacks
-- A lot of code to do simple tasks
-- Very hard to understand
-- Extremely unportable (hard to make work across all systems)
+There are (at least) 23 code paths in the code before
+- (1) copy constructor of Person parameter may throw
+- (5) constructor of temp string may throw
+- (6) call to favorite_food, favorite_drink, ﬁrst (2), last(2), may throw
+- (10) operators may be user-overloaded, thus may throw
+- (1) copy constructor of string for return value may throw
 
-### Invention of C
+There are many resources that need to be returned after use.
 
-C made it easy to write code that was
-- Fast
-- Simple
-- Cross-platform
+![f|C|550](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171552097.png)
 
-Weakness
-- **No objects or classes**
-- Diﬃcult to write **generic code**
-- **Tedious** when writing large programs
+`RAII`: Resource Acquisition is Initialization
+In RAII
+- All resources used by a class **should be acquired in the constructor**
+- All resources used by a class **should be released in the destructor**
+- Avoid calling `new` and `delete` explicitly
 
-### Design Philosophy of C++
+## Smart Pointers
 
-[Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- **Only add features if they solve an actual problem**
-- Express ideas and intent directly in code
-- **Compartmentalization(区块化)** is key
-- Do not waste time or space
-- **Enforce safety at compile time whenever possible**
+There are three types of `smart (RAII-safe) pointers`:
+- std::unique_ptr
+	- Uniquely owns its resource, **can't be copied**
+	- When a `unique_ptr` goes out of scope, it **frees the memory associated with it**
+- std::shared_ptr
+	- **Can make copies**, destructed when underlying memory goes out of scope
+- std::weak_ptr
+	- Models temporary ownership: when an object only needs to be accessed if it exists **(convert to shared_ptr to access)**
 
-{{< admonition note>}}
-C++: Basic Syntax + the STL
+```ad-example
+```cpp
+std::unique_ptr<T> up{new T};
+std::unique_ptr<T> up = std::make_unique<T>();
 
-Standard C++: Basic Syntax + std(standard) library
-{{< /admonition >}}
+std::shared_ptr<T> sp{new T};
+std::shared_ptr<T> sp = std::make_shared<T>();
 
-### The STL
-
-- Tons at of EOL general functionality
-- Built in classes like maps, sets, vectors
-- Accessed through the namespace std::
-- **Extremely powerful and wel-maintained**
-
+std::weak_ptr<T> wp = sp; // can only be copy/move constructed(or empty)
+```
 

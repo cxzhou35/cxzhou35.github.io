@@ -49,7 +49,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">CS106L: Lec09 Functions and Lambdas - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec09 Functions and Lambdas" />
+    <title class="pjax-title">CS106L: Lec01 Welcome - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec01 Welcome" />
 <meta property="og:description" content="CS106L 课程笔记" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/" /><meta property="og:image" content="https://xuer04.github.io/image/fig.png"/><meta property="article:section" content="posts" />
@@ -58,23 +58,23 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://xuer04.github.io/image/fig.png"/>
 
-<meta name="twitter:title" content="CS106L: Lec09 Functions and Lambdas"/>
+<meta name="twitter:title" content="CS106L: Lec01 Welcome"/>
 <meta name="twitter:description" content="CS106L 课程笔记"/>
 <meta name="application-name" content="Zicx の Blog">
 <meta name="apple-mobile-web-app-title" content="Zicx の Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec10_operator_ovloading/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec08_templates/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec10_operator_overloading/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec08_templates/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "CS106L: Lec09 Functions and Lambdas",
+        "headline": "CS106L: Lec01 Welcome",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec09_funcs_and_lambdas\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  205 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  406 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec09_funcs_and_lambdas\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,21 +175,16 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
-      </ul>
-    </li>
+    <li><a href="#predicate-functions">Predicate Functions</a></li>
+    <li><a href="#lambdas">Lambdas</a></li>
+    <li><a href="#functors">Functors</a></li>
   </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec09 Functions and Lambdas</h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec01 Welcome</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%AF%BE%E7%A8%8B/"><i class="far fa-folder fa-fw"></i>课程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 205 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 406 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -204,75 +199,170 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
-      </ul>
-    </li>
+    <li><a href="#predicate-functions">Predicate Functions</a></li>
+    <li><a href="#lambdas">Lambdas</a></li>
+    <li><a href="#functors">Functors</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="about-cs106l" class="headerLink">
-    <a href="#about-cs106l" class="header-mark"></a>About CS106L</h1><ul>
-<li>Focus is on <strong>code:</strong> What makes it good, what powerful and elegant code looks like</li>
-<li>The real deal: No Stanford libraries, only STL</li>
-<li>Understand how and why C++ was made</li>
+            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
+    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
+<li>[[#Predicate Functions|Predicate Functions]]</li>
+<li>[[#Lambdas|Lambdas]]</li>
+<li>[[#Functors|Functors]]</li>
 </ul>
-<h1 id="c-history" class="headerLink">
-    <a href="#c-history" class="header-mark"></a>C++ History</h1><h3 id="assembly" class="headerLink">
-    <a href="#assembly" class="header-mark"></a>Assembly</h3><p>Benefits</p>
-<ul>
-<li>Unbelievably <strong>simple</strong> instructions</li>
-<li>Extremely <strong>fast</strong> (when well-written)</li>
-<li><strong>Complete control</strong> over your program</li>
-</ul>
-<p>Drawbacks</p>
-<ul>
-<li>A lot of code to do simple tasks</li>
-<li>Very hard to understand</li>
-<li>Extremely unportable (hard to make work across all systems)</li>
-</ul>
-<h3 id="invention-of-c" class="headerLink">
-    <a href="#invention-of-c" class="header-mark"></a>Invention of C</h3><p>C made it easy to write code that was</p>
-<ul>
-<li>Fast</li>
-<li>Simple</li>
-<li>Cross-platform</li>
-</ul>
-<p>Weakness</p>
-<ul>
-<li><strong>No objects or classes</strong></li>
-<li>Diﬃcult to write <strong>generic code</strong></li>
-<li><strong>Tedious</strong> when writing large programs</li>
-</ul>
-<h3 id="design-philosophy-of-c" class="headerLink">
-    <a href="#design-philosophy-of-c" class="header-mark"></a>Design Philosophy of C++</h3><p><a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines" target="_blank" rel="noopener noreffer">Cpp Core Guidelines</a></p>
-<ul>
-<li><strong>Only add features if they solve an actual problem</strong></li>
-<li>Express ideas and intent directly in code</li>
-<li><strong>Compartmentalization(区块化)</strong> is key</li>
-<li>Do not waste time or space</li>
-<li><strong>Enforce safety at compile time whenever possible</strong></li>
-</ul>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>C++: Basic Syntax + the STL</p>
-<p>Standard C++: Basic Syntax + std(standard) library</p>
+<h2 id="predicate-functions" class="headerLink">
+    <a href="#predicate-functions" class="header-mark"></a>Predicate Functions</h2><p>Any function that <strong>returns a boolean</strong> value is a <code>predicate.</code> A predicate can have <strong>any amount of parameters</strong>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
+</span></span><span class="line"><span class="cl">bool isVowel(char c){
+</span></span><span class="line"><span class="cl">	std::string vowel = &#34;aeiou&#34;;
+</span></span><span class="line"><span class="cl">	return vowel.find(c) != std::string::npos;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// to use predicate
+</span></span><span class="line"><span class="cl">template &lt;typename InputIt, typename UniPred&gt;
+</span></span><span class="line"><span class="cl">int count_occurrences(InputIt begin, InputIt end, UniPred pred){
+</span></span><span class="line"><span class="cl">	int count = 0;
+</span></span><span class="line"><span class="cl">	for (auto iter = begin; iter != end; ++iter){
+</span></span><span class="line"><span class="cl">		if(pred(*iter)) count++;
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	return count;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">std::string str = &#34;xadia&#34;;
+</span></span><span class="line"><span class="cl">count_occurrences(str.begin(), str.end(), isVowel);
+</span></span></code></pre></td></tr></table>
 </div>
-        </div>
-    </div>
-<h3 id="the-stl" class="headerLink">
-    <a href="#the-stl" class="header-mark"></a>The STL</h3><ul>
-<li>Tons at of EOL general functionality</li>
-<li>Built in classes like maps, sets, vectors</li>
-<li>Accessed through the namespace std::</li>
-<li><strong>Extremely powerful and wel-maintained</strong></li>
-</ul></div>
+</div><p>Here <code>UniPred</code> is called a <code>function pointer</code>.</p>
+<ul>
+<li>Function pointers can be treated just like other pointers.</li>
+<li>They can be passed around like variables as parameters or in template functions.</li>
+<li>They can be called like functions.</li>
+</ul>
+<h2 id="lambdas" class="headerLink">
+    <a href="#lambdas" class="header-mark"></a>Lambdas</h2><p><code>Lambdas</code> are <strong>inline,</strong> <strong>anonymous</strong> functions that can know about variables declared in their same scope.
+<img
+        class="lazyload"
+        data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png"
+        data-srcset="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png 1.5x, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png"
+        title="f|C|500"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">```</span><span class="n">cpp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">complete</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">lambda</span><span class="w"> </span><span class="n">expression</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">[</span><span class="w"> </span><span class="n">capture</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="nf">mutable</span><span class="p">(</span><span class="n">optional</span><span class="p">)</span><span class="w"> </span><span class="nf">constexpr</span><span class="p">(</span><span class="n">optional</span><span class="p">)(</span><span class="n">c</span><span class="o">++</span><span class="mi">17</span><span class="p">)</span><span class="w"> </span><span class="n">exception</span><span class="w"> </span><span class="n">attribute</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">return_type</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="err">}</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="k">limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">auto</span><span class="w"> </span><span class="n">isMoreThan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="k">limit</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">limit</span><span class="p">;</span><span class="err">}</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nf">isMoreThan</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="no">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">`</span><span class="kt">int</span><span class="o">`</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">auto</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="err">}</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">assignment</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">forbidden</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">auto</span><span class="w"> </span><span class="n">funa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s2">&#34;A&#34;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="err">}</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">auto</span><span class="w"> </span><span class="n">funb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s2">&#34;B&#34;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="err">}</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">funa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funb</span><span class="p">;</span><span class="w">   </span><span class="o">//</span><span class="w"> </span><span class="n">error</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">auto</span><span class="w"> </span><span class="n">func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funa</span><span class="p">;</span><span class="w">   </span><span class="o">//</span><span class="w"> </span><span class="n">ok</span><span class="p">,</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">permitted</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Lambdas can capture any outside variable by using <code>[]</code>, <strong>both by reference and by value</strong>.</p>
+<p><img
+        class="lazyload"
+        data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png"
+        data-srcset="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png 1.5x, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png"
+        title="f|C|500"></p>
+<ul>
+<li>Use a lambda when you need a <strong>short function or to access local variables in your function</strong>.</li>
+<li>If you need more logic or overloading, use function pointers.</li>
+</ul>
+<p>Whenever a lambda expression is defined, the compiler will automatically generate an <strong>anonymous class</strong>, we call it <code>closure class</code>, this class overloads <code>()</code> operator of course.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
+</span></span><span class="line"><span class="cl">class Closure
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">public:
+</span></span><span class="line"><span class="cl">    // ...
+</span></span><span class="line"><span class="cl">    ReturnType operator(params) const { body };
+</span></span><span class="line"><span class="cl">};
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="functors" class="headerLink">
+    <a href="#functors" class="header-mark"></a>Functors</h2><p>A <code>functor</code> is any <strong>class</strong> that provides an implementation of <strong>operator().</strong> They can create <strong>closures</strong> of &ldquo;customized&rdquo; functions.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">**Actually, this name never appears in the standard c++, we usually call it `function object`.**
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>Closure</code>: a single instantiation of a functor object.</p>
+<p><strong>The STL  standard function object:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n">return_type</span><span class="p">(</span><span class="n">param_types</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">func</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
 
         
 
@@ -294,45 +384,6 @@
         </div>
     <div class="related-item-container">
             <div class="related-image">
-                <a href="/2023/01/lec02_types_and_structs/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec02_types_and_structs/">CS106L: Lec02 Types and Structs</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/2023/01/lec03_streams/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec03_streams/">CS106L: Lec03 Streams</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/2023/01/lec04_init_and_ref/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec04_init_and_ref/">CS106L: Lec04 Initialization and Reference</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
                 <a href="/2023/01/lec05_containers/"><img
         class="lazyload"
         data-src="/image/cs106L/title.png"
@@ -341,7 +392,46 @@
         alt="/image/cs106L/title.png"
         title="CS106L 课程笔记" height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/2023/01/lec05_containers/">CS106L: Lec05 Containers</a>
+                <a href="/2023/01/lec05_containers/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec06_iterators_and_pointers/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec06_iterators_and_pointers/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec07_classes/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec07_classes/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec08_templates/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec08_templates/">CS106L: Lec01 Welcome</a>
             </h2>
         </div>
     
@@ -360,7 +450,7 @@
             <div class="post-info-md"><span><a class="link-to-mardown" href=/2023/01/lec09_funcs_and_lambdas/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/" data-title="CS106L: Lec09 Functions and Lambdas" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/" data-title="CS106L: Lec09 Functions and Lambdas" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/" data-title="CS106L: Lec01 Welcome" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/" data-title="CS106L: Lec01 Welcome" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -372,8 +462,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2023/01/lec10_operator_ovloading/" class="prev" rel="prev" title="CS106L: Lec10 Operator Overloading"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec10 Operator Overloading</a>
-            <a href="/2023/01/lec08_templates/" class="next" rel="next" title="CS106L: Lec08 Templates">CS106L: Lec08 Templates<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/2023/01/lec10_operator_overloading/" class="prev" rel="prev" title="CS106L: Lec01 Welcome"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec01 Welcome</a>
+            <a href="/2023/01/lec08_templates/" class="next" rel="next" title="CS106L: Lec01 Welcome">CS106L: Lec01 Welcome<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.

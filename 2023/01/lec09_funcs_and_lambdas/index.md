@@ -1,60 +1,99 @@
-# CS106L: Lec09 Functions and Lambdas
+# CS106L: Lec01 Welcome
 
 
 <!--more-->
 
-# About CS106L
+# TOC
+- [[#Predicate Functions|Predicate Functions]]
+- [[#Lambdas|Lambdas]]
+- [[#Functors|Functors]]
 
-- Focus is on **code:** What makes it good, what powerful and elegant code looks like
-- The real deal: No Stanford libraries, only STL
-- Understand how and why C++ was made
+## Predicate Functions
 
-# C++ History
+Any function that **returns a boolean** value is a `predicate.` A predicate can have **any amount of parameters**.
 
-### Assembly
+```ad-example
+```cpp
+bool isVowel(char c){
+	std::string vowel = "aeiou";
+	return vowel.find(c) != std::string::npos;
+}
 
-Benefits
-- Unbelievably **simple** instructions
-- Extremely **fast** (when well-written)
-- **Complete control** over your program
+// to use predicate
+template <typename InputIt, typename UniPred>
+int count_occurrences(InputIt begin, InputIt end, UniPred pred){
+	int count = 0;
+	for (auto iter = begin; iter != end; ++iter){
+		if(pred(*iter)) count++;
+	}
+	return count;
+}
 
-Drawbacks
-- A lot of code to do simple tasks
-- Very hard to understand
-- Extremely unportable (hard to make work across all systems)
+std::string str = "xadia";
+count_occurrences(str.begin(), str.end(), isVowel);
+```
 
-### Invention of C
+Here `UniPred` is called a `function pointer`.
+- Function pointers can be treated just like other pointers.
+- They can be passed around like variables as parameters or in template functions.
+- They can be called like functions.
 
-C made it easy to write code that was
-- Fast
-- Simple
-- Cross-platform
+## Lambdas
 
-Weakness
-- **No objects or classes**
-- Diﬃcult to write **generic code**
-- **Tedious** when writing large programs
+`Lambdas` are **inline,** **anonymous** functions that can know about variables declared in their same scope.
+![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png)
 
-### Design Philosophy of C++
+```ad-example
+```cpp
+// complete format of lambda expression
+[ capture list ] ( params ) mutable(optional) constexpr(optional)(c++17) exception attribute -> return_type { function body } 
 
-[Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- **Only add features if they solve an actual problem**
-- Express ideas and intent directly in code
-- **Compartmentalization(区块化)** is key
-- Do not waste time or space
-- **Enforce safety at compile time whenever possible**
+int limit = 5;
+auto isMoreThan = [limit] (int n) {return n > limit;};
+isMoreThan(6); // true
 
-{{< admonition note>}}
-C++: Basic Syntax + the STL
+// specify the return type `int` 
+auto add = [](int a, int b) -> int { return a + b; };
 
-Standard C++: Basic Syntax + std(standard) library
-{{< /admonition >}}
+// assignment is forbidden
+auto funa = [] { cout << "A" << endl; };
+auto funb = [] { cout << "B" << endl; };
 
-### The STL
+funa = funb;   // error
+auto func = funa;   // ok, copy is permitted
+```
 
-- Tons at of EOL general functionality
-- Built in classes like maps, sets, vectors
-- Accessed through the namespace std::
-- **Extremely powerful and wel-maintained**
+Lambdas can capture any outside variable by using `[]`, **both by reference and by value**.
 
+![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png)
+
+- Use a lambda when you need a **short function or to access local variables in your function**.
+- If you need more logic or overloading, use function pointers.
+
+Whenever a lambda expression is defined, the compiler will automatically generate an **anonymous class**, we call it `closure class`, this class overloads `()` operator of course.
+
+```ad-example
+```cpp
+class Closure
+{
+public:
+    // ...
+    ReturnType operator(params) const { body };
+};
+```
+
+## Functors
+
+A `functor` is any **class** that provides an implementation of **operator().** They can create **closures** of "customized" functions.
+
+```ad-warning
+**Actually, this name never appears in the standard c++, we usually call it `function object`.**
+```
+
+`Closure`: a single instantiation of a functor object.
+
+**The STL  standard function object:**
+```cpp
+std::function<return_type(param_types)> func;
+```
 

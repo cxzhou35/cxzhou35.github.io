@@ -49,7 +49,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title class="pjax-title">CS106L: Lec05 Containers - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec05 Containers" />
+    <title class="pjax-title">CS106L: Lec01 Welcome - Zicx の Blog</title><meta name="Description" content="CS106L 课程笔记"><meta property="og:title" content="CS106L: Lec01 Welcome" />
 <meta property="og:description" content="CS106L 课程笔记" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xuer04.github.io/2023/01/lec05_containers/" /><meta property="og:image" content="https://xuer04.github.io/image/fig.png"/><meta property="article:section" content="posts" />
@@ -58,23 +58,23 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://xuer04.github.io/image/fig.png"/>
 
-<meta name="twitter:title" content="CS106L: Lec05 Containers"/>
+<meta name="twitter:title" content="CS106L: Lec01 Welcome"/>
 <meta name="twitter:description" content="CS106L 课程笔记"/>
 <meta name="application-name" content="Zicx の Blog">
 <meta name="apple-mobile-web-app-title" content="Zicx の Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec05_containers/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec04_init_and_ref/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec05_containers/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec01_welcome/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "CS106L: Lec05 Containers",
+        "headline": "CS106L: Lec01 Welcome",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec05_containers\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  205 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  704 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec05_containers\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,22 +175,34 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#stl">STL</a></li>
+    <li><a href="#container">Container</a>
       <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
+        <li><a href="#stl-containers">STL Containers</a>
+          <ul>
+            <li><a href="#vector">Vector</a></li>
+            <li><a href="#deque">Deque</a></li>
+            <li><a href="#map">Map</a></li>
+            <li><a href="#multimap">Multimap</a></li>
+            <li><a href="#set">Set</a></li>
+          </ul>
+        </li>
+        <li><a href="#container-adaptors">Container Adaptors</a>
+          <ul>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#queue">Queue</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec05 Containers</h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec01 Welcome</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%AF%BE%E7%A8%8B/"><i class="far fa-folder fa-fw"></i>课程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 205 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 704 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         data-src="/image/cs106L/title.png"
@@ -204,75 +216,268 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#stl">STL</a></li>
+    <li><a href="#container">Container</a>
       <ul>
-        <li><a href="#assembly">Assembly</a></li>
-        <li><a href="#invention-of-c">Invention of C</a></li>
-        <li><a href="#design-philosophy-of-c">Design Philosophy of C++</a></li>
-        <li><a href="#the-stl">The STL</a></li>
+        <li><a href="#stl-containers">STL Containers</a>
+          <ul>
+            <li><a href="#vector">Vector</a></li>
+            <li><a href="#deque">Deque</a></li>
+            <li><a href="#map">Map</a></li>
+            <li><a href="#multimap">Multimap</a></li>
+            <li><a href="#set">Set</a></li>
+          </ul>
+        </li>
+        <li><a href="#container-adaptors">Container Adaptors</a>
+          <ul>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#queue">Queue</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="about-cs106l" class="headerLink">
-    <a href="#about-cs106l" class="header-mark"></a>About CS106L</h1><ul>
-<li>Focus is on <strong>code:</strong> What makes it good, what powerful and elegant code looks like</li>
-<li>The real deal: No Stanford libraries, only STL</li>
-<li>Understand how and why C++ was made</li>
-</ul>
-<h1 id="c-history" class="headerLink">
-    <a href="#c-history" class="header-mark"></a>C++ History</h1><h3 id="assembly" class="headerLink">
-    <a href="#assembly" class="header-mark"></a>Assembly</h3><p>Benefits</p>
+            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
+    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
+<li>[[#STL|STL]]</li>
+<li>[[#Container|Container]]
 <ul>
-<li>Unbelievably <strong>simple</strong> instructions</li>
-<li>Extremely <strong>fast</strong> (when well-written)</li>
-<li><strong>Complete control</strong> over your program</li>
-</ul>
-<p>Drawbacks</p>
+<li>[[#Container#STL Containers|STL Containers]]
 <ul>
-<li>A lot of code to do simple tasks</li>
-<li>Very hard to understand</li>
-<li>Extremely unportable (hard to make work across all systems)</li>
+<li>[[#STL Containers#Vector|Vector]]</li>
+<li>[[#STL Containers#Deque|Deque]]</li>
+<li>[[#STL Containers#Map|Map]]</li>
+<li>[[#STL Containers#Multimap|Multimap]]</li>
+<li>[[#STL Containers#Set|Set]]</li>
 </ul>
-<h3 id="invention-of-c" class="headerLink">
-    <a href="#invention-of-c" class="header-mark"></a>Invention of C</h3><p>C made it easy to write code that was</p>
+</li>
+<li>[[#Container#Container Adaptors|Container Adaptors]]
 <ul>
-<li>Fast</li>
-<li>Simple</li>
-<li>Cross-platform</li>
+<li>[[#Container Adaptors#Stack|Stack]]</li>
+<li>[[#Container Adaptors#Queue|Queue]]</li>
 </ul>
-<p>Weakness</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="stl" class="headerLink">
+    <a href="#stl" class="header-mark"></a>STL</h2><p><code>Standard template library</code> includes</p>
 <ul>
-<li><strong>No objects or classes</strong></li>
-<li>Diﬃcult to write <strong>generic code</strong></li>
-<li><strong>Tedious</strong> when writing large programs</li>
+<li>Algorithms</li>
+<li>Functors/Lambdas</li>
+<li>Inerators</li>
+<li>Containers</li>
+<li>Adaptors</li>
 </ul>
-<h3 id="design-philosophy-of-c" class="headerLink">
-    <a href="#design-philosophy-of-c" class="header-mark"></a>Design Philosophy of C++</h3><p><a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines" target="_blank" rel="noopener noreffer">Cpp Core Guidelines</a></p>
+<h2 id="container" class="headerLink">
+    <a href="#container" class="header-mark"></a>Container</h2><p><code>Container</code>: An object that allows us to collect other objects together and interact with them in some way.</p>
 <ul>
-<li><strong>Only add features if they solve an actual problem</strong></li>
-<li>Express ideas and intent directly in code</li>
-<li><strong>Compartmentalization(区块化)</strong> is key</li>
-<li>Do not waste time or space</li>
-<li><strong>Enforce safety at compile time whenever possible</strong></li>
+<li>Organization: Related data can be packaged together.</li>
+<li>Standardization: Common features are expected and implemented.</li>
+<li>Abstraction: Complex ideas made easier to utilize by clients.</li>
 </ul>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>C++: Basic Syntax + the STL</p>
-<p>Standard C++: Basic Syntax + std(standard) library</p>
+<h3 id="stl-containers" class="headerLink">
+    <a href="#stl-containers" class="header-mark"></a>STL Containers</h3><ul>
+<li>Familiar: vector, stack, queue, set, map</li>
+<li>Unfamiliar:
+<ul>
+<li><code>array</code> : An array is the primitive form of a vector, fixed size in a strict sequence.</li>
+<li><code>deque</code> : A deque is a double ended queue.</li>
+<li>list: A list is a doubly linked list, can loop through in either direction.</li>
+</ul>
+</li>
+</ul>
+<p>Two types of containers</p>
+<ul>
+<li>Sequence:
+<ul>
+<li>Containers that can be accessed sequentially.</li>
+<li>Provides access to <strong>sequences of elements</strong>.</li>
+<li>Anything with an inherent order goes here.</li>
+<li>vectors, deques, lists &hellip;</li>
+</ul>
+</li>
+<li>Associative
+<ul>
+<li>Containers that don’t necessarily have a sequential order.</li>
+<li>More easily searched, like maps and sets.</li>
+<li>maps, sets, unordered maps/sets &hellip;</li>
+</ul>
+</li>
+</ul>
+<h4 id="vector" class="headerLink">
+    <a href="#vector" class="header-mark"></a>Vector</h4><p>At a high level, a vector is an <strong>ordered collection of elements of the any same type</strong> that can <strong>grow and shrink</strong> in size.</p>
+<p>We keep track of a few member variables</p>
+<ul>
+<li><code>size</code>: number of elements in the vector</li>
+<li><code>capacity</code>: space allocated for elements</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// initialization of vector
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec1</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span> <span class="c1">// {3, 5}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">// {5, 5, 5}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// add element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">vec1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// {3, 5, 4}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// get element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">vec1</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// a = 3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">vec1</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span> <span class="c1">// b = 5
+</span></span></span></code></pre></td></tr></table>
 </div>
-        </div>
-    </div>
-<h3 id="the-stl" class="headerLink">
-    <a href="#the-stl" class="header-mark"></a>The STL</h3><ul>
-<li>Tons at of EOL general functionality</li>
-<li>Built in classes like maps, sets, vectors</li>
-<li>Accessed through the namespace std::</li>
-<li><strong>Extremely powerful and wel-maintained</strong></li>
-</ul></div>
+</div><h4 id="deque" class="headerLink">
+    <a href="#deque" class="header-mark"></a>Deque</h4><p>A deque is a double ended queue, can do everything a vector can do, unlike vector, it is possible and fast to <code>push_front</code> and <code>pop_front</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dq</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// add element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">dq</span><span class="p">.</span><span class="n">push_front</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// {2}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">dq</span><span class="p">.</span><span class="n">push_front</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// {4, 2}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">dq</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// {4, 2, 3}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// delete element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">dq</span><span class="p">.</span><span class="n">pop_front</span><span class="p">()</span> <span class="c1">// {2, 3}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">dq</span><span class="p">.</span><span class="n">pop_back</span><span class="p">()</span> <span class="c1">// {2}
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">**Which to use?**
+</span></span><span class="line"><span class="cl">vector is the type of sequence that should be used by **default**, deque is the data structure of choice when most insertions and deletions take place at the beginning or at the end of the sequence.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;p align=&#34;right&#34;&gt;—— C++ ISO Standard&lt;/p&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Choosing sequence containers</strong></p>
+<p><img
+        class="lazyload"
+        data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png"
+        data-srcset="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png 1.5x, https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png"
+        title="image.png"></p>
+<h4 id="map" class="headerLink">
+    <a href="#map" class="header-mark"></a>Map</h4><p>Maps are implemented with <strong>key-value pairs with unique keys</strong>, <code>std::pair&lt;const key, value&gt;</code>
+Based on <strong>ordering property of keys</strong>, keys need to be comparable using <code>&lt;</code> operator.</p>
+<ul>
+<li><strong>Ordered maps/sets</strong> require a <strong>comparison operator</strong> to be deﬁned, keys in sorted order.</li>
+<li><strong>Unordered maps/sets</strong> require a <strong>hash function</strong> to be deﬁned, keys are unordered.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
+</span></span><span class="line"><span class="cl">std::map&lt;int, string&gt; mymap;
+</span></span><span class="line"><span class="cl">string str = mymap.at(key); // throw error if the key  not exists.
+</span></span><span class="line"><span class="cl">str = mymap[key]; // will not throw error if the key not exists.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="multimap" class="headerLink">
+    <a href="#multimap" class="header-mark"></a>Multimap</h4><p>Multimap is an associative container that contains a sorted list of key-value pairs, while <strong>permitting multiple entries with the same key</strong>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
+</span></span><span class="line"><span class="cl">std::multimap&lt;int, int&gt; myMMap;
+</span></span><span class="line"><span class="cl">myMMap.insert({std::make_pair(3, 3)});
+</span></span><span class="line"><span class="cl">myMMap.insert({3, 12});
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cout &lt;&lt; myMMap.count(3) &lt;&lt; endl; // 2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="set" class="headerLink">
+    <a href="#set" class="header-mark"></a>Set</h4><p>Sets contains a sorted set of <strong>unique objects</strong> of type <code>Key</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
+</span></span><span class="line"><span class="cl">std::set&lt;string&gt; myset;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// add element
+</span></span><span class="line"><span class="cl">myset.insert(&#34;game&#34;); // {&#34;game&#34;}
+</span></span><span class="line"><span class="cl">myset.insert(&#34;milk&#34;); // {&#34;game&#34;, &#34;milk&#34;}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// check if contains element
+</span></span><span class="line"><span class="cl">bool game_exist = myset.count(&#34;game&#34;); // true
+</span></span><span class="line"><span class="cl">bool hello_exist = myset.count(&#34;hello&#34;); // false
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// remove element
+</span></span><span class="line"><span class="cl">myset.earse(&#34;milk&#34;); // {&#34;game&#34;}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="container-adaptors" class="headerLink">
+    <a href="#container-adaptors" class="header-mark"></a>Container Adaptors</h3><p>Container adaptors are &ldquo;wrappers&rdquo; to existing containers
+<code>Wrappers</code> modify the <strong>interface to sequence containers</strong> and change what the client is allowed to do/how they can interact with the container.</p>
+<ul>
+<li>Commonly used data structures made easy for the client to use.</li>
+<li>Can use different backing containers based on use type.</li>
+<li>Container adaptors wrap existing containers to permit new/restrict access to the interface for the clients.</li>
+</ul>
+<h4 id="stack" class="headerLink">
+    <a href="#stack" class="header-mark"></a>Stack</h4><p>Stack just limits the functionality of a vector/deque to only allow <code>push_back</code> and <code>pop_back</code>.</p>
+<h4 id="queue" class="headerLink">
+    <a href="#queue" class="header-mark"></a>Queue</h4><p>Queue just limits the functionality of a deque to only allow <code>push_back</code>  and <code>pop_front</code>.</p></div>
 
         
 
@@ -294,45 +499,6 @@
         </div>
     <div class="related-item-container">
             <div class="related-image">
-                <a href="/2023/01/lec02_types_and_structs/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec02_types_and_structs/">CS106L: Lec02 Types and Structs</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/2023/01/lec03_streams/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec03_streams/">CS106L: Lec03 Streams</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/2023/01/lec04_init_and_ref/"><img
-        class="lazyload"
-        data-src="/image/cs106L/title.png"
-        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
-        data-sizes="auto"
-        alt="/image/cs106L/title.png"
-        title="CS106L 课程笔记" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/2023/01/lec04_init_and_ref/">CS106L: Lec04 Initialization and Reference</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
                 <a href="/2023/01/lec06_iterators_and_pointers/"><img
         class="lazyload"
         data-src="/image/cs106L/title.png"
@@ -341,7 +507,46 @@
         alt="/image/cs106L/title.png"
         title="CS106L 课程笔记" height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/2023/01/lec06_iterators_and_pointers/">CS106L: Lec06 Iterators and Pointers</a>
+                <a href="/2023/01/lec06_iterators_and_pointers/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec07_classes/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec07_classes/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec08_templates/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec08_templates/">CS106L: Lec01 Welcome</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
+                <a href="/2023/01/lec09_funcs_and_lambdas/"><img
+        class="lazyload"
+        data-src="/image/cs106L/title.png"
+        data-srcset="/image/cs106L/title.png, /image/cs106L/title.png 1.5x, /image/cs106L/title.png 2x"
+        data-sizes="auto"
+        alt="/image/cs106L/title.png"
+        title="CS106L 课程笔记" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/2023/01/lec09_funcs_and_lambdas/">CS106L: Lec01 Welcome</a>
             </h2>
         </div>
     
@@ -360,7 +565,7 @@
             <div class="post-info-md"><span><a class="link-to-mardown" href=/2023/01/lec05_containers/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec05_containers/" data-title="CS106L: Lec05 Containers" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec05_containers/" data-title="CS106L: Lec05 Containers" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/2023/01/lec05_containers/" data-title="CS106L: Lec01 Welcome" data-via="Zicx3566" data-hashtags="Cpp,公开课"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/2023/01/lec05_containers/" data-title="CS106L: Lec01 Welcome" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -372,8 +577,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2023/01/lec06_iterators_and_pointers/" class="prev" rel="prev" title="CS106L: Lec06 Iterators and Pointers"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec06 Iterators and Pointers</a>
-            <a href="/2023/01/lec04_init_and_ref/" class="next" rel="next" title="CS106L: Lec04 Initialization and Reference">CS106L: Lec04 Initialization and Reference<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/2023/01/lec06_iterators_and_pointers/" class="prev" rel="prev" title="CS106L: Lec01 Welcome"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec01 Welcome</a>
+            <a href="/2023/01/lec01_welcome/" class="next" rel="next" title="CS106L: Lec01 Welcome">CS106L: Lec01 Welcome<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.

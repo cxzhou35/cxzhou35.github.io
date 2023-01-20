@@ -1,60 +1,141 @@
-# CS106L: Lec07 Classes
+# CS106L: Lec01 Welcome
 
 
 <!--more-->
 
-# About CS106L
+# TOC
+- [[#Classes|Classes]]
+	- [[#Classes#Namespaces|Namespaces]]
+	- [[#Classes#This keyword|This keyword]]
+	- [[#Classes#Constructors|Constructors]]
+	- [[#Classes#Array|Array]]
+	- [[#Classes#Destructors|Destructors]]
+	- [[#Classes#Static member|Static member]]
 
-- Focus is on **code:** What makes it good, what powerful and elegant code looks like
-- The real deal: No Stanford libraries, only STL
-- Understand how and why C++ was made
+## Classes
 
-# C++ History
+`Class`: A programmerdeﬁned custom type. **An abstraction of an object or data type**.
+- An **Object** is an instance of a **Class.**
+- When a class is deﬁned, no memory is allocated but when it is **instantiated** (i.e. an object is created) memory is allocated.
+- Classes provide their users with a **public interface** and separate this from a **private implementation**.
 
-### Assembly
+```ad-example
+```cpp
+class Student {
+	public:
+		std::string getName();
+		void setName(std::string name);
+		int getAge();
+		void setAge(int age);
+ 
+	private:
+		std::string name;
+		std::string state;
+		int age;
+};
+```
 
-Benefits
-- Unbelievably **simple** instructions
-- Extremely **fast** (when well-written)
-- **Complete control** over your program
+**Public section:**
+- Users of the specific object can directly access anything here.
+- Deﬁnes interface for **interacting with the private member variables**.
 
-Drawbacks
-- A lot of code to do simple tasks
-- Very hard to understand
-- Extremely unportable (hard to make work across all systems)
+**Private section:**
+- Usually contains all member variables.
+- Users **can't access or modify anything** in the private section.
 
-### Invention of C
+###  Namespaces
 
-C made it easy to write code that was
-- Fast
-- Simple
-- Cross-platform
+- Put code into logical groups, to **avoid name clashes**.
+- Each class has its own namespace.
+- Syntax for calling/using something in a namespace: 
+  `namespace_name::name`
+- **Function** deﬁnitions with namespaces.
+	- Inside the {...} the private member variables for `namespace_name` will be in scope.
+	- `std::string Student::getName() {...}`, we can use  private member variables  in this function.
 
-Weakness
-- **No objects or classes**
-- Diﬃcult to write **generic code**
-- **Tedious** when writing large programs
+ ### This keyword
 
-### Design Philosophy of C++
+`this` is the pointer which points out the **object that calls the member function**. `this->element_name` means "the item in this specific object with name `element_name`. Use this for avoiding naming conﬂicts. 
 
-[Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
-- **Only add features if they solve an actual problem**
-- Express ideas and intent directly in code
-- **Compartmentalization(区块化)** is key
-- Do not waste time or space
-- **Enforce safety at compile time whenever possible**
+```ad-example
+```cpp
+void Student::setName(std::string name){
+	this->name = name;
+} 
+```
 
-{{< admonition note>}}
-C++: Basic Syntax + the STL
+### Constructors
 
-Standard C++: Basic Syntax + std(standard) library
-{{< /admonition >}}
+- The constructor is called every time **a new instance is created**
+- Deﬁne how the member variables of an object is initialized.
+- Use **initializer lists** for speedier construction.
 
-### The STL
+```ad-example
+```cpp
+// construction using initializer lists
+// no parameters
+Student::Student() : name{""}, age{0}, state{""} {}
 
-- Tons at of EOL general functionality
-- Built in classes like maps, sets, vectors
-- Accessed through the namespace std::
-- **Extremely powerful and wel-maintained**
+// with parameters
+Student::Student(string name, int age, string state) : name{name}, age{age}, state{state} {}
+```
 
+### Array
+
+- Arrays are a primitive type. They are the building blocks of all containers
+- Think of array as lists of objects of **ﬁxed size** that you can **index into**.
+
+```cpp
+int *intarray;
+
+// initialize an array
+int* *intarray = new int[10];
+
+// index into an array
+int elem = intarray[0];
+```
+
+### Destructors
+
+- Deleteing (almost) always happens in the destructor of a class.
+- The destructor is deﬁned using `class_name::~class_name()`
+- the destructor is called when the **object goes out of scope**.
+
+### Static member
+
+`Static member` meas this member is **belong to the class** instead of the specific object.
+
+> **static variable must have definition.**
+
+```ad-example
+```cpp
+class Game {
+ public:
+  Game(/* args */);
+  ~Game(/* args */);
+  void setID(int id) { Game::id = id; }
+  int getID() { return id; }
+
+ private:
+  /* data */
+  static int id;
+};
+```
+
+In this code, `id` is a variable member belong to the class `Game`, if we call `obj.setID(val)`, the variable `Game:：id` wouble be changed.
+
+```ad-example
+```cpp
+int main(void) {
+  Game game1;
+  game1.setID(2);
+  cout << "game1 id: ";
+  cout << game1.getID() << endl; // 2
+
+  Game game2;
+  cout << "game2 id: ";
+  cout << game2.getID() << endl; // 2
+  return 0;
+}
+```
 

@@ -15,31 +15,7 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>CS106L: Lec02 Types and Structs</title>
-    <link>https://xuer04.github.io/2023/01/lec02_types_and_structs/</link>
-    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec02_types_and_structs/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
-            </div>CS106L 课程笔记]]></description>
-</item><item>
-    <title>CS106L: Lec03 Streams</title>
-    <link>https://xuer04.github.io/2023/01/lec03_streams/</link>
-    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec03_streams/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
-            </div>CS106L 课程笔记]]></description>
-</item><item>
-    <title>CS106L: Lec04 Initialization and Reference</title>
-    <link>https://xuer04.github.io/2023/01/lec04_init_and_ref/</link>
-    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec04_init_and_ref/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
-            </div>CS106L 课程笔记]]></description>
-</item><item>
-    <title>CS106L: Lec05 Containers</title>
+    <title>CS106L: Lec01 Welcome</title>
     <link>https://xuer04.github.io/2023/01/lec05_containers/</link>
     <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
                     <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec05_containers/</guid>
@@ -47,7 +23,7 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>CS106L: Lec06 Iterators and Pointers</title>
+    <title>CS106L: Lec01 Welcome</title>
     <link>https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/</link>
     <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
                     <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/</guid>
@@ -55,7 +31,7 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>CS106L: Lec07 Classes</title>
+    <title>CS106L: Lec01 Welcome</title>
     <link>https://xuer04.github.io/2023/01/lec07_classes/</link>
     <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
                     <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec07_classes/</guid>
@@ -63,7 +39,7 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>CS106L: Lec08 Templates</title>
+    <title>CS106L: Lec01 Welcome</title>
     <link>https://xuer04.github.io/2023/01/lec08_templates/</link>
     <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
                     <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec08_templates/</guid>
@@ -71,7 +47,7 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>CS106L: Lec09 Functions and Lambdas</title>
+    <title>CS106L: Lec01 Welcome</title>
     <link>https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/</link>
     <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
                     <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/</guid>
@@ -79,10 +55,34 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>CS106L: Lec10 Operator Overloading</title>
-    <link>https://xuer04.github.io/2023/01/lec10_operator_ovloading/</link>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec10_operator_overloading/</link>
     <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec10_operator_ovloading/</guid>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec10_operator_overloading/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec11_special_member_functions/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec11_special_member_functions/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec12_type_safety/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec12_type_safety/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec13_special_topics/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec13_special_topics/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
