@@ -14,7 +14,7 @@ Initialization while we declare a variable.
 `Uniform initialization`: Curly bracket initialization. Available for **all types**, immediate initialization on declaration!
 - Use uniform initialization to initialize every ﬁeld of **non-primitive typed variables**.
 
-```ad-example
+{{< admonition example>}}
 ```cpp
 Student s{"Sarah", "CA", 21}; // struct
 
@@ -25,6 +25,7 @@ std::vector<int> vec{1, 3, 5}; // vector
 int x{5}; // int
 string str{"Name"}; //string
 ```
+{{< /admonition >}}
 
 ## Structured binding
 
@@ -74,14 +75,14 @@ std::vector<int>& ref = original;
 
 ## L-values and R-values
 
-#### L-values
+### L-values
 
 - L-values can appear on the **left or right** of an `=`
 - L-values **have names**
 - L-values are **not temporary**
 - L-values live until the **end of the scope**
 
-#### R-values
+### R-values
 
 - R-values can only appear on the **right** of an `=`
 - R-values **don't have names**

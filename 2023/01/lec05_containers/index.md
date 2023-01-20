@@ -3,20 +3,8 @@
 
 <!--more-->
 
-# TOC
-- [[#STL|STL]]
-- [[#Container|Container]]
-	- [[#Container#STL Containers|STL Containers]]
-		- [[#STL Containers#Vector|Vector]]
-		- [[#STL Containers#Deque|Deque]]
-		- [[#STL Containers#Map|Map]]
-		- [[#STL Containers#Multimap|Multimap]]
-		- [[#STL Containers#Set|Set]]
-	- [[#Container#Container Adaptors|Container Adaptors]]
-		- [[#Container Adaptors#Stack|Stack]]
-		- [[#Container Adaptors#Queue|Queue]]
 
-## STL
+# STL
 
 `Standard template library` includes
 - Algorithms
@@ -25,14 +13,15 @@
 - Containers
 - Adaptors
 
-## Container
+# Container
 
 `Container`: An object that allows us to collect other objects together and interact with them in some way.
+
 - Organization: Related data can be packaged together.
 - Standardization: Common features are expected and implemented.
 - Abstraction: Complex ideas made easier to utilize by clients.
 
-### STL Containers
+## STL Containers
 
 - Familiar: vector, stack, queue, set, map
 - Unfamiliar:
@@ -41,6 +30,7 @@
 	- list: A list is a doubly linked list, can loop through in either direction.
 
 Two types of containers
+
 - Sequence:
 	- Containers that can be accessed sequentially.
 	- Provides access to **sequences of elements**.
@@ -51,10 +41,12 @@ Two types of containers
 	- More easily searched, like maps and sets.
 	- maps, sets, unordered maps/sets ...
 
- #### Vector
- At a high level, a vector is an **ordered collection of elements of the any same type** that can **grow and shrink** in size.
+### Vector
+
+At a high level, a vector is an **ordered collection of elements of the any same type** that can **grow and shrink** in size.
 
 We keep track of a few member variables
+
 - `size`: number of elements in the vector
 - `capacity`: space allocated for elements
 
@@ -71,7 +63,8 @@ int a = vec1.at(0); // a = 3
 int b = vec1[1]; // b = 5
 ```
 
-#### Deque
+### Deque
+
 A deque is a double ended queue, can do everything a vector can do, unlike vector, it is possible and fast to `push_front` and `pop_front`.
 
 ```cpp
@@ -88,34 +81,39 @@ dq.pop_front() // {2, 3}
 dq.pop_back() // {2}
 ```
 
-```ad-quote
+{{< admonition quote>}}
 **Which to use?**
 vector is the type of sequence that should be used by **default**, deque is the data structure of choice when most insertions and deletions take place at the beginning or at the end of the sequence.
 
 <p align="right">—— C++ ISO Standard</p>
 ```
+{{< /admonition >}}
 
 **Choosing sequence containers**
 
 ![image.png](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png)
 
-#### Map
+### Map
+
 Maps are implemented with **key-value pairs with unique keys**, `std::pair<const key, value>`
+
 Based on **ordering property of keys**, keys need to be comparable using `<` operator. 
 - **Ordered maps/sets** require a **comparison operator** to be deﬁned, keys in sorted order.
 - **Unordered maps/sets** require a **hash function** to be deﬁned, keys are unordered.
 
-```ad-example
+{{< admonition example>}}
 ```cpp
 std::map<int, string> mymap;
 string str = mymap.at(key); // throw error if the key  not exists.
 str = mymap[key]; // will not throw error if the key not exists.
 ```
+{{< /admonition >}}
 
-#### Multimap
+### Multimap
+
 Multimap is an associative container that contains a sorted list of key-value pairs, while **permitting multiple entries with the same key**.
 
-```ad-example
+{{< admonition example>}}
 ```cpp
 std::multimap<int, int> myMMap;
 myMMap.insert({std::make_pair(3, 3)});
@@ -123,11 +121,13 @@ myMMap.insert({3, 12});
 
 cout << myMMap.count(3) << endl; // 2
 ```
+{{< /admonition >}}
 
-#### Set
+### Set
+
 Sets contains a sorted set of **unique objects** of type `Key`.
 
-```ad-example
+{{< admonition example>}}
 ```cpp
 std::set<string> myset;
 
@@ -142,19 +142,23 @@ bool hello_exist = myset.count("hello"); // false
 // remove element
 myset.earse("milk"); // {"game"}
 ```
+{{< /admonition >}}
 
-### Container Adaptors
+## Container Adaptors
 
 Container adaptors are "wrappers" to existing containers
+
 `Wrappers` modify the **interface to sequence containers** and change what the client is allowed to do/how they can interact with the container.
 
 - Commonly used data structures made easy for the client to use.
 - Can use different backing containers based on use type.
 - Container adaptors wrap existing containers to permit new/restrict access to the interface for the clients.
 
-#### Stack
+### Stack
+
 Stack just limits the functionality of a vector/deque to only allow `push_back` and `pop_back`.
 
-#### Queue
+### Queue
+
 Queue just limits the functionality of a deque to only allow `push_back`  and `pop_front`.
 

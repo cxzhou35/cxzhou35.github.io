@@ -11,7 +11,7 @@
 
 # C++ History
 
-### Assembly
+## Assembly
 
 Benefits
 - Unbelievably **simple** instructions
@@ -23,7 +23,7 @@ Drawbacks
 - Very hard to understand
 - Extremely unportable (hard to make work across all systems)
 
-### Invention of C
+## Invention of C
 
 C made it easy to write code that was
 - Fast
@@ -35,7 +35,7 @@ Weakness
 - Diﬃcult to write **generic code**
 - **Tedious** when writing large programs
 
-### Design Philosophy of C++
+## Design Philosophy of C++
 
 [Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 - **Only add features if they solve an actual problem**
@@ -50,7 +50,7 @@ C++: Basic Syntax + the STL
 Standard C++: Basic Syntax + std(standard) library
 {{< /admonition >}}
 
-### The STL
+## The STL
 
 - Tons at of EOL general functionality
 - Built in classes like maps, sets, vectors

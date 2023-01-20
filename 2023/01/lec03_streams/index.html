@@ -178,25 +178,17 @@
     <li><a href="#stream-abstraction">Stream Abstraction</a></li>
     <li><a href="#standard-iostreams">Standard iostreams</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#output-streams">Output Streams</a></li>
-            <li><a href="#input-streams">Input Streams</a></li>
-          </ul>
-        </li>
+        <li><a href="#output-streams">Output Streams</a></li>
+        <li><a href="#input-streams">Input Streams</a></li>
       </ul>
     </li>
     <li><a href="#state-bits">State bits</a></li>
     <li><a href="#stdgetline">std::getline()</a></li>
     <li><a href="#file-streams">File Streams</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#output-file-streams">Output File Streams</a></li>
-            <li><a href="#input-file-streams">Input File Streams</a></li>
-            <li><a href="#file-mode">File mode</a></li>
-          </ul>
-        </li>
+        <li><a href="#output-file-streams">Output File Streams</a></li>
+        <li><a href="#input-file-streams">Input File Streams</a></li>
+        <li><a href="#file-mode">File mode</a></li>
       </ul>
     </li>
     <li><a href="#string-streams">String Streams</a></li>
@@ -224,25 +216,17 @@
     <li><a href="#stream-abstraction">Stream Abstraction</a></li>
     <li><a href="#standard-iostreams">Standard iostreams</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#output-streams">Output Streams</a></li>
-            <li><a href="#input-streams">Input Streams</a></li>
-          </ul>
-        </li>
+        <li><a href="#output-streams">Output Streams</a></li>
+        <li><a href="#input-streams">Input Streams</a></li>
       </ul>
     </li>
     <li><a href="#state-bits">State bits</a></li>
     <li><a href="#stdgetline">std::getline()</a></li>
     <li><a href="#file-streams">File Streams</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#output-file-streams">Output File Streams</a></li>
-            <li><a href="#input-file-streams">Input File Streams</a></li>
-            <li><a href="#file-mode">File mode</a></li>
-          </ul>
-        </li>
+        <li><a href="#output-file-streams">Output File Streams</a></li>
+        <li><a href="#input-file-streams">Input File Streams</a></li>
+        <li><a href="#file-mode">File mode</a></li>
       </ul>
     </li>
     <li><a href="#string-streams">String Streams</a></li>
@@ -266,8 +250,8 @@
 <li><code>cerr</code>: Standard error stream(unbuffered)</li>
 <li><code>clog</code>: Standard error stream(buffered)</li>
 </ul>
-<h4 id="output-streams" class="headerLink">
-    <a href="#output-streams" class="header-mark"></a>Output Streams</h4><p><code>std::out</code> is an output stream. It has type <code>std::ostream</code>.</p>
+<h3 id="output-streams" class="headerLink">
+    <a href="#output-streams" class="header-mark"></a>Output Streams</h3><p><code>std::out</code> is an output stream. It has type <code>std::ostream</code>.</p>
 <ul>
 <li>Can only send data using the <code>&lt;&lt;</code> operator.</li>
 <li>Converts data of any type into <strong>string</strong> and sends it to the stream.</li>
@@ -293,8 +277,8 @@
 </div></div>
         </div>
     </div>
-<h4 id="input-streams" class="headerLink">
-    <a href="#input-streams" class="header-mark"></a>Input Streams</h4><p><code>std::cin</code> is an input stream. It has type <code>std::istream</code>.</p>
+<h3 id="input-streams" class="headerLink">
+    <a href="#input-streams" class="header-mark"></a>Input Streams</h3><p><code>std::cin</code> is an input stream. It has type <code>std::istream</code>.</p>
 <ul>
 <li>Can only send data using the <code>&gt;&gt;</code> operator.</li>
 <li>Receives a <strong>string</strong> from the stream and converts it to <strong>data</strong>.</li>
@@ -483,8 +467,8 @@
 <li><code>getline</code> reads up to the next delimiter (by default, &lsquo;\n&rsquo;), and <strong>does go past that delimiter.</strong></li>
 </ul>
 <h2 id="file-streams" class="headerLink">
-    <a href="#file-streams" class="header-mark"></a>File Streams</h2><h4 id="output-file-streams" class="headerLink">
-    <a href="#output-file-streams" class="header-mark"></a>Output File Streams</h4><ul>
+    <a href="#file-streams" class="header-mark"></a>File Streams</h2><h3 id="output-file-streams" class="headerLink">
+    <a href="#output-file-streams" class="header-mark"></a>Output File Streams</h3><ul>
 <li>Defined in header <code>&lt;fstream&gt;</code></li>
 <li>Have type <code>std::ofstream</code></li>
 <li>Can only send data using the <code>&lt;&lt;</code> operator.</li>
@@ -511,8 +495,8 @@
 </div></div>
         </div>
     </div>
-<h4 id="input-file-streams" class="headerLink">
-    <a href="#input-file-streams" class="header-mark"></a>Input File Streams</h4><ul>
+<h3 id="input-file-streams" class="headerLink">
+    <a href="#input-file-streams" class="header-mark"></a>Input File Streams</h3><ul>
 <li>Defined in header <code>&lt;fstream&gt;</code></li>
 <li>Have type <code>std::ifstream</code>.</li>
 <li>Only receives strings using the <code>&gt;&gt;</code> operator.</li>
@@ -543,8 +527,8 @@
 </div></div>
         </div>
     </div>
-<h4 id="file-mode" class="headerLink">
-    <a href="#file-mode" class="header-mark"></a>File mode</h4><ul>
+<h3 id="file-mode" class="headerLink">
+    <a href="#file-mode" class="header-mark"></a>File mode</h3><ul>
 <li><code>ios::app</code>: append</li>
 <li><code>ios::ate</code>: at end</li>
 <li><code>ios::in</code>: open file for reading</li>

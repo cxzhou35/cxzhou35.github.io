@@ -74,7 +74,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec05_containers\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  704 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  654 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec05_containers\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,24 +175,19 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#stl">STL</a></li>
-    <li><a href="#container">Container</a>
+    <li><a href="#stl-containers">STL Containers</a>
       <ul>
-        <li><a href="#stl-containers">STL Containers</a>
-          <ul>
-            <li><a href="#vector">Vector</a></li>
-            <li><a href="#deque">Deque</a></li>
-            <li><a href="#map">Map</a></li>
-            <li><a href="#multimap">Multimap</a></li>
-            <li><a href="#set">Set</a></li>
-          </ul>
-        </li>
-        <li><a href="#container-adaptors">Container Adaptors</a>
-          <ul>
-            <li><a href="#stack">Stack</a></li>
-            <li><a href="#queue">Queue</a></li>
-          </ul>
-        </li>
+        <li><a href="#vector">Vector</a></li>
+        <li><a href="#deque">Deque</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#multimap">Multimap</a></li>
+        <li><a href="#set">Set</a></li>
+      </ul>
+    </li>
+    <li><a href="#container-adaptors">Container Adaptors</a>
+      <ul>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#queue">Queue</a></li>
       </ul>
     </li>
   </ul>
@@ -201,7 +196,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E8%AF%BE%E7%A8%8B/"><i class="far fa-folder fa-fw"></i>课程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 704 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 654 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -216,53 +211,25 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#stl">STL</a></li>
-    <li><a href="#container">Container</a>
+    <li><a href="#stl-containers">STL Containers</a>
       <ul>
-        <li><a href="#stl-containers">STL Containers</a>
-          <ul>
-            <li><a href="#vector">Vector</a></li>
-            <li><a href="#deque">Deque</a></li>
-            <li><a href="#map">Map</a></li>
-            <li><a href="#multimap">Multimap</a></li>
-            <li><a href="#set">Set</a></li>
-          </ul>
-        </li>
-        <li><a href="#container-adaptors">Container Adaptors</a>
-          <ul>
-            <li><a href="#stack">Stack</a></li>
-            <li><a href="#queue">Queue</a></li>
-          </ul>
-        </li>
+        <li><a href="#vector">Vector</a></li>
+        <li><a href="#deque">Deque</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#multimap">Multimap</a></li>
+        <li><a href="#set">Set</a></li>
+      </ul>
+    </li>
+    <li><a href="#container-adaptors">Container Adaptors</a>
+      <ul>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#queue">Queue</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
-    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
-<li>[[#STL|STL]]</li>
-<li>[[#Container|Container]]
-<ul>
-<li>[[#Container#STL Containers|STL Containers]]
-<ul>
-<li>[[#STL Containers#Vector|Vector]]</li>
-<li>[[#STL Containers#Deque|Deque]]</li>
-<li>[[#STL Containers#Map|Map]]</li>
-<li>[[#STL Containers#Multimap|Multimap]]</li>
-<li>[[#STL Containers#Set|Set]]</li>
-</ul>
-</li>
-<li>[[#Container#Container Adaptors|Container Adaptors]]
-<ul>
-<li>[[#Container Adaptors#Stack|Stack]]</li>
-<li>[[#Container Adaptors#Queue|Queue]]</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="stl" class="headerLink">
-    <a href="#stl" class="header-mark"></a>STL</h2><p><code>Standard template library</code> includes</p>
+            </div><div class="content" id="content"><h1 id="stl" class="headerLink">
+    <a href="#stl" class="header-mark"></a>STL</h1><p><code>Standard template library</code> includes</p>
 <ul>
 <li>Algorithms</li>
 <li>Functors/Lambdas</li>
@@ -270,15 +237,15 @@
 <li>Containers</li>
 <li>Adaptors</li>
 </ul>
-<h2 id="container" class="headerLink">
-    <a href="#container" class="header-mark"></a>Container</h2><p><code>Container</code>: An object that allows us to collect other objects together and interact with them in some way.</p>
+<h1 id="container" class="headerLink">
+    <a href="#container" class="header-mark"></a>Container</h1><p><code>Container</code>: An object that allows us to collect other objects together and interact with them in some way.</p>
 <ul>
 <li>Organization: Related data can be packaged together.</li>
 <li>Standardization: Common features are expected and implemented.</li>
 <li>Abstraction: Complex ideas made easier to utilize by clients.</li>
 </ul>
-<h3 id="stl-containers" class="headerLink">
-    <a href="#stl-containers" class="header-mark"></a>STL Containers</h3><ul>
+<h2 id="stl-containers" class="headerLink">
+    <a href="#stl-containers" class="header-mark"></a>STL Containers</h2><ul>
 <li>Familiar: vector, stack, queue, set, map</li>
 <li>Unfamiliar:
 <ul>
@@ -306,8 +273,8 @@
 </ul>
 </li>
 </ul>
-<h4 id="vector" class="headerLink">
-    <a href="#vector" class="header-mark"></a>Vector</h4><p>At a high level, a vector is an <strong>ordered collection of elements of the any same type</strong> that can <strong>grow and shrink</strong> in size.</p>
+<h3 id="vector" class="headerLink">
+    <a href="#vector" class="header-mark"></a>Vector</h3><p>At a high level, a vector is an <strong>ordered collection of elements of the any same type</strong> that can <strong>grow and shrink</strong> in size.</p>
 <p>We keep track of a few member variables</p>
 <ul>
 <li><code>size</code>: number of elements in the vector</li>
@@ -339,8 +306,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">vec1</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span> <span class="c1">// b = 5
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="deque" class="headerLink">
-    <a href="#deque" class="header-mark"></a>Deque</h4><p>A deque is a double ended queue, can do everything a vector can do, unlike vector, it is possible and fast to <code>push_front</code> and <code>pop_front</code>.</p>
+</div><h3 id="deque" class="headerLink">
+    <a href="#deque" class="header-mark"></a>Deque</h3><p>A deque is a double ended queue, can do everything a vector can do, unlike vector, it is possible and fast to <code>push_front</code> and <code>pop_front</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -369,21 +336,19 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">dq</span><span class="p">.</span><span class="n">pop_back</span><span class="p">()</span> <span class="c1">// {2}
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">**Which to use?**
-</span></span><span class="line"><span class="cl">vector is the type of sequence that should be used by **default**, deque is the data structure of choice when most insertions and deletions take place at the beginning or at the end of the sequence.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">&lt;p align=&#34;right&#34;&gt;—— C++ ISO Standard&lt;/p&gt;
-</span></span></code></pre></td></tr></table>
+</div><div class="details admonition quote open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-quote-right fa-fw"></i>引用<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>Which to use?</strong>
+vector is the type of sequence that should be used by <strong>default</strong>, deque is the data structure of choice when most insertions and deletions take place at the beginning or at the end of the sequence.</p>
+<p align="right">—— C++ ISO Standard</p>
+```
 </div>
-</div><p><strong>Choosing sequence containers</strong></p>
+        </div>
+    </div>
+<p><strong>Choosing sequence containers</strong></p>
 <p><img
         class="lazyload"
         data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png"
@@ -391,50 +356,67 @@
         data-sizes="auto"
         alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png"
         title="image.png"></p>
-<h4 id="map" class="headerLink">
-    <a href="#map" class="header-mark"></a>Map</h4><p>Maps are implemented with <strong>key-value pairs with unique keys</strong>, <code>std::pair&lt;const key, value&gt;</code>
-Based on <strong>ordering property of keys</strong>, keys need to be comparable using <code>&lt;</code> operator.</p>
+<h3 id="map" class="headerLink">
+    <a href="#map" class="header-mark"></a>Map</h3><p>Maps are implemented with <strong>key-value pairs with unique keys</strong>, <code>std::pair&lt;const key, value&gt;</code></p>
+<p>Based on <strong>ordering property of keys</strong>, keys need to be comparable using <code>&lt;</code> operator.</p>
 <ul>
 <li><strong>Ordered maps/sets</strong> require a <strong>comparison operator</strong> to be deﬁned, keys in sorted order.</li>
 <li><strong>Unordered maps/sets</strong> require a <strong>hash function</strong> to be deﬁned, keys are unordered.</li>
 </ul>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">std::map&lt;int, string&gt; mymap;
-</span></span><span class="line"><span class="cl">string str = mymap.at(key); // throw error if the key  not exists.
-</span></span><span class="line"><span class="cl">str = mymap[key]; // will not throw error if the key not exists.
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;</span> <span class="n">mymap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">string</span> <span class="n">str</span> <span class="o">=</span> <span class="n">mymap</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">key</span><span class="p">);</span> <span class="c1">// throw error if the key  not exists.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">str</span> <span class="o">=</span> <span class="n">mymap</span><span class="p">[</span><span class="n">key</span><span class="p">];</span> <span class="c1">// will not throw error if the key not exists.
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="multimap" class="headerLink">
-    <a href="#multimap" class="header-mark"></a>Multimap</h4><p>Multimap is an associative container that contains a sorted list of key-value pairs, while <strong>permitting multiple entries with the same key</strong>.</p>
-<div class="highlight"><div class="chroma">
+</div></div>
+        </div>
+    </div>
+<h3 id="multimap" class="headerLink">
+    <a href="#multimap" class="header-mark"></a>Multimap</h3><p>Multimap is an associative container that contains a sorted list of key-value pairs, while <strong>permitting multiple entries with the same key</strong>.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">std::multimap&lt;int, int&gt; myMMap;
-</span></span><span class="line"><span class="cl">myMMap.insert({std::make_pair(3, 3)});
-</span></span><span class="line"><span class="cl">myMMap.insert({3, 12});
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">multimap</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">myMMap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">myMMap</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)});</span>
+</span></span><span class="line"><span class="cl"><span class="n">myMMap</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">});</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cout &lt;&lt; myMMap.count(3) &lt;&lt; endl; // 2
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">myMMap</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 2
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="set" class="headerLink">
-    <a href="#set" class="header-mark"></a>Set</h4><p>Sets contains a sorted set of <strong>unique objects</strong> of type <code>Key</code>.</p>
-<div class="highlight"><div class="chroma">
+</div></div>
+        </div>
+    </div>
+<h3 id="set" class="headerLink">
+    <a href="#set" class="header-mark"></a>Set</h3><p>Sets contains a sorted set of <strong>unique objects</strong> of type <code>Key</code>.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -448,36 +430,37 @@ Based on <strong>ordering property of keys</strong>, keys need to be comparable 
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">std::set&lt;string&gt; myset;
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">myset</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// add element
-</span></span><span class="line"><span class="cl">myset.insert(&#34;game&#34;); // {&#34;game&#34;}
-</span></span><span class="line"><span class="cl">myset.insert(&#34;milk&#34;); // {&#34;game&#34;, &#34;milk&#34;}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// check if contains element
-</span></span><span class="line"><span class="cl">bool game_exist = myset.count(&#34;game&#34;); // true
-</span></span><span class="line"><span class="cl">bool hello_exist = myset.count(&#34;hello&#34;); // false
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// remove element
-</span></span><span class="line"><span class="cl">myset.earse(&#34;milk&#34;); // {&#34;game&#34;}
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="c1">// add element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myset</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&#34;game&#34;</span><span class="p">);</span> <span class="c1">// {&#34;game&#34;}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myset</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&#34;milk&#34;</span><span class="p">);</span> <span class="c1">// {&#34;game&#34;, &#34;milk&#34;}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// check if contains element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">game_exist</span> <span class="o">=</span> <span class="n">myset</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">&#34;game&#34;</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">hello_exist</span> <span class="o">=</span> <span class="n">myset</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span> <span class="c1">// false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// remove element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myset</span><span class="p">.</span><span class="n">earse</span><span class="p">(</span><span class="s">&#34;milk&#34;</span><span class="p">);</span> <span class="c1">// {&#34;game&#34;}
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="container-adaptors" class="headerLink">
-    <a href="#container-adaptors" class="header-mark"></a>Container Adaptors</h3><p>Container adaptors are &ldquo;wrappers&rdquo; to existing containers
-<code>Wrappers</code> modify the <strong>interface to sequence containers</strong> and change what the client is allowed to do/how they can interact with the container.</p>
+</div></div>
+        </div>
+    </div>
+<h2 id="container-adaptors" class="headerLink">
+    <a href="#container-adaptors" class="header-mark"></a>Container Adaptors</h2><p>Container adaptors are &ldquo;wrappers&rdquo; to existing containers</p>
+<p><code>Wrappers</code> modify the <strong>interface to sequence containers</strong> and change what the client is allowed to do/how they can interact with the container.</p>
 <ul>
 <li>Commonly used data structures made easy for the client to use.</li>
 <li>Can use different backing containers based on use type.</li>
 <li>Container adaptors wrap existing containers to permit new/restrict access to the interface for the clients.</li>
 </ul>
-<h4 id="stack" class="headerLink">
-    <a href="#stack" class="header-mark"></a>Stack</h4><p>Stack just limits the functionality of a vector/deque to only allow <code>push_back</code> and <code>pop_back</code>.</p>
-<h4 id="queue" class="headerLink">
-    <a href="#queue" class="header-mark"></a>Queue</h4><p>Queue just limits the functionality of a deque to only allow <code>push_back</code>  and <code>pop_front</code>.</p></div>
+<h3 id="stack" class="headerLink">
+    <a href="#stack" class="header-mark"></a>Stack</h3><p>Stack just limits the functionality of a vector/deque to only allow <code>push_back</code> and <code>pop_back</code>.</p>
+<h3 id="queue" class="headerLink">
+    <a href="#queue" class="header-mark"></a>Queue</h3><p>Queue just limits the functionality of a deque to only allow <code>push_back</code>  and <code>pop_front</code>.</p></div>
 
         
 

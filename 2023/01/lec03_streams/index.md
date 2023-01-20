@@ -21,7 +21,7 @@ Convert between **string-represented data** and the real thing.
 - `cerr`: Standard error stream(unbuffered)
 - `clog`: Standard error stream(buffered)
 
-#### Output Streams
+### Output Streams
 
 `std::out` is an output stream. It has type `std::ostream`.
 
@@ -37,7 +37,7 @@ std::cout << 5 << std::endl;
 ```
 {{< /admonition>}}
 
-#### Input Streams
+### Input Streams
 `std::cin` is an input stream. It has type `std::istream`.
 
 - Can only send data using the `>>` operator.
@@ -147,7 +147,7 @@ Compare `>>` with `geline`:
 
 ## File Streams
 
-#### Output File Streams
+### Output File Streams
 
 - Defined in header `<fstream>`
 - Have type `std::ofstream`
@@ -163,7 +163,7 @@ out_file << 5 << std::endl; // out.txt now contains 5
 ```
 {{< /admonition>}}
 
-#### Input File Streams
+### Input File Streams
 
 - Defined in header `<fstream>`
 - Have type `std::ifstream`.
@@ -182,7 +182,7 @@ in_file >> str; // first word in out.txt goes into str
 {{< /admonition>}}
 
 
-#### File mode
+### File mode
 
 - `ios::app`: append
 - `ios::ate`: at end
