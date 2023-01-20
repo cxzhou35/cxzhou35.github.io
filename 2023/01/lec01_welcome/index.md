@@ -3,6 +3,8 @@
 
 <!--more-->
 
+<meta name="referrer" content="no-referrer" />
+
 # About CS106L
 
 - Focus is on **code:** What makes it good, what powerful and elegant code looks like

@@ -3,6 +3,8 @@
 
 <!--more-->
 
+<meta name="referrer" content="no-referrer" />
+
 ## Special member functions
 
 There are six special member functions, These functions are generated only when they're called:

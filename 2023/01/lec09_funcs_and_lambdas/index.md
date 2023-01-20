@@ -3,6 +3,8 @@
 
 <!--more-->
 
+<meta name="referrer" content="no-referrer" />
+
 ## Predicate Functions
 
 Any function that **returns a boolean** value is a `predicate.` A predicate can have **any amount of parameters**.

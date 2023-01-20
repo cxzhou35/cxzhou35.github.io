@@ -3,6 +3,8 @@
 
 <!--more-->
 
+<meta name="referrer" content="no-referrer" />
+
 
 ## Operators
 

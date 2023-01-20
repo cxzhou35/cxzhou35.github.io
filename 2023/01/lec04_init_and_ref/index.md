@@ -3,6 +3,8 @@
 
 <!--more-->
 
+<meta name="referrer" content="no-referrer" />
+
 ## Initialization
 
 **Initialization: How we provide initial values to variables.**

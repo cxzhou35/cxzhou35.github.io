@@ -3,6 +3,8 @@
 
 <!--more-->
 
+<meta name="referrer" content="no-referrer" />
+
 # C++ types and structs
 
 ## C++ Fundamental Types
