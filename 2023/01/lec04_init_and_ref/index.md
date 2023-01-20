@@ -208,9 +208,11 @@ class Str {
 ### Parameter passing rules
 
 Basic parameter passing rules
+
 ![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png)
 
 Advanced parameter passing rules
+
 ![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110922497.png)
 
 
