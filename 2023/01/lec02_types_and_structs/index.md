@@ -1,4 +1,4 @@
-# CS106L: Lec01 Types and Structs
+# CS106L: Lec02 Types and Structs
 
 
 <!--more-->
