@@ -3,23 +3,17 @@
 
 <!--more-->
 
-# TOC
-- [[#Iterators|Iterators]]
-	- [[#Iterators#What is iterator|What is iterator]]
-	- [[#Iterators#Types of iterator|Types of iterator]]
-	- [[#Iterators#Ranges|Ranges]]
-	- [[#Iterators#Range based for loop|Range based for loop]]
-- [[#Pointers|Pointers]]
-	- [[#Pointers#What is pointer|What is pointer]]
 
-## Iterators
+# Iterators
 
-### What is iterator
+## What is iterator
 
 **Iterator is a abstraction for a tool that accesses the next or previous element or random access.**
 
 How do we access elements in a container in order?
+
 Containers all implement something called an iterator to do this.
+
 - Iterators let you access **all data** in containers programmatically.
 - Iterators allow iteration over **any** container, whether it is ordered or not.
 - An iterator has **a certain order**, it "knows" what element will come next.
@@ -31,7 +25,8 @@ Containers all implement something called an iterator to do this.
 	- Comparing -> `iter != s.end();`
 	- Copying -> `new_iter = iter;`
 
- Similarities
+Similarities
+
 - Can be created from existing iterator.
 - Can be advanced using `++`
 - Can be compared with `==` and `!=`
@@ -67,8 +62,9 @@ for(auto iter = mmap.begin(); iter != mmap.end(); ++iter){
 	cout << iter->first << " " << iter->second << endl;
 }
 ```
+{{< /admonition >}}
 
-### Types of iterator
+## Types of iterator
 
 - `Input and output iterators`: They can perform sequential single-pass input or output operations.
 - `Forward iterators`: They have all the functionality of input iterators and if they are not constant iterators also have the functionality of output iterators.
@@ -86,6 +82,7 @@ for(auto iter = mmap.begin(); iter != mmap.end(); ++iter){
 - Random-access iterators allow you to **directly access values** without visiting all elements sequentially.
 	- `it += 5;`
  ![f|C|300](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301120958920.png) 
+
 **Collected by [xyx](https://xuan-insr.github.io/cpp/%E7%90%86%E8%A7%A3%20STL%20-%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1/):**
 
 ![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151450358.png)
@@ -99,16 +96,18 @@ for (auto iter = set.begin(); iter != set.end(); ++iter){
 // dereference the iterator to get element
 const auto& elem = *iter;
 ```
+{{< /admonition >}}
 
-### Ranges
+## Ranges
 
 We can iterate through different ranges.
 
 ![f|C|550](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301131539497.png)
 
-### Range based for loop
+## Range based for loop
 
 A range based `for` loop is a shorthand for iterator code.
+
 All that is required is that the class contains the member functions `begin()` and `end()` and that its **return value type supports the operators `++,` `*` and `!=` **
 
 {{< admonition example >}}
@@ -130,10 +129,11 @@ for(auto [key, value] : mmap){
 	dosomething(key, value);
 }
 ```
+{{< /admonition >}}
 
-## Pointers
+# Pointers
 
-### What is pointer
+## What is pointer
 
 Variables created in code take up space on the computer. They live in memory at speciﬁc addresses. Pointers reference those memory addresses and not the object themselves.
 
@@ -162,5 +162,6 @@ std::pair<int, string>* pgame = &game;
 cout << pgame->first << endl; // 2
 cout << pgame->second << endl; // Death Loop
 ```
+{{< /admonition >}}
 
 
