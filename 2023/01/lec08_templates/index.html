@@ -74,7 +74,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec08_templates\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  616 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  601 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec08_templates\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,21 +175,17 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#template">Template</a>
-      <ul>
-        <li><a href="#function-template">Function Template</a></li>
-        <li><a href="#class-template">Class Template</a></li>
-        <li><a href="#generic-programming">Generic Programming</a></li>
-        <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
-      </ul>
-    </li>
+    <li><a href="#function-template">Function Template</a></li>
+    <li><a href="#class-template">Class Template</a></li>
+    <li><a href="#generic-programming">Generic Programming</a></li>
+    <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec08 Templates</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/cs106l/"><i class="far fa-folder fa-fw"></i>CS106L</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 616 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 601 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -204,31 +200,21 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#template">Template</a>
-      <ul>
-        <li><a href="#function-template">Function Template</a></li>
-        <li><a href="#class-template">Class Template</a></li>
-        <li><a href="#generic-programming">Generic Programming</a></li>
-        <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
-      </ul>
-    </li>
+    <li><a href="#function-template">Function Template</a></li>
+    <li><a href="#class-template">Class Template</a></li>
+    <li><a href="#generic-programming">Generic Programming</a></li>
+    <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
-    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
-<li>[[#Template|Template]]
-<ul>
-<li>[[#Template#Function Template|Function Template]]</li>
-<li>[[#Template#Class Template|Class Template]]</li>
-<li>[[#Template#Generic Programming|Generic Programming]]</li>
-<li>[[#Template#Template Metaprogramming|Template Metaprogramming]]</li>
-</ul>
-</li>
-</ul>
-<h2 id="template" class="headerLink">
-    <a href="#template" class="header-mark"></a>Template</h2><h3 id="function-template" class="headerLink">
-    <a href="#function-template" class="header-mark"></a>Function Template</h3><p><code>Function Template</code>: A function template defines a family of functions. The simple idea is to <strong>pass data type as a parameter</strong> so that we don’t need to write the same code for different data types.</p>
-<div class="highlight"><div class="chroma">
+            </div><div class="content" id="content"><h1 id="template" class="headerLink">
+    <a href="#template" class="header-mark"></a>Template</h1><h2 id="function-template" class="headerLink">
+    <a href="#function-template" class="header-mark"></a>Function Template</h2><p><code>Function Template</code>: A function template defines a family of functions. The simple idea is to <strong>pass data type as a parameter</strong> so that we don’t need to write the same code for different data types.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -246,29 +232,30 @@
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">```</span><span class="n">cpp</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="o">`</span><span class="n">typename</span><span class="o">`</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">`</span><span class="n">class</span><span class="o">`</span><span class="w"> </span><span class="n">keyword</span><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">types</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">T</span><span class="o">=</span><span class="kt">int</span><span class="o">&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">T</span><span class="w"> </span><span class="nf">myMax</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="k">call</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">int_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myMax</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">int_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="w"> </span><span class="n">double_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyMax</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">.</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">double_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">.</span><span class="mi">1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">template</span><span class="w"> </span><span class="n">arguments</span><span class="w"> </span><span class="n">deduction</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nf">myMax</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">infers</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">`</span><span class="kt">int</span><span class="o">`</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nf">myMax</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">.</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">infers</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">`</span><span class="kt">double</span><span class="o">`</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nf">myMax</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;i&#39;</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">infers</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">`</span><span class="kt">char</span><span class="o">`</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// we need `typename` or `class` keyword 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// default parameter types
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">=</span><span class="kt">int</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">T</span> <span class="n">myMax</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">,</span> <span class="n">T</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="o">?</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// function call
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">int_max</span> <span class="o">=</span> <span class="n">myMax</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// int_max = 7
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">double</span> <span class="n">double_max</span> <span class="o">=</span> <span class="n">MyMax</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">);</span> <span class="c1">// double_max = 5.1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// template arguments deduction
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myMax</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// infers that T is of type `int`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myMax</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">);</span> <span class="c1">// infers that T is of type `double`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">myMax</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="sc">&#39;i&#39;</span><span class="p">);</span> <span class="c1">// infers that T is of type `char`
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Explicit instantiation</strong></p>
+</div></div>
+        </div>
+    </div>
+<p><strong>Explicit instantiation</strong></p>
 <ul>
 <li>specify the type T</li>
 <li><code>cout &lt;&lt; myMax&lt;int&gt;(2, 3) &lt;&lt; endl;</code></li>
@@ -278,21 +265,31 @@
 <li>leave the type for the compiler to deduce</li>
 <li><code>cout &lt;&lt; myMax(2, 3) &lt;&lt; endl</code></li>
 </ul>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>template functions are not compiled until used!</strong></p>
+<p>For each instantiation with different parameters, the compiler generates a new specific version of your template at compile time.
+Template code is instantiated at compile time.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
+<pre tabindex="0" class="chroma"><code></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">**template functions are not compiled until used!**
-</span></span><span class="line"><span class="cl">For each instantiation with different parameters, the compiler generates a new specific version of your template at compile time.
-</span></span><span class="line"><span class="cl">Template code is instantiated at compile time.
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
 </div>
-</div><h3 id="class-template" class="headerLink">
-    <a href="#class-template" class="header-mark"></a>Class Template</h3><p><code>Class Template</code>: A class that is parametrized over some number of types. A class that is comprised of member variables of a general type/types. Use generic typenames as <strong>placeholders.</strong></p>
-<div class="highlight"><div class="chroma">
+</div></div>
+        </div>
+    </div>
+<h2 id="class-template" class="headerLink">
+    <a href="#class-template" class="header-mark"></a>Class Template</h2><p><code>Class Template</code>: A class that is parametrized over some number of types. A class that is comprised of member variables of a general type/types. Use generic typenames as <strong>placeholders.</strong></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -320,52 +317,58 @@
 </span><span class="lnt">24
 </span><span class="lnt">25
 </span><span class="lnt">26
-</span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">```</span><span class="n">cpp</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">typename</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">template</span><span class="w"> </span><span class="n">arguments</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">etc</span><span class="p">.</span><span class="w"> </span><span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">typename</span><span class="w"> </span><span class="n">S</span><span class="o">=</span><span class="kt">int</span><span class="o">&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">class</span><span class="w"> </span><span class="n">MyPair</span><span class="w"> </span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">public</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">First</span><span class="w"> </span><span class="nf">getFirst</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">Second</span><span class="w"> </span><span class="nf">getSecond</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">void</span><span class="w"> </span><span class="nf">setFirst</span><span class="p">(</span><span class="n">First</span><span class="w"> </span><span class="n">f</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">void</span><span class="w"> </span><span class="nf">setSecond</span><span class="p">(</span><span class="n">Second</span><span class="w"> </span><span class="n">f</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">private</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">First</span><span class="w"> </span><span class="n">first</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">Second</span><span class="w"> </span><span class="n">second</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">announce</span><span class="w"> </span><span class="n">every</span><span class="w"> </span><span class="n">member</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">templated</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">typename</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">First</span><span class="w"> </span><span class="n">MyPair</span><span class="p">::</span><span class="nf">getFirst</span><span class="p">()</span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">first</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">nested</span><span class="w"> </span><span class="n">dependent</span><span class="w"> </span><span class="n">type</span><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span><span class="w"> </span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">typename</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">typename</span><span class="w"> </span><span class="n">MyPair</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="p">::</span><span class="n">iterator</span><span class="w"> </span><span class="n">MyPair</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="p">::</span><span class="nf">begin</span><span class="p">()</span><span class="w"> </span><span class="err">{</span><span class="p">...</span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">here</span><span class="w"> </span><span class="n">iterator</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">`</span><span class="n">dependent</span><span class="w"> </span><span class="n">type</span><span class="o">`</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">namespace</span><span class="w"> </span><span class="n">Mypair</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="p">::</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">`</span><span class="n">typename</span><span class="o">`</span><span class="w"> </span><span class="n">prior</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">S</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// we can specify a default value for template arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1">// etc. template&lt;typename F, typename S=int&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">MyPair</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">First</span> <span class="n">getFirst</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Second</span> <span class="nf">getSecond</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">void</span> <span class="nf">setFirst</span><span class="p">(</span><span class="n">First</span> <span class="n">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">void</span> <span class="nf">setSecond</span><span class="p">(</span><span class="n">Second</span> <span class="n">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">	<span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">First</span> <span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Second</span> <span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// must announce every member function is templated
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">S</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">First</span> <span class="n">MyPair</span><span class="o">::</span><span class="n">getFirst</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// nested dependent type 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">S</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typename</span> <span class="n">MyPair</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span> <span class="n">S</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">MyPair</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span> <span class="n">S</span><span class="o">&gt;::</span><span class="n">begin</span><span class="p">()</span> <span class="p">{...}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// here iterator is a `dependent type` in namespace Mypair&lt;F, S&gt;::
+</span></span></span><span class="line"><span class="cl"><span class="c1">// we must add `typename` prior
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>Templated code implementation <strong>should never be in a .cpp file</strong>: your compiler has to see them at the same time as it sees the code that calls them.</p>
-<h3 id="generic-programming" class="headerLink">
-    <a href="#generic-programming" class="header-mark"></a>Generic Programming</h3><p><strong>Generic Programming</strong> is a programming paradigm for developing <strong>efficient</strong>, <strong>reusable</strong> software libraries.
-Generics is the idea to <strong>allow type (Integer, String, … etc) to be a parameter</strong> to methods, classes and interfaces.
-Generics can be implemented in C++ using <a href="https://www.geeksforgeeks.org/templates-cpp/" target="_blank" rel="noopener noreffer">Templates</a>.</p>
+</div></div>
+        </div>
+    </div>
+<p>Templated code implementation <strong>should never be in a .cpp file</strong>: your compiler has to see them at the same time as it sees the code that calls them.</p>
+<h2 id="generic-programming" class="headerLink">
+    <a href="#generic-programming" class="header-mark"></a>Generic Programming</h2><p><strong>Generic Programming</strong> is a programming paradigm for developing <strong>efficient</strong>, <strong>reusable</strong> software libraries.</p>
+<p>Generics is the idea to <strong>allow type (Integer, String, … etc) to be a parameter</strong> to methods, classes and interfaces.</p>
+<p>Generics can be implemented in C++ using <a href="https://www.geeksforgeeks.org/templates-cpp/" target="_blank" rel="noopener noreffer">Templates</a>.</p>
 <p>The <strong>advantages</strong> of Generic Programming are</p>
 <ul>
 <li>Code Reusability</li>
 <li>Avoid Function Overloading</li>
 <li>Once written it can be used for multiple times and cases.</li>
 </ul>
-<h3 id="template-metaprogramming" class="headerLink">
-    <a href="#template-metaprogramming" class="header-mark"></a>Template Metaprogramming</h3><p>Normally, code runs during runtime. But with <code>template metaprogramming(TMP)</code>, code <strong>runs once during compile time</strong>. Something runs once during compiling and can be used as many times as you like during runtime.</p>
-<div class="highlight"><div class="chroma">
+<h2 id="template-metaprogramming" class="headerLink">
+    <a href="#template-metaprogramming" class="header-mark"></a>Template Metaprogramming</h2><p>Normally, code runs during runtime. But with <code>template metaprogramming(TMP)</code>, code <strong>runs once during compile time</strong>. Something runs once during compiling and can be used as many times as you like during runtime.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -378,24 +381,25 @@ Generics can be implemented in C++ using <a href="https://www.geeksforgeeks.org
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">```</span><span class="n">cpp</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">unsigned</span><span class="w"> </span><span class="n">n</span><span class="o">&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">struct</span><span class="w"> </span><span class="n">Factorial</span><span class="w"> </span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kt">enum</span><span class="w"> </span><span class="err">{</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Factorial</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">::</span><span class="n">value</span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">template</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">template</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="o">`</span><span class="n">specialization</span><span class="o">`</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">struct</span><span class="w"> </span><span class="n">Factorial</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span><span class="w"> </span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kt">enum</span><span class="w"> </span><span class="err">{</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Factorial</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">&gt;</span><span class="p">::</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">print</span><span class="w"> </span><span class="mi">3628800</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span> <span class="o">&lt;</span><span class="kt">unsigned</span> <span class="n">n</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Factorial</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">enum</span> <span class="p">{</span><span class="n">value</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">Factorial</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;&gt;</span> <span class="c1">// template class `specialization`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">struct</span> <span class="nc">Factorial</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">enum</span> <span class="p">{</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Factorial</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// print 3628800
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><code>struct</code> is similar to <code>class</code> in that it can contain both member variables and member functions.</p>
+</div></div>
+        </div>
+    </div>
+<p><code>struct</code> is similar to <code>class</code> in that it can contain both member variables and member functions.</p>
 <p><strong>the difference of struct and class</strong></p>
 <ul>
 <li>When using class, the <strong>members of a class are all private by default</strong>, while when using struct, the <strong>members of a struct are all public by default</strong>.</li>

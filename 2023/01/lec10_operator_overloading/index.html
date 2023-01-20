@@ -74,7 +74,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec10_operator_overloading\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  467 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  477 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec10_operator_overloading\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -179,7 +179,6 @@
       <ul>
         <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
         <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
-        <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
       </ul>
     </li>
   </ul>
@@ -188,7 +187,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/cs106l/"><i class="far fa-folder fa-fw"></i>CS106L</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 467 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 477 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -207,7 +206,6 @@
       <ul>
         <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
         <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
-        <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
       </ul>
     </li>
   </ul>
@@ -251,7 +249,12 @@
 </li>
 <li>The <code>friend</code> keyword allows non-member functions or classes to access private information in another class.</li>
 </ul>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -284,45 +287,48 @@
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">```</span><span class="n">cpp</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">way</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">class</span><span class="w"> </span><span class="n">Student</span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">public</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="cm">/* ... */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="o">//</span><span class="w"> </span><span class="n">member</span><span class="w"> </span><span class="n">function</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="o">//</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">pass</span><span class="w"> </span><span class="o">`</span><span class="n">this</span><span class="o">`</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">parameter</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">const</span><span class="w"> </span><span class="n">Student</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">age</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">private</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="cm">/* ... */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">way</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">class</span><span class="w"> </span><span class="n">Student</span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">public</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="cm">/* ... */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="o">//</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">member</span><span class="w"> </span><span class="n">function</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">const</span><span class="w"> </span><span class="n">Student</span><span class="o">&amp;</span><span class="w"> </span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="n">const</span><span class="w"> </span><span class="n">Student</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">private</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="cm">/* ... */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">member</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">global</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">bool</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">const</span><span class="w"> </span><span class="n">Student</span><span class="o">&amp;</span><span class="w"> </span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="n">const</span><span class="w"> </span><span class="n">Student</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">lhs</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">age</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// first way
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Student</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="cm">/* ... */</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// member function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// this function would pass `this` as parameter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">friend</span> <span class="kt">bool</span> <span class="k">operator</span> <span class="o">&lt;</span> <span class="p">(</span><span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">			<span class="n">age</span> <span class="o">&lt;</span> <span class="n">rhs</span><span class="p">.</span><span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="cm">/* ... */</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// second way
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Student</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="cm">/* ... */</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// non-member function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">friend</span> <span class="kt">bool</span> <span class="k">operator</span> <span class="o">&lt;</span> <span class="p">(</span><span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="cm">/* ... */</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// non-member function(global)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="k">operator</span> <span class="o">&lt;</span> <span class="p">(</span><span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">lhs</span><span class="p">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="n">rhs</span><span class="p">.</span><span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Non-member function(global function) of operator overloading(global overloading)</strong></p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -337,27 +343,30 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">struct Time {
-</span></span><span class="line"><span class="cl">  int hours;
-</span></span><span class="line"><span class="cl">  int minutes;
-</span></span><span class="line"><span class="cl">  int seconds;
-</span></span><span class="line"><span class="cl">};
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Time</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">hours</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">minutes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">seconds</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Time&amp; time) {
-</span></span><span class="line"><span class="cl">  out &lt;&lt; time.hours &lt;&lt; &#34;:&#34; &lt;&lt; time.minutes &lt;&lt; &#34;:&#34; &lt;&lt; time.seconds;
-</span></span><span class="line"><span class="cl">  return out;
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">Time</span><span class="o">&amp;</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="n">time</span><span class="p">.</span><span class="n">hours</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">time</span><span class="p">.</span><span class="n">minutes</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">time</span><span class="p">.</span><span class="n">seconds</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">out</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Time t1{12, 20, 56};
-</span></span><span class="line"><span class="cl">cout &lt;&lt; t1; // 12:20:56
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="n">Time</span> <span class="n">t1</span><span class="p">{</span><span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">56</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t1</span><span class="p">;</span> <span class="c1">// 12:20:56
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>The implementation of <code>&lt;&lt;</code> operator in STL <code>basic_ostream</code>.</strong></p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -370,39 +379,55 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">template&lt;typename _Traits&gt;
-</span></span><span class="line"><span class="cl">  inline basic_ostream&lt;char, _Traits&gt;&amp;
-</span></span><span class="line"><span class="cl">  operator&lt;&lt;(basic_ostream&lt;char, _Traits&gt;&amp; __out, const char* __s)
-</span></span><span class="line"><span class="cl">  {
-</span></span><span class="line"><span class="cl">    if (!__s)
-</span></span><span class="line"><span class="cl">_out.setstate(ios_base::badbit);
-</span></span><span class="line"><span class="cl">    else
-</span></span><span class="line"><span class="cl">_ostream_insert(__out, __s,
-</span></span><span class="line"><span class="cl">	 static_cast&lt;streamsize&gt;(_Traits::length(__s)));
-</span></span><span class="line"><span class="cl">    return __out;
-</span></span><span class="line"><span class="cl">  }
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Traits</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">inline</span> <span class="n">basic_ostream</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span> <span class="n">_Traits</span><span class="o">&gt;&amp;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">basic_ostream</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span> <span class="n">_Traits</span><span class="o">&gt;&amp;</span> <span class="n">__out</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">__s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">__s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_out</span><span class="p">.</span><span class="n">setstate</span><span class="p">(</span><span class="n">ios_base</span><span class="o">::</span><span class="n">badbit</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl"><span class="nf">_ostream_insert</span><span class="p">(</span><span class="n">__out</span><span class="p">,</span> <span class="n">__s</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">streamsize</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_Traits</span><span class="o">::</span><span class="n">length</span><span class="p">(</span><span class="n">__s</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">__out</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>Be careful with non-member overloading.</strong>
+Certain operators, like <code>new</code> and <code>delete,</code> don’t require a specific type.</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">**</span><span class="n">Be</span><span class="w"> </span><span class="n">careful</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">member</span><span class="w"> </span><span class="n">overloading</span><span class="p">.</span><span class="o">**</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Certain</span><span class="w"> </span><span class="n">operators</span><span class="p">,</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="o">`</span><span class="n">new</span><span class="o">`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="o">`</span><span class="k">delete</span><span class="p">,</span><span class="o">`</span><span class="w"> </span><span class="n">don</span><span class="err">’</span><span class="n">t</span><span class="w"> </span><span class="k">require</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">specific</span><span class="w"> </span><span class="n">type</span><span class="p">.</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### Rules and Philosophy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- Meaning should be obvious when you see it.
+</span></span><span class="line"><span class="cl">- Functionality should be **reasonably similar** to corresponding arithmetic operations
+</span></span><span class="line"><span class="cl">- When the meaning isn&#39;t obvious, give it a **normal name** instead.
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="rules-and-philosophy" class="headerLink">
-    <a href="#rules-and-philosophy" class="header-mark"></a>Rules and Philosophy</h3><ul>
-<li>Meaning should be obvious when you see it.</li>
-<li>Functionality should be <strong>reasonably similar</strong> to corresponding arithmetic operations</li>
-<li>When the meaning isn&rsquo;t obvious, give it a <strong>normal name</strong> instead.</li>
-</ul></div>
+</div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
 
         
 

@@ -74,7 +74,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec11_special_member_functions\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  772 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  773 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec11_special_member_functions\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -179,13 +179,6 @@
       <ul>
         <li><a href="#copy-and-copy-assignment">Copy and copy assignment</a></li>
         <li><a href="#default-and-delete">Default and delete</a></li>
-        <li><a href="#move-and-move-assignment">Move and move assignment</a>
-          <ul>
-            <li><a href="#r-value-reference">r-value reference</a></li>
-            <li><a href="#move-assignment">move assignment</a></li>
-            <li><a href="#stdmove">std::move</a></li>
-          </ul>
-        </li>
       </ul>
     </li>
   </ul>
@@ -194,7 +187,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/cs106l/"><i class="far fa-folder fa-fw"></i>CS106L</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 772 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 773 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -213,13 +206,6 @@
       <ul>
         <li><a href="#copy-and-copy-assignment">Copy and copy assignment</a></li>
         <li><a href="#default-and-delete">Default and delete</a></li>
-        <li><a href="#move-and-move-assignment">Move and move assignment</a>
-          <ul>
-            <li><a href="#r-value-reference">r-value reference</a></li>
-            <li><a href="#move-assignment">move assignment</a></li>
-            <li><a href="#stdmove">std::move</a></li>
-          </ul>
-        </li>
       </ul>
     </li>
   </ul>
@@ -281,7 +267,12 @@
     <a href="#default-and-delete" class="header-mark"></a>Default and delete</h3><p><code>default</code> and <code>delete</code> are key words  in c++.</p>
 <p>Declaring any user-deﬁned constructor will <strong>make the default disappear</strong>. If we need to use the default special member function we need add <code>=default</code>.
 <code>=default</code>  is only used for <strong>special member functions</strong> of the class that have <strong>no default parameters</strong>. Can be defined either inside the class body <strong>(inline)</strong> or outside the class body <strong>(out-of-line)</strong>.</p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -300,32 +291,35 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">class Student {
-</span></span><span class="line"><span class="cl"> public:
-</span></span><span class="line"><span class="cl">  // member function
-</span></span><span class="line"><span class="cl">  Student(int age);
-</span></span><span class="line"><span class="cl">  Student() = default; // defulated default constructor.
-</span></span><span class="line"><span class="cl">  ~Student();
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Student</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// member function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Student</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Student</span><span class="p">()</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span> <span class="c1">// defulated default constructor.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="o">~</span><span class="n">Student</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> private:
-</span></span><span class="line"><span class="cl">  int age;
-</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl"> <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Student::Student(int age) : age(age) {}
-</span></span><span class="line"><span class="cl">Student::~Student() {}
+</span></span><span class="line"><span class="cl"><span class="n">Student</span><span class="o">::</span><span class="n">Student</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="o">:</span> <span class="n">age</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span><span class="o">::~</span><span class="n">Student</span><span class="p">()</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Student s0; // error if there is no defaulted function
-</span></span><span class="line"><span class="cl">Student s1(19);
-</span></span><span class="line"><span class="cl">Student s2(29);
+</span></span><span class="line"><span class="cl"><span class="n">Student</span> <span class="n">s0</span><span class="p">;</span> <span class="c1">// error if there is no defaulted function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Student</span> <span class="nf">s1</span><span class="p">(</span><span class="mi">19</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span> <span class="nf">s2</span><span class="p">(</span><span class="mi">29</span><span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Setting a <strong>special member function</strong> to <code>=delete</code> removes its functionality. Thus we can selectively <strong>allow functionality</strong> of special member functions.
 <strong><code>=delete</code> can not be used at <code>destructor</code>.</strong></p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -351,35 +345,33 @@
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
-</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">class Student {
-</span></span><span class="line"><span class="cl"> public:
-</span></span><span class="line"><span class="cl">  // member function
-</span></span><span class="line"><span class="cl">  Student(int age);
-</span></span><span class="line"><span class="cl">  Student() = default; // defulated default constructor.
-</span></span><span class="line"><span class="cl">  ~Student();
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Student</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// member function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Student</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Student</span><span class="p">()</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span> <span class="c1">// defulated default constructor.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="o">~</span><span class="n">Student</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  Student(const Student&amp; rhs) = delete; // delete the copy constructor
-</span></span><span class="line"><span class="cl">  Student&amp; operator=(Student&amp; other) = delete; // delete the copy assignment
+</span></span><span class="line"><span class="cl">  <span class="n">Student</span><span class="p">(</span><span class="k">const</span> <span class="n">Student</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="o">=</span> <span class="k">delete</span><span class="p">;</span> <span class="c1">// delete the copy constructor
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Student</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Student</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="o">=</span> <span class="k">delete</span><span class="p">;</span> <span class="c1">// delete the copy assignment
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ~Student() = delete; // error, destructor can&#39;t be deleted
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"> <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  // ~Student() = delete; // error, destructor can&#39;t be deleted
+</span></span><span class="line"><span class="cl"><span class="n">Student</span><span class="o">::</span><span class="n">Student</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="o">:</span> <span class="n">age</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span><span class="o">::~</span><span class="n">Student</span><span class="p">()</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> private:
-</span></span><span class="line"><span class="cl">  int age;
-</span></span><span class="line"><span class="cl">};
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Student::Student(int age) : age(age) {}
-</span></span><span class="line"><span class="cl">Student::~Student() {}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Student s1(19);
-</span></span><span class="line"><span class="cl">Student s2(s1); // error, copy constructor has been deleted
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Student s3;
-</span></span><span class="line"><span class="cl">s3 = s2; // error, copy assignment has been deleted
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span> <span class="nf">s1</span><span class="p">(</span><span class="mi">19</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span> <span class="nf">s2</span><span class="p">(</span><span class="n">s1</span><span class="p">);</span> <span class="c1">// error, copy constructor has been deleted
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span> <span class="n">s3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">s3</span> <span class="o">=</span> <span class="n">s2</span><span class="p">;</span> <span class="c1">// error, copy assignment has been deleted
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="move-and-move-assignment" class="headerLink">
     <a href="#move-and-move-assignment" class="header-mark"></a>Move and move assignment</h3><p>Move constructors and move assignment operators will perform <strong>&ldquo;memberwise moves&rdquo;</strong>.
@@ -403,7 +395,12 @@ r-values are always about to die, so we can steal their resources.</p>
 <h4 id="r-value-reference" class="headerLink">
     <a href="#r-value-reference" class="header-mark"></a>r-value reference</h4><p>Different with l-value reference, we use <code>&amp;&amp;</code> to present <strong>r-value reference</strong>.</p>
 <h4 id="move-assignment" class="headerLink">
-    <a href="#move-assignment" class="header-mark"></a>move assignment</h4><div class="highlight"><div class="chroma">
+    <a href="#move-assignment" class="header-mark"></a>move assignment</h4><div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -416,27 +413,30 @@ r-values are always about to die, so we can steal their resources.</p>
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">vector&lt;T&gt;&amp; operator=(vector&lt;T&gt;&amp;&amp; other)
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">	if (&amp;other == this) return *this;
-</span></span><span class="line"><span class="cl">	_size = other._size;
-</span></span><span class="line"><span class="cl">	_capacity = other._capacity;
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;&amp;</span> <span class="n">other</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">other</span> <span class="o">==</span> <span class="k">this</span><span class="p">)</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">_size</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">_size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">_capacity</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">_capacity</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">	//we can steal the array
-</span></span><span class="line"><span class="cl">	delete[] _elems;
-</span></span><span class="line"><span class="cl">	_elems = other._elems;
-</span></span><span class="line"><span class="cl">	return *this;
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">	<span class="c1">//we can steal the array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">delete</span><span class="p">[]</span> <span class="n">_elems</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">_elems</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">_elems</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="stdmove" class="headerLink">
     <a href="#stdmove" class="header-mark"></a>std::move</h4><p><code>std::move</code> function mainly <strong>converts a l-value into a r-value reference</strong>.
 Use <code>std::move</code> to force the use of other <strong>types&rsquo; move assignments and constructors</strong>.</p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -458,42 +458,54 @@ Use <code>std::move</code> to force the use of other <strong>types&rsquo; move a
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">```</span><span class="n">cpp</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">other</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">this</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="nf">move</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">_size</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">_capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="nf">move</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">_capacity</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="o">//</span><span class="n">we</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">steal</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">array</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">delete</span><span class="p">[]</span><span class="w"> </span><span class="n">_elems</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">_elems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="nf">move</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">_elems</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">this</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s2">&#34;hello&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;world&#34;</span><span class="err">}</span><span class="p">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">vec1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s2">&#34;hello&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;world&#34;</span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="nf">move</span><span class="p">(</span><span class="n">vec1</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">vec2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s2">&#34;hello&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;world&#34;</span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">								  </span><span class="o">//</span><span class="w"> </span><span class="n">vec1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		  
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">vec1</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="s2">&#34;game&#34;</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">vec1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s2">&#34;game&#34;</span><span class="err">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="o">`</span><span class="n">vec1</span><span class="o">`</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">l</span><span class="o">-</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="o">`</span><span class="n">std</span><span class="p">::</span><span class="n">move</span><span class="o">`</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">convert</span><span class="w"> </span><span class="n">it</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">//</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">break</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="o">`</span><span class="n">vec1</span><span class="o">`</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;&amp;</span> <span class="n">other</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">other</span> <span class="o">==</span> <span class="k">this</span><span class="p">)</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">_size</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">_size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">_capacity</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">_capacity</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">	<span class="c1">//we can steal the array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">delete</span><span class="p">[]</span> <span class="n">_elems</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">_elems</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">_elems</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">vec1</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#34;hello&#34;</span><span class="p">,</span> <span class="s">&#34;world&#34;</span><span class="p">};</span> <span class="c1">// vec1 = {&#34;hello&#34;, &#34;world&#34;}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">vec2</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">vec1</span><span class="p">);</span> <span class="c1">// vec2 = {&#34;hello&#34;, &#34;world&#34;}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>								  <span class="c1">// vec1 = {}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		  
+</span></span><span class="line"><span class="cl"><span class="n">vec1</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&#34;game&#34;</span><span class="p">);</span> <span class="c1">// vec1 = {&#34;game&#34;}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// `vec1` is a l-value, we use `std::move` to convert it
+</span></span></span><span class="line"><span class="cl"><span class="c1">// also break the variable `vec1`
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>After a variable is moved via <code>std::move</code>, <strong>it should never be used until it is reassigned to a new variable</strong>.</p>
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>Don&rsquo;t use <code>std::move</code> outside of class definitions, never use it in application code.</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
+<pre tabindex="0" class="chroma"><code></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">**Don&#39;t use `std::move` outside of class definitions, never use it in application code.**
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
 </div>
 </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
 
         
 

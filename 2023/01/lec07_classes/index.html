@@ -74,7 +74,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xuer04.github.io\/2023\/01\/lec07_classes\/"
-        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  588 ,
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Cpp, 公开课","wordcount":  582 ,
         "url": "https:\/\/xuer04.github.io\/2023\/01\/lec07_classes\/","datePublished": "2023-01-20T10:22:46+08:00","dateModified": "2023-01-20T10:22:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Zicx","logo": {
@@ -175,23 +175,19 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#classes">Classes</a>
-      <ul>
-        <li><a href="#namespaces">Namespaces</a></li>
-        <li><a href="#this-keyword">This keyword</a></li>
-        <li><a href="#constructors">Constructors</a></li>
-        <li><a href="#array">Array</a></li>
-        <li><a href="#destructors">Destructors</a></li>
-        <li><a href="#static-member">Static member</a></li>
-      </ul>
-    </li>
+    <li><a href="#namespaces">Namespaces</a></li>
+    <li><a href="#this-keyword">This keyword</a></li>
+    <li><a href="#constructors">Constructors</a></li>
+    <li><a href="#array">Array</a></li>
+    <li><a href="#destructors">Destructors</a></li>
+    <li><a href="#static-member">Static member</a></li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec07 Classes</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/cs106l/"><i class="far fa-folder fa-fw"></i>CS106L</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 588 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-01-20">2023-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 582 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -206,39 +202,27 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#classes">Classes</a>
-      <ul>
-        <li><a href="#namespaces">Namespaces</a></li>
-        <li><a href="#this-keyword">This keyword</a></li>
-        <li><a href="#constructors">Constructors</a></li>
-        <li><a href="#array">Array</a></li>
-        <li><a href="#destructors">Destructors</a></li>
-        <li><a href="#static-member">Static member</a></li>
-      </ul>
-    </li>
+    <li><a href="#namespaces">Namespaces</a></li>
+    <li><a href="#this-keyword">This keyword</a></li>
+    <li><a href="#constructors">Constructors</a></li>
+    <li><a href="#array">Array</a></li>
+    <li><a href="#destructors">Destructors</a></li>
+    <li><a href="#static-member">Static member</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="toc" class="headerLink">
-    <a href="#toc" class="header-mark"></a>TOC</h1><ul>
-<li>[[#Classes|Classes]]
-<ul>
-<li>[[#Classes#Namespaces|Namespaces]]</li>
-<li>[[#Classes#This keyword|This keyword]]</li>
-<li>[[#Classes#Constructors|Constructors]]</li>
-<li>[[#Classes#Array|Array]]</li>
-<li>[[#Classes#Destructors|Destructors]]</li>
-<li>[[#Classes#Static member|Static member]]</li>
-</ul>
-</li>
-</ul>
-<h2 id="classes" class="headerLink">
-    <a href="#classes" class="header-mark"></a>Classes</h2><p><code>Class</code>: A programmerdeﬁned custom type. <strong>An abstraction of an object or data type</strong>.</p>
+            </div><div class="content" id="content"><h1 id="classes" class="headerLink">
+    <a href="#classes" class="header-mark"></a>Classes</h1><p><code>Class</code>: A programmerdeﬁned custom type. <strong>An abstraction of an object or data type</strong>.</p>
 <ul>
 <li>An <strong>Object</strong> is an instance of a <strong>Class.</strong></li>
 <li>When a class is deﬁned, no memory is allocated but when it is <strong>instantiated</strong> (i.e. an object is created) memory is allocated.</li>
 <li>Classes provide their users with a <strong>public interface</strong> and separate this from a <strong>private implementation</strong>.</li>
 </ul>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -252,25 +236,26 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">class Student {
-</span></span><span class="line"><span class="cl">	public:
-</span></span><span class="line"><span class="cl">		std::string getName();
-</span></span><span class="line"><span class="cl">		void setName(std::string name);
-</span></span><span class="line"><span class="cl">		int getAge();
-</span></span><span class="line"><span class="cl">		void setAge(int age);
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Student</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">getName</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="nf">getAge</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">void</span> <span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span> <span class="n">age</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">	private:
-</span></span><span class="line"><span class="cl">		std::string name;
-</span></span><span class="line"><span class="cl">		std::string state;
-</span></span><span class="line"><span class="cl">		int age;
-</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl">	<span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">state</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>Public section:</strong></p>
+</div></div>
+        </div>
+    </div>
+<p><strong>Public section:</strong></p>
 <ul>
 <li>Users of the specific object can directly access anything here.</li>
 <li>Deﬁnes interface for <strong>interacting with the private member variables</strong>.</li>
@@ -280,8 +265,8 @@
 <li>Usually contains all member variables.</li>
 <li>Users <strong>can&rsquo;t access or modify anything</strong> in the private section.</li>
 </ul>
-<h3 id="namespaces" class="headerLink">
-    <a href="#namespaces" class="header-mark"></a>Namespaces</h3><ul>
+<h2 id="namespaces" class="headerLink">
+    <a href="#namespaces" class="header-mark"></a>Namespaces</h2><ul>
 <li>Put code into logical groups, to <strong>avoid name clashes</strong>.</li>
 <li>Each class has its own namespace.</li>
 <li>Syntax for calling/using something in a namespace:
@@ -293,29 +278,40 @@
 </ul>
 </li>
 </ul>
-<h3 id="this-keyword" class="headerLink">
-    <a href="#this-keyword" class="header-mark"></a>This keyword</h3><p><code>this</code> is the pointer which points out the <strong>object that calls the member function</strong>. <code>this-&gt;element_name</code> means &ldquo;the item in this specific object with name <code>element_name</code>. Use this for avoiding naming conﬂicts.</p>
-<div class="highlight"><div class="chroma">
+<h2 id="this-keyword" class="headerLink">
+    <a href="#this-keyword" class="header-mark"></a>This keyword</h2><p><code>this</code> is the pointer which points out the <strong>object that calls the member function</strong>. <code>this-&gt;element_name</code> means &ldquo;the item in this specific object with name <code>element_name</code>. Use this for avoiding naming conﬂicts.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">void Student::setName(std::string name){
-</span></span><span class="line"><span class="cl">	this-&gt;name = name;
-</span></span><span class="line"><span class="cl">} 
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">Student</span><span class="o">::</span><span class="n">setName</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">this</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="constructors" class="headerLink">
-    <a href="#constructors" class="header-mark"></a>Constructors</h3><ul>
+</div></div>
+        </div>
+    </div>
+<h2 id="constructors" class="headerLink">
+    <a href="#constructors" class="header-mark"></a>Constructors</h2><ul>
 <li>The constructor is called every time <strong>a new instance is created</strong></li>
 <li>Deﬁne how the member variables of an object is initialized.</li>
 <li>Use <strong>initializer lists</strong> for speedier construction.</li>
 </ul>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -323,24 +319,30 @@
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">// construction using initializer lists
-</span></span><span class="line"><span class="cl">// no parameters
-</span></span><span class="line"><span class="cl">Student::Student() : name{&#34;&#34;}, age{0}, state{&#34;&#34;} {}
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// construction using initializer lists
+</span></span></span><span class="line"><span class="cl"><span class="c1">// no parameters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Student</span><span class="o">::</span><span class="n">Student</span><span class="p">()</span> <span class="o">:</span> <span class="n">name</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">},</span> <span class="n">age</span><span class="p">{</span><span class="mi">0</span><span class="p">},</span> <span class="n">state</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">}</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// with parameters
-</span></span><span class="line"><span class="cl">Student::Student(string name, int age, string state) : name{name}, age{age}, state{state} {}
+</span></span><span class="line"><span class="cl"><span class="c1">// with parameters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Student</span><span class="o">::</span><span class="n">Student</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">string</span> <span class="n">state</span><span class="p">)</span> <span class="o">:</span> <span class="n">name</span><span class="p">{</span><span class="n">name</span><span class="p">},</span> <span class="n">age</span><span class="p">{</span><span class="n">age</span><span class="p">},</span> <span class="n">state</span><span class="p">{</span><span class="n">state</span><span class="p">}</span> <span class="p">{}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="array" class="headerLink">
-    <a href="#array" class="header-mark"></a>Array</h3><ul>
+</div></div>
+        </div>
+    </div>
+<h2 id="array" class="headerLink">
+    <a href="#array" class="header-mark"></a>Array</h2><ul>
 <li>Arrays are a primitive type. They are the building blocks of all containers</li>
 <li>Think of array as lists of objects of <strong>ﬁxed size</strong> that you can <strong>index into</strong>.</li>
 </ul>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -360,18 +362,26 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">elem</span> <span class="o">=</span> <span class="n">intarray</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="destructors" class="headerLink">
-    <a href="#destructors" class="header-mark"></a>Destructors</h3><ul>
+</div></div>
+        </div>
+    </div>
+<h2 id="destructors" class="headerLink">
+    <a href="#destructors" class="header-mark"></a>Destructors</h2><ul>
 <li>Deleteing (almost) always happens in the destructor of a class.</li>
 <li>The destructor is deﬁned using <code>class_name::~class_name()</code></li>
 <li>the destructor is called when the <strong>object goes out of scope</strong>.</li>
 </ul>
-<h3 id="static-member" class="headerLink">
-    <a href="#static-member" class="header-mark"></a>Static member</h3><p><code>Static member</code> meas this member is <strong>belong to the class</strong> instead of the specific object.</p>
+<h2 id="static-member" class="headerLink">
+    <a href="#static-member" class="header-mark"></a>Static member</h2><p><code>Static member</code> meas this member is <strong>belong to the class</strong> instead of the specific object.</p>
 <blockquote>
 <p><strong>static variable must have definition.</strong></p>
 </blockquote>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -384,25 +394,33 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">class Game {
-</span></span><span class="line"><span class="cl"> public:
-</span></span><span class="line"><span class="cl">  Game(/* args */);
-</span></span><span class="line"><span class="cl">  ~Game(/* args */);
-</span></span><span class="line"><span class="cl">  void setID(int id) { Game::id = id; }
-</span></span><span class="line"><span class="cl">  int getID() { return id; }
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Game</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Game</span><span class="p">(</span><span class="cm">/* args */</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="o">~</span><span class="n">Game</span><span class="p">(</span><span class="cm">/* args */</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">setID</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span> <span class="n">Game</span><span class="o">::</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="nf">getID</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">id</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> private:
-</span></span><span class="line"><span class="cl">  /* data */
-</span></span><span class="line"><span class="cl">  static int id;
-</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl"> <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/* data */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">static</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>In this code, <code>id</code> is a variable member belong to the class <code>Game</code>, if we call <code>obj.setID(val)</code>, the variable <code>Game:：id</code> wouble be changed.</p>
-<div class="highlight"><div class="chroma">
+</div><div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>In this code, <code>id</code> is a variable member belong to the class <code>Game</code>, if we call <code>obj.setID(val)</code>, the variable <code>Game:：id</code> wouble be changed.</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -415,24 +433,35 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">int main(void) {
-</span></span><span class="line"><span class="cl">  Game game1;
-</span></span><span class="line"><span class="cl">  game1.setID(2);
-</span></span><span class="line"><span class="cl">  cout &lt;&lt; &#34;game1 id: &#34;;
-</span></span><span class="line"><span class="cl">  cout &lt;&lt; game1.getID() &lt;&lt; endl; // 2
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  Game game2;
-</span></span><span class="line"><span class="cl">  cout &lt;&lt; &#34;game2 id: &#34;;
-</span></span><span class="line"><span class="cl">  cout &lt;&lt; game2.getID() &lt;&lt; endl; // 2
-</span></span><span class="line"><span class="cl">  return 0;
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Game</span> <span class="n">game1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">game1</span><span class="p">.</span><span class="n">setID</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;game1 id: &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">game1</span><span class="p">.</span><span class="n">getID</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="n">Game</span> <span class="n">game2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;game2 id: &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">game2</span><span class="p">.</span><span class="n">getID</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div>
+</div><div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
 
         
 

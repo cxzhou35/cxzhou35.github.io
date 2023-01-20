@@ -208,7 +208,12 @@
     <a href="#type-safety" class="header-mark"></a>Type safety</h2><p><code>Type Safety</code>: The extent to which a language prevents typing errors and guarantees the behavior of programs.</p>
 <p><code>Undeﬁned Behavior(UB)</code>: Function could crash, could give us garbage, could accidentally give us some actual value.</p>
 <p><code>std::optional&lt;T&gt;</code>: A template class which will either contain a value of type T or contain nothing (expressed as <code>nullopt</code>). <code>std::optional</code> is a tool that could make this happen: you can return either a value or nothing.</p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -218,18 +223,16 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">int main(){
-</span></span><span class="line"><span class="cl">	std::optional&lt;int&gt; num1 = {}; // num1 does not have a value
-</span></span><span class="line"><span class="cl">	// std::optional num1 = {2};     // type deduction
-</span></span><span class="line"><span class="cl">	num1 = std::optional&lt;int&gt;{1}; // now it does!
-</span></span><span class="line"><span class="cl">	num1 = std::nullopt; // now it doesn&#39;t anymore
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">	return 0;
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">num1</span> <span class="o">=</span> <span class="p">{};</span> <span class="c1">// num1 does not have a value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// std::optional num1 = {2};     // type deduction
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">num1</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span> <span class="c1">// now it does!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">num1</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">;</span> <span class="c1">// now it doesn&#39;t anymore
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> 
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>std::optional</code> interface</p>
@@ -267,7 +270,10 @@
 <li>returns the result of calling f(value) if contained value exists, otherwise null_opt (f must return optional<valueType>)</li>
 </ul>
 </li>
-</ul></div>
+</ul>
+</div>
+        </div>
+    </div></div>
 
         
 

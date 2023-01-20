@@ -12,7 +12,7 @@
 
 Any function that **returns a boolean** value is a `predicate.` A predicate can have **any amount of parameters**.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 bool isVowel(char c){
 	std::string vowel = "aeiou";
@@ -43,7 +43,7 @@ Here `UniPred` is called a `function pointer`.
 `Lambdas` are **inline,** **anonymous** functions that can know about variables declared in their same scope.
 ![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png)
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 // complete format of lambda expression
 [ capture list ] ( params ) mutable(optional) constexpr(optional)(c++17) exception attribute -> return_type { function body } 
@@ -72,7 +72,7 @@ Lambdas can capture any outside variable by using `[]`, **both by reference and 
 
 Whenever a lambda expression is defined, the compiler will automatically generate an **anonymous class**, we call it `closure class`, this class overloads `()` operator of course.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 class Closure
 {
@@ -86,7 +86,7 @@ public:
 
 A `functor` is any **class** that provides an implementation of **operator().** They can create **closures** of "customized" functions.
 
-```ad-warning
+{{< admonition warning >}}
 **Actually, this name never appears in the standard c++, we usually call it `function object`.**
 ```
 

@@ -14,7 +14,7 @@
 
 `std::optional<T>`: A template class which will either contain a value of type T or contain nothing (expressed as `nullopt`). `std::optional` is a tool that could make this happen: you can return either a value or nothing.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 int main(){
 	std::optional<int> num1 = {}; // num1 does not have a value

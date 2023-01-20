@@ -47,7 +47,7 @@ Type::operator=(const Type& other)
 Declaring any user-deﬁned constructor will **make the default disappear**. If we need to use the default special member function we need add `=default`.
 `=default`  is only used for **special member functions** of the class that have **no default parameters**. Can be defined either inside the class body **(inline)** or outside the class body **(out-of-line)**.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 class Student {
  public:
@@ -71,7 +71,7 @@ Student s2(29);
 Setting a **special member function** to `=delete` removes its functionality. Thus we can selectively **allow functionality** of special member functions. 
 **`=delete` can not be used at `destructor`.**
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 class Student {
  public:
@@ -121,7 +121,7 @@ Different with l-value reference, we use `&&` to present **r-value reference**.
 
 #### move assignment
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 vector<T>& operator=(vector<T>&& other)
 {
@@ -140,7 +140,7 @@ vector<T>& operator=(vector<T>&& other)
 `std::move` function mainly **converts a l-value into a r-value reference**.
 Use `std::move` to force the use of other **types' move assignments and constructors**.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 vector<T>& operator=(vector<T>&& other)
 {
@@ -166,7 +166,7 @@ vec1.push_back("game"); // vec1 = {"game"}
 
 After a variable is moved via `std::move`, **it should never be used until it is reassigned to a new variable**.
 
-```ad-warning
+{{< admonition warning >}}
 **Don't use `std::move` outside of class definitions, never use it in application code.**
 ```
 

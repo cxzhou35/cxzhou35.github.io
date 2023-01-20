@@ -46,7 +46,7 @@ There are three types of `smart (RAII-safe) pointers`:
 - std::weak_ptr
 	- Models temporary ownership: when an object only needs to be accessed if it exists **(convert to shared_ptr to access)**
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 std::unique_ptr<T> up{new T};
 std::unique_ptr<T> up = std::make_unique<T>();

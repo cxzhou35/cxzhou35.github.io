@@ -3,20 +3,14 @@
 
 <!--more-->
 
-# TOC
-- [[#Template|Template]]
-	- [[#Template#Function Template|Function Template]]
-	- [[#Template#Class Template|Class Template]]
-	- [[#Template#Generic Programming|Generic Programming]]
-	- [[#Template#Template Metaprogramming|Template Metaprogramming]]
 
-## Template
+# Template
 
-### Function Template
+## Function Template
 
 `Function Template`: A function template defines a family of functions. The simple idea is to **pass data type as a parameter** so that we don’t need to write the same code for different data types.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 // we need `typename` or `class` keyword 
 template <typename T>
@@ -35,26 +29,32 @@ myMax(1, 2); // infers that T is of type `int`
 myMax(1.2, 3.9); // infers that T is of type `double`
 myMax('a', 'i'); // infers that T is of type `char`
 ```
+{{< /admonition >}}
 
 **Explicit instantiation**
+
 - specify the type T
 - `cout << myMax<int>(2, 3) << endl;`
 
 **Implicit instantiation**
+
 - leave the type for the compiler to deduce
 - `cout << myMax(2, 3) << endl`
 
-```ad-hint
+{{< admonition tip>}}
 **template functions are not compiled until used!**
+
 For each instantiation with different parameters, the compiler generates a new specific version of your template at compile time.
 Template code is instantiated at compile time.
 ```
+{{< /admonition >}}
 
-### Class Template 
+
+## Class Template 
 
 `Class Template`: A class that is parametrized over some number of types. A class that is comprised of member variables of a general type/types. Use generic typenames as **placeholders.**
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 template<typename F, typename S>
 // we can specify a default value for template arguments
@@ -83,25 +83,29 @@ typename MyPair<F, S>::iterator MyPair<F, S>::begin() {...}
 // here iterator is a `dependent type` in namespace Mypair<F, S>::
 // we must add `typename` prior
 ```
+{{< /admonition >}}
 
 Templated code implementation **should never be in a .cpp file**: your compiler has to see them at the same time as it sees the code that calls them.
 
-### Generic Programming
+## Generic Programming
 
 **Generic Programming** is a programming paradigm for developing **efficient**, **reusable** software libraries.
+
 Generics is the idea to **allow type (Integer, String, … etc) to be a parameter** to methods, classes and interfaces.
+
 Generics can be implemented in C++ using [Templates](https://www.geeksforgeeks.org/templates-cpp/).
 
 The **advantages** of Generic Programming are
+
 - Code Reusability
 - Avoid Function Overloading
 - Once written it can be used for multiple times and cases.
 
-### Template Metaprogramming
+## Template Metaprogramming
 
 Normally, code runs during runtime. But with `template metaprogramming(TMP)`, code **runs once during compile time**. Something runs once during compiling and can be used as many times as you like during runtime.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 template <unsigned n>
 struct Factorial {
@@ -115,10 +119,12 @@ struct Factorial<0> {
 
 cout << Factorial<10>::value << endl; // print 3628800
 ```
+{{< /admonition >}}
 
 `struct` is similar to `class` in that it can contain both member variables and member functions.
 
 **the difference of struct and class**
+
 - When using class, the **members of a class are all private by default**, while when using struct, the **members of a struct are all public by default**.
 - class can be used as a **template keyword**, while struct cannot.
 - class inheritance is **private inheritance** by default, while struct inheritance is **public inheritance** by default

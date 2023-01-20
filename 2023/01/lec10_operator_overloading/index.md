@@ -32,7 +32,7 @@
 	- It allows us to overload operators with **classes we don’t own**.
 - The `friend` keyword allows non-member functions or classes to access private information in another class.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 // first way
 class Student{
@@ -69,7 +69,7 @@ bool operator < (const Student& lhs, const Student& rhs) {
 
 **Non-member function(global function) of operator overloading(global overloading)**
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 struct Time {
   int hours;
@@ -88,7 +88,7 @@ cout << t1; // 12:20:56
 
 **The implementation of `<<` operator in STL `basic_ostream`.**
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 template<typename _Traits>
   inline basic_ostream<char, _Traits>&
@@ -103,7 +103,7 @@ _ostream_insert(__out, __s,
   }
 ```
 
-```ad-warning
+{{< admonition warning >}}
 **Be careful with non-member overloading.**
 Certain operators, like `new` and `delete,` don’t require a specific type.
 ```
