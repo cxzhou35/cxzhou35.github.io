@@ -1,4 +1,4 @@
-# CS106L: Lec02 Types and Structs
+# CS106L: Lec01 Welcome
 
 
 <!--more-->
@@ -15,6 +15,7 @@ bool bVal = true; //1 bit
 ```
 
 `String type`
+
 ```cpp
 #include <string> // need `string` library
 std::string str = "Sarah"; // double quotes means string
@@ -25,22 +26,19 @@ char character = str[1]; // 'a'
 
 ## Dynamic vs Static typing
 
-{{< admonition note>}}
+```ad-note
 C++ is a **statically typed language.**
 
 `statically typed`:
-
-Everything with a name (variables, functions, etc) is given a type before runtime.(C++)
+Everything with a name (variables, functions, etc) is **given a type before runtime.**(C++)
 
 `dynamically typed`:
-
-Everything with a name (variables, functions, etc) is given a 
-type at runtime based on the thing’s current value.(Python)
+Everything with a name (variables, functions, etc) is **given a 
+type at runtime** based on the thing’s current value.(Python)
 
 `Runtime`:
-
 Period when program is executing commands (after compilation, if compiled).
-{{< /admonition >}}
+```
 
 ```python
 # CRASH during runtime, can’t divide a string
@@ -58,15 +56,14 @@ int div_3(int x){
 div_3("hello");
 ```
 
-Static typing helps us to prevent errors before our code runs.
+**Static typing** helps us to prevent errors before our code runs.
 
 ## Overloading
 
-**Define two functions with the same name but different types.**
+**Deﬁne two functions with the same name but diﬀerent types.**
 
 {{< admonition example>}}
-```cpp
-int half(int x) { 
+```cpp int half(int x) { 
 	std::cout << “1” << endl; 
 	return x / 2;
 }
@@ -77,7 +74,6 @@ double half(double x) {
 }
 ```
 {{< /admonition >}}
-
 
 ## Struct
 
@@ -104,7 +100,7 @@ auto [name, state, age] = s;
 
 ## Pair
 
-`std::pair`: An STL built-in struct with two fields of any type.
+`std::pair`: An STL built-in struct with two ﬁelds of any type.
 
 ```cpp
 // The fields in std::pairs are named `first` and `second`
@@ -149,7 +145,8 @@ Type deduction with `auto`.
 auto spliceString(const string& s);
 ```
 
-{{< admonition >}}
+{{< admonition note>}}
 auto doesn't mean that the variable doesn't have a type, it means that the type is **deduced by the compiler**.
 {{< /admonition >}}
+
 

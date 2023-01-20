@@ -15,7 +15,7 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>CS106L: Lec02 Types and Structs</title>
+    <title>CS106L: Lec01 Welcome</title>
     <link>https://xuer04.github.io/2023/01/lec02_types_and_structs/</link>
     <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
                     <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec02_types_and_structs/</guid>
@@ -23,20 +23,68 @@
                 <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
             </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>从零开始搭建 Ubuntu 开发环境</title>
-    <link>https://xuer04.github.io/2022/08/setup_ubuntu/</link>
-    <pubDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2022/08/setup_ubuntu/</guid>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec03_streams/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec03_streams/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/image/setup_ubuntu/ubuntu.jpg" referrerpolicy="no-referrer">
-            </div>这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 Ubuntu 20.04 为例）]]></description>
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
 </item><item>
-    <title>Markdown 教程与 Hugo 中的简单应用</title>
-    <link>https://xuer04.github.io/2022/08/markdown_use/</link>
-    <pubDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2022/08/markdown_use/</guid>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec04_init_and_ref/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec04_init_and_ref/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/image/markdown_use/markdown.png" referrerpolicy="no-referrer">
-            </div>这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。]]></description>
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec05_containers/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec05_containers/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec07_classes/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec07_classes/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec08_templates/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec08_templates/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec09_funcs_and_lambdas/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
+</item><item>
+    <title>CS106L: Lec01 Welcome</title>
+    <link>https://xuer04.github.io/2023/01/lec10_operator_ovloading/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2023/01/lec10_operator_ovloading/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/image/cs106L/title.png" referrerpolicy="no-referrer">
+            </div>CS106L 课程笔记]]></description>
 </item></channel>
 </rss>
