@@ -45,8 +45,8 @@ myMax('a', 'i'); // infers that T is of type `char`
 **template functions are not compiled until used!**
 
 For each instantiation with different parameters, the compiler generates a new specific version of your template at compile time.
+
 Template code is instantiated at compile time.
-```
 {{< /admonition >}}
 
 
