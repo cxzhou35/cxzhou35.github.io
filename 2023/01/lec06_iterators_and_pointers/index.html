@@ -63,7 +63,7 @@
 <meta name="application-name" content="Zicx の Blog">
 <meta name="apple-mobile-web-app-title" content="Zicx の Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec07_classes/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec05_containers/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/" /><link rel="prev" href="https://xuer04.github.io/2023/01/lec07_classes/" /><link rel="next" href="https://xuer04.github.io/2023/01/lec06_iterators_and_pointers/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
     {
@@ -178,14 +178,6 @@
     <li><a href="#iterators">Iterators</a>
       <ul>
         <li><a href="#what-is-iterator">What is iterator</a></li>
-        <li><a href="#types-of-iterator">Types of iterator</a></li>
-        <li><a href="#ranges">Ranges</a></li>
-        <li><a href="#range-based-for-loop">Range based for loop</a></li>
-      </ul>
-    </li>
-    <li><a href="#pointers">Pointers</a>
-      <ul>
-        <li><a href="#what-is-pointer">What is pointer</a></li>
       </ul>
     </li>
   </ul>
@@ -212,14 +204,6 @@
     <li><a href="#iterators">Iterators</a>
       <ul>
         <li><a href="#what-is-iterator">What is iterator</a></li>
-        <li><a href="#types-of-iterator">Types of iterator</a></li>
-        <li><a href="#ranges">Ranges</a></li>
-        <li><a href="#range-based-for-loop">Range based for loop</a></li>
-      </ul>
-    </li>
-    <li><a href="#pointers">Pointers</a>
-      <ul>
-        <li><a href="#what-is-pointer">What is pointer</a></li>
       </ul>
     </li>
   </ul>
@@ -266,7 +250,12 @@ Containers all implement something called an iterator to do this.</p>
 <li>Can be advanced using <code>++</code></li>
 <li>Can be compared with <code>==</code> and <code>!=</code></li>
 </ul>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -296,38 +285,36 @@ Containers all implement something called an iterator to do this.</p>
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
-</span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">std::set&lt;int&gt; myset{1, 2, 3, 4};
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">myset</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// define a iterator like this: 
-</span></span><span class="line"><span class="cl">// container_class_name::iterator iterator_name;
-</span></span><span class="line"><span class="cl">std::set&lt;int&gt;::iterator iter = myset.begin();
-</span></span><span class="line"><span class="cl">cout &lt;&lt; *iter &lt;&lt; endl; // 1
+</span></span><span class="line"><span class="cl"><span class="c1">// define a iterator like this: 
+</span></span></span><span class="line"><span class="cl"><span class="c1">// container_class_name::iterator iterator_name;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">myset</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">iter</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="o">++</span><span class="n">iter</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">iter</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">iter</span> <span class="o">==</span> <span class="n">myset</span><span class="p">.</span><span class="n">end</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">++iter;
-</span></span><span class="line"><span class="cl">cout &lt;&lt; *iter &lt;&lt; endl; // 2
+</span></span><span class="line"><span class="cl"><span class="c1">// find returns an iterator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">elem2find</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">if (iter == myset.end()){
-</span></span><span class="line"><span class="cl">	return;
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// find returns an iterator
-</span></span><span class="line"><span class="cl">std::vector&lt;int&gt; vec{3, 1, 4, 8, 5, 9, 2, 6, 7, 0};
-</span></span><span class="line"><span class="cl">const int elem2find = 5;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">auto find_it = std::find(vec.begin(), vec.end(), elem2find);
-</span></span><span class="line"><span class="cl">cout &lt;&lt; *find_it &lt;&lt; endl; // 5
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// map iterator
-</span></span><span class="line"><span class="cl">std::map&lt;int, int&gt; mmap;
-</span></span><span class="line"><span class="cl">for(auto iter = mmap.begin(); iter != mmap.end(); ++iter){
-</span></span><span class="line"><span class="cl">	cout &lt;&lt; (*iter).first &lt;&lt; &#34; &#34; &lt;&lt; (*iter).second &lt;&lt; endl;
-</span></span><span class="line"><span class="cl">	// is the same as ...
-</span></span><span class="line"><span class="cl">	cout &lt;&lt; iter-&gt;first &lt;&lt; &#34; &#34; &lt;&lt; iter-&gt;second &lt;&lt; endl;
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">find_it</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">elem2find</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">find_it</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 5
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// map iterator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">mmap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">mmap</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">iter</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">iter</span><span class="p">).</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">iter</span><span class="p">).</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// is the same as ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="types-of-iterator" class="headerLink">
@@ -378,7 +365,12 @@ Containers all implement something called an iterator to do this.</p>
         data-sizes="auto"
         alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151450358.png"
         title="f|C|500"></p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -386,16 +378,14 @@ Containers all implement something called an iterator to do this.</p>
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">for (auto iter = set.begin(); iter != set.end(); ++iter){
-</span></span><span class="line"><span class="cl">	do something;
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">set</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">set</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">iter</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">do</span> <span class="n">something</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// dereference the iterator to get element
-</span></span><span class="line"><span class="cl">const auto&amp; elem = *iter;
+</span></span><span class="line"><span class="cl"><span class="c1">// dereference the iterator to get element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">elem</span> <span class="o">=</span> <span class="o">*</span><span class="n">iter</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="ranges" class="headerLink">
@@ -410,7 +400,12 @@ Containers all implement something called an iterator to do this.</p>
 <h3 id="range-based-for-loop" class="headerLink">
     <a href="#range-based-for-loop" class="header-mark"></a>Range based for loop</h3><p>A range based <code>for</code> loop is a shorthand for iterator code.
 All that is required is that the class contains the member functions <code>begin()</code> and <code>end()</code> and that its **return value type supports the operators <code>++,</code> <code>*</code> and <code>!=</code> **</p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -428,33 +423,36 @@ All that is required is that the class contains the member functions <code>begin
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">// for(type variable : container)
-</span></span><span class="line"><span class="cl">std::map&lt;string, int&gt; mmap;
-</span></span><span class="line"><span class="cl">for(auto thing : mmap){
-</span></span><span class="line"><span class="cl">	dosomething(thing.first, thing.second)
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// for(type variable : container)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">mmap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">thing</span> <span class="p">:</span> <span class="n">mmap</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dosomething</span><span class="p">(</span><span class="n">thing</span><span class="p">.</span><span class="n">first</span><span class="p">,</span> <span class="n">thing</span><span class="p">.</span><span class="n">second</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// the implementation
-</span></span><span class="line"><span class="cl">for (it = mmap.begin(); it != mmap.end(); ++it){
-</span></span><span class="line"><span class="cl">	thing = *it;
-</span></span><span class="line"><span class="cl">	dosomething(thing.first, thing.second)
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="c1">// the implementation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">mmap</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">mmap</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">thing</span> <span class="o">=</span> <span class="o">*</span><span class="n">it</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dosomething</span><span class="p">(</span><span class="n">thing</span><span class="p">.</span><span class="n">first</span><span class="p">,</span> <span class="n">thing</span><span class="p">.</span><span class="n">second</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// for structure container (cpp17 extension)
-</span></span><span class="line"><span class="cl">for(auto [key, value] : mmap){
-</span></span><span class="line"><span class="cl">	dosomething(key, value);
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="c1">// for structure container (cpp17 extension)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">]</span> <span class="o">:</span> <span class="n">mmap</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dosomething</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="pointers" class="headerLink">
     <a href="#pointers" class="header-mark"></a>Pointers</h2><h3 id="what-is-pointer" class="headerLink">
     <a href="#what-is-pointer" class="header-mark"></a>What is pointer</h3><p>Variables created in code take up space on the computer. They live in memory at speciﬁc addresses. Pointers reference those memory addresses and not the object themselves.</p>
 <p>Pointer can access <strong>memory addresses with &amp;</strong> and <strong>the data at an address/pointer using *</strong>.</p>
-<div class="highlight"><div class="chroma">
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -476,33 +474,39 @@ All that is required is that the class contains the member functions <code>begin
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```cpp
-</span></span><span class="line"><span class="cl">int val = 18;
-</span></span><span class="line"><span class="cl">int* ptr = &amp;val;
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">*</span> <span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">val</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// dereference
-</span></span><span class="line"><span class="cl">cout &lt;&lt; *ptr &lt;&lt; endl; // 18
+</span></span><span class="line"><span class="cl"><span class="c1">// dereference
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 18
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// dereference of member variables
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">struct</span> <span class="nc">Student</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// dereference of member variables
-</span></span><span class="line"><span class="cl">struct Student{
-</span></span><span class="line"><span class="cl">	int id;
-</span></span><span class="line"><span class="cl">	string name;
-</span></span><span class="line"><span class="cl">};
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Student s1{12, &#34;Alice&#34;};
-</span></span><span class="line"><span class="cl">Student* ptr = &amp;s1;
-</span></span><span class="line"><span class="cl">cout &lt;&lt; ptr-&gt;id &lt;&lt; endl; // 12
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">std::pair&lt;int, string&gt; game{2, &#34;Death Loop&#34;};
-</span></span><span class="line"><span class="cl">std::pair&lt;int, string&gt;* pgame = &amp;game;
-</span></span><span class="line"><span class="cl">cout &lt;&lt; pgame-&gt;first &lt;&lt; endl; // 2
-</span></span><span class="line"><span class="cl">cout &lt;&lt; pgame-&gt;second &lt;&lt; endl; // Death Loop
-</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span> <span class="n">s1</span><span class="p">{</span><span class="mi">12</span><span class="p">,</span> <span class="s">&#34;Alice&#34;</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">Student</span><span class="o">*</span> <span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">s1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 12
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;</span> <span class="n">game</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="s">&#34;Death Loop&#34;</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;*</span> <span class="n">pgame</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">game</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">pgame</span><span class="o">-&gt;</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">pgame</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Death Loop
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
+        </div>
+    </div></div>
 
         
 
@@ -603,7 +607,7 @@ All that is required is that the class contains the member functions <code>begin
     </div>
 
     <div class="post-nav"><a href="/2023/01/lec07_classes/" class="prev" rel="prev" title="CS106L: Lec07 Classes"><i class="fas fa-angle-left fa-fw"></i>CS106L: Lec07 Classes</a>
-            <a href="/2023/01/lec05_containers/" class="next" rel="next" title="CS106L: Lec05 Containers">CS106L: Lec05 Containers<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="/2023/01/lec06_iterators_and_pointers/" class="next" rel="next" title="CS106L: Lec06 Iterators and Pointers">CS106L: Lec06 Iterators and Pointers<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.

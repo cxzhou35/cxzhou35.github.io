@@ -36,7 +36,7 @@ Containers all implement something called an iterator to do this.
 - Can be advanced using `++`
 - Can be compared with `==` and `!=`
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 std::set<int> myset{1, 2, 3, 4};
 
@@ -90,7 +90,7 @@ for(auto iter = mmap.begin(); iter != mmap.end(); ++iter){
 
 ![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151450358.png)
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 for (auto iter = set.begin(); iter != set.end(); ++iter){
 	do something;
@@ -111,7 +111,7 @@ We can iterate through different ranges.
 A range based `for` loop is a shorthand for iterator code.
 All that is required is that the class contains the member functions `begin()` and `end()` and that its **return value type supports the operators `++,` `*` and `!=` **
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 // for(type variable : container)
 std::map<string, int> mmap;
@@ -139,7 +139,7 @@ Variables created in code take up space on the computer. They live in memory at 
 
 Pointer can access **memory addresses with &** and **the data at an address/pointer using \***.
 
-```ad-example
+{{< admonition example >}}
 ```cpp
 int val = 18;
 int* ptr = &val;

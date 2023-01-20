@@ -10,10 +10,10 @@ def replace_ad_type(directory):
             with open(file_path, "w") as f:
                 for line in lines:
                     for type in types:
-                        str = 'ad-' + type
+                        str = '```ad-' + type
                         if  str in line:
                             # 随机选择一个 type
-                            line = line.replace(str, f"{{< admonition {type} >}}")
+                            line = line.replace(str, f"{{{{< admonition {type} >}}}}")
                     f.write(line)
 
 replace_ad_type("./")
