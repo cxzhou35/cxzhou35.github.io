@@ -121,7 +121,7 @@ class Game {
   static int id;
 };
 ```
-{{< admonition example >}}
+{{< /admonition >}}
 
 In this code, `id` is a variable member belong to the class `Game`, if we call `obj.setID(val)`, the variable `Game:：id` wouble be changed.
 
@@ -139,5 +139,5 @@ int main(void) {
   return 0;
 }
 ```
-{{< admonition example >}}
+{{< /admonition >}}
 
