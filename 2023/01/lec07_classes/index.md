@@ -4,7 +4,7 @@
 <!--more-->
 
 
-# Classes
+## Classes
 
 `Class`: A programmerdeﬁned custom type. **An abstraction of an object or data type**.
 
@@ -39,7 +39,7 @@ class Student {
 - Usually contains all member variables.
 - Users **can't access or modify anything** in the private section.
 
-##  Namespaces
+###  Namespaces
 
 - Put code into logical groups, to **avoid name clashes**.
 - Each class has its own namespace.
@@ -49,7 +49,7 @@ class Student {
 	- Inside the {...} the private member variables for `namespace_name` will be in scope.
 	- `std::string Student::getName() {...}`, we can use  private member variables  in this function.
 
-## This keyword
+### This keyword
 
 `this` is the pointer which points out the **object that calls the member function**. `this->element_name` means "the item in this specific object with name `element_name`. Use this for avoiding naming conﬂicts. 
 
@@ -61,7 +61,7 @@ void Student::setName(std::string name){
 ```
 {{< /admonition>}}
 
-## Constructors
+### Constructors
 
 - The constructor is called every time **a new instance is created**
 - Deﬁne how the member variables of an object is initialized.
@@ -78,7 +78,7 @@ Student::Student(string name, int age, string state) : name{name}, age{age}, sta
 ```
 {{< /admonition>}}
 
-## Array
+### Array
 
 - Arrays are a primitive type. They are the building blocks of all containers
 - Think of array as lists of objects of **ﬁxed size** that you can **index into**.
@@ -95,13 +95,13 @@ int elem = intarray[0];
 ```
 {{< /admonition>}}
 
-## Destructors
+### Destructors
 
 - Deleteing (almost) always happens in the destructor of a class.
 - The destructor is deﬁned using `class_name::~class_name()`
 - the destructor is called when the **object goes out of scope**.
 
-## Static member
+### Static member
 
 `Static member` meas this member is **belong to the class** instead of the specific object.
 

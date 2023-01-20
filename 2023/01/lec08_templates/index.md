@@ -4,9 +4,9 @@
 <!--more-->
 
 
-# Template
+## Template
 
-## Function Template
+### Function Template
 
 `Function Template`: A function template defines a family of functions. The simple idea is to **pass data type as a parameter** so that we don’t need to write the same code for different data types.
 
@@ -50,7 +50,7 @@ Template code is instantiated at compile time.
 {{< /admonition >}}
 
 
-## Class Template 
+### Class Template 
 
 `Class Template`: A class that is parametrized over some number of types. A class that is comprised of member variables of a general type/types. Use generic typenames as **placeholders.**
 
@@ -87,7 +87,7 @@ typename MyPair<F, S>::iterator MyPair<F, S>::begin() {...}
 
 Templated code implementation **should never be in a .cpp file**: your compiler has to see them at the same time as it sees the code that calls them.
 
-## Generic Programming
+### Generic Programming
 
 **Generic Programming** is a programming paradigm for developing **efficient**, **reusable** software libraries.
 
@@ -101,7 +101,7 @@ The **advantages** of Generic Programming are
 - Avoid Function Overloading
 - Once written it can be used for multiple times and cases.
 
-## Template Metaprogramming
+### Template Metaprogramming
 
 Normally, code runs during runtime. But with `template metaprogramming(TMP)`, code **runs once during compile time**. Something runs once during compiling and can be used as many times as you like during runtime.
 

@@ -175,23 +175,27 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#stream-abstraction">Stream Abstraction</a></li>
-    <li><a href="#standard-iostreams">Standard iostreams</a>
+    <li><a href="#stream">Stream</a>
       <ul>
-        <li><a href="#output-streams">Output Streams</a></li>
-        <li><a href="#input-streams">Input Streams</a></li>
+        <li><a href="#stream-abstraction">Stream Abstraction</a></li>
+        <li><a href="#standard-iostreams">Standard iostreams</a>
+          <ul>
+            <li><a href="#output-streams">Output Streams</a></li>
+            <li><a href="#input-streams">Input Streams</a></li>
+          </ul>
+        </li>
+        <li><a href="#state-bits">State bits</a></li>
+        <li><a href="#stdgetline">std::getline()</a></li>
+        <li><a href="#file-streams">File Streams</a>
+          <ul>
+            <li><a href="#output-file-streams">Output File Streams</a></li>
+            <li><a href="#input-file-streams">Input File Streams</a></li>
+            <li><a href="#file-mode">File mode</a></li>
+          </ul>
+        </li>
+        <li><a href="#string-streams">String Streams</a></li>
       </ul>
     </li>
-    <li><a href="#state-bits">State bits</a></li>
-    <li><a href="#stdgetline">std::getline()</a></li>
-    <li><a href="#file-streams">File Streams</a>
-      <ul>
-        <li><a href="#output-file-streams">Output File Streams</a></li>
-        <li><a href="#input-file-streams">Input File Streams</a></li>
-        <li><a href="#file-mode">File mode</a></li>
-      </ul>
-    </li>
-    <li><a href="#string-streams">String Streams</a></li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec03 Streams</h1><div class="post-meta">
@@ -213,28 +217,33 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#stream-abstraction">Stream Abstraction</a></li>
-    <li><a href="#standard-iostreams">Standard iostreams</a>
+    <li><a href="#stream">Stream</a>
       <ul>
-        <li><a href="#output-streams">Output Streams</a></li>
-        <li><a href="#input-streams">Input Streams</a></li>
+        <li><a href="#stream-abstraction">Stream Abstraction</a></li>
+        <li><a href="#standard-iostreams">Standard iostreams</a>
+          <ul>
+            <li><a href="#output-streams">Output Streams</a></li>
+            <li><a href="#input-streams">Input Streams</a></li>
+          </ul>
+        </li>
+        <li><a href="#state-bits">State bits</a></li>
+        <li><a href="#stdgetline">std::getline()</a></li>
+        <li><a href="#file-streams">File Streams</a>
+          <ul>
+            <li><a href="#output-file-streams">Output File Streams</a></li>
+            <li><a href="#input-file-streams">Input File Streams</a></li>
+            <li><a href="#file-mode">File mode</a></li>
+          </ul>
+        </li>
+        <li><a href="#string-streams">String Streams</a></li>
       </ul>
     </li>
-    <li><a href="#state-bits">State bits</a></li>
-    <li><a href="#stdgetline">std::getline()</a></li>
-    <li><a href="#file-streams">File Streams</a>
-      <ul>
-        <li><a href="#output-file-streams">Output File Streams</a></li>
-        <li><a href="#input-file-streams">Input File Streams</a></li>
-        <li><a href="#file-mode">File mode</a></li>
-      </ul>
-    </li>
-    <li><a href="#string-streams">String Streams</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="stream" class="headerLink">
-    <a href="#stream" class="header-mark"></a>Stream</h1><h2 id="stream-abstraction" class="headerLink">
-    <a href="#stream-abstraction" class="header-mark"></a>Stream Abstraction</h2><p>Convert between <strong>string-represented data</strong> and the real thing.</p>
+            </div><div class="content" id="content"><meta name="referrer" content="no-referrer" />
+<h2 id="stream" class="headerLink">
+    <a href="#stream" class="header-mark"></a>Stream</h2><h3 id="stream-abstraction" class="headerLink">
+    <a href="#stream-abstraction" class="header-mark"></a>Stream Abstraction</h3><p>Convert between <strong>string-represented data</strong> and the real thing.</p>
 <p><img
         class="lazyload"
         data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301101510893.png"
@@ -243,15 +252,15 @@
         alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301101510893.png"
         title="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301101510893.png"></p>
 <p><code>stream</code>: an <strong>abstraction</strong> for input/output. Streams convert between data and the <strong>string representation of data</strong>.</p>
-<h2 id="standard-iostreams" class="headerLink">
-    <a href="#standard-iostreams" class="header-mark"></a>Standard iostreams</h2><ul>
+<h3 id="standard-iostreams" class="headerLink">
+    <a href="#standard-iostreams" class="header-mark"></a>Standard iostreams</h3><ul>
 <li><code>cin</code>: Standard input stream(buffered)</li>
 <li><code>cout</code>: Standard output stream(buffered)</li>
 <li><code>cerr</code>: Standard error stream(unbuffered)</li>
 <li><code>clog</code>: Standard error stream(buffered)</li>
 </ul>
-<h3 id="output-streams" class="headerLink">
-    <a href="#output-streams" class="header-mark"></a>Output Streams</h3><p><code>std::out</code> is an output stream. It has type <code>std::ostream</code>.</p>
+<h4 id="output-streams" class="headerLink">
+    <a href="#output-streams" class="header-mark"></a>Output Streams</h4><p><code>std::out</code> is an output stream. It has type <code>std::ostream</code>.</p>
 <ul>
 <li>Can only send data using the <code>&lt;&lt;</code> operator.</li>
 <li>Converts data of any type into <strong>string</strong> and sends it to the stream.</li>
@@ -277,8 +286,8 @@
 </div></div>
         </div>
     </div>
-<h3 id="input-streams" class="headerLink">
-    <a href="#input-streams" class="header-mark"></a>Input Streams</h3><p><code>std::cin</code> is an input stream. It has type <code>std::istream</code>.</p>
+<h4 id="input-streams" class="headerLink">
+    <a href="#input-streams" class="header-mark"></a>Input Streams</h4><p><code>std::cin</code> is an input stream. It has type <code>std::istream</code>.</p>
 <ul>
 <li>Can only send data using the <code>&gt;&gt;</code> operator.</li>
 <li>Receives a <strong>string</strong> from the stream and converts it to <strong>data</strong>.</li>
@@ -370,8 +379,8 @@
         </div>
     </div>
 <p>When we first input 2.17, the <code>2</code> is read and put into variable <code>age</code>, but the std::istream is still reading(not meet whitespace), and save <code>.17</code> in buffer, when the second <code>std::cin &gt;&gt;</code> called, write <code>.17</code> into variable <code>hourlyWage</code>.</p>
-<h2 id="state-bits" class="headerLink">
-    <a href="#state-bits" class="header-mark"></a>State bits</h2><p>We can use state bits to check if the stream has errors.</p>
+<h3 id="state-bits" class="headerLink">
+    <a href="#state-bits" class="header-mark"></a>State bits</h3><p>We can use state bits to check if the stream has errors.</p>
 <ul>
 <li><code>Good bit</code>: ready for read/write</li>
 <li><code>Fail bit</code>: previous operation failed, all future operations frozen
@@ -408,8 +417,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="stdgetline" class="headerLink">
-    <a href="#stdgetline" class="header-mark"></a>std::getline()</h2><ul>
+<h3 id="stdgetline" class="headerLink">
+    <a href="#stdgetline" class="header-mark"></a>std::getline()</h3><ul>
 <li>Defined in header <code>&lt;string&gt;</code></li>
 <li>Used to read a string or a line from an <strong>input stream</strong>.</li>
 <li>Signature: <code>istream&amp; getline(istream&amp; is, string&amp; str, char delim);</code>
@@ -466,9 +475,9 @@
 <li><code>&gt;&gt;</code> reads up to the next whitespace character and <strong>does not go past that whitespace character.</strong></li>
 <li><code>getline</code> reads up to the next delimiter (by default, &lsquo;\n&rsquo;), and <strong>does go past that delimiter.</strong></li>
 </ul>
-<h2 id="file-streams" class="headerLink">
-    <a href="#file-streams" class="header-mark"></a>File Streams</h2><h3 id="output-file-streams" class="headerLink">
-    <a href="#output-file-streams" class="header-mark"></a>Output File Streams</h3><ul>
+<h3 id="file-streams" class="headerLink">
+    <a href="#file-streams" class="header-mark"></a>File Streams</h3><h4 id="output-file-streams" class="headerLink">
+    <a href="#output-file-streams" class="header-mark"></a>Output File Streams</h4><ul>
 <li>Defined in header <code>&lt;fstream&gt;</code></li>
 <li>Have type <code>std::ofstream</code></li>
 <li>Can only send data using the <code>&lt;&lt;</code> operator.</li>
@@ -495,8 +504,8 @@
 </div></div>
         </div>
     </div>
-<h3 id="input-file-streams" class="headerLink">
-    <a href="#input-file-streams" class="header-mark"></a>Input File Streams</h3><ul>
+<h4 id="input-file-streams" class="headerLink">
+    <a href="#input-file-streams" class="header-mark"></a>Input File Streams</h4><ul>
 <li>Defined in header <code>&lt;fstream&gt;</code></li>
 <li>Have type <code>std::ifstream</code>.</li>
 <li>Only receives strings using the <code>&gt;&gt;</code> operator.</li>
@@ -527,8 +536,8 @@
 </div></div>
         </div>
     </div>
-<h3 id="file-mode" class="headerLink">
-    <a href="#file-mode" class="header-mark"></a>File mode</h3><ul>
+<h4 id="file-mode" class="headerLink">
+    <a href="#file-mode" class="header-mark"></a>File mode</h4><ul>
 <li><code>ios::app</code>: append</li>
 <li><code>ios::ate</code>: at end</li>
 <li><code>ios::in</code>: open file for reading</li>
@@ -540,8 +549,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="string-streams" class="headerLink">
-    <a href="#string-streams" class="header-mark"></a>String Streams</h2><ul>
+<h3 id="string-streams" class="headerLink">
+    <a href="#string-streams" class="header-mark"></a>String Streams</h3><ul>
 <li>Input stream: <code>std::istringstream</code>
 <ul>
 <li>Give any data type to the <strong>istringstream,</strong> it’ll store it as a string.

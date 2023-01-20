@@ -4,9 +4,9 @@
 <!--more-->
 
 
-# Iterators
+## Iterators
 
-## What is iterator
+### What is iterator
 
 **Iterator is a abstraction for a tool that accesses the next or previous element or random access.**
 
@@ -64,7 +64,7 @@ for(auto iter = mmap.begin(); iter != mmap.end(); ++iter){
 ```
 {{< /admonition >}}
 
-## Types of iterator
+### Types of iterator
 
 - `Input and output iterators`: They can perform sequential single-pass input or output operations.
 - `Forward iterators`: They have all the functionality of input iterators and if they are not constant iterators also have the functionality of output iterators.
@@ -98,13 +98,13 @@ const auto& elem = *iter;
 ```
 {{< /admonition >}}
 
-## Ranges
+### Ranges
 
 We can iterate through different ranges.
 
 ![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301131539497.png)
 
-## Range based for loop
+### Range based for loop
 
 A range based `for` loop is a shorthand for iterator code.
 
@@ -131,9 +131,9 @@ for(auto [key, value] : mmap){
 ```
 {{< /admonition >}}
 
-# Pointers
+## Pointers
 
-## What is pointer
+### What is pointer
 
 Variables created in code take up space on the computer. They live in memory at speciﬁc addresses. Pointers reference those memory addresses and not the object themselves.
 

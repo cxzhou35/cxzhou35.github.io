@@ -3,7 +3,7 @@
 
 <!--more-->
 
-# Special member functions
+## Special member functions
 
 There are six special member functions, These functions are generated only when they're called:
 
@@ -18,7 +18,7 @@ There are six special member functions, These functions are generated only when 
 
 We don't have to write out any of these. They all have **default versions** that are generated automatically.
 
-## Copy and copy assignment
+### Copy and copy assignment
 
 By default, the copy constructor will create **copies of each member variable**. This is **member-wise copying**. Many times, we will want to create a copy that **does more than just copies the member variables**.
 
@@ -32,7 +32,7 @@ Type::Type(const Type& other)
 Type::operator=(const Type& other)
 ```
 
-## Default and delete
+### Default and delete
 
 `default` and `delete` are key words  in c++.
 
@@ -93,7 +93,7 @@ s3 = s2; // error, copy assignment has been deleted
 ```
 {{< /admonition >}}
 
-## Move and move assignment
+### Move and move assignment
 
 Move constructors and move assignment operators will perform **"memberwise moves"**.
 
@@ -113,11 +113,11 @@ When the item on the right of the `=` is an **r-value** we should use move assig
 
 r-values are always about to die, so we can steal their resources.
 
-### r-value reference
+#### r-value reference
 
 Different with l-value reference, we use `&&` to present **r-value reference**.
 
-### move assignment
+#### move assignment
 
 {{< admonition example >}}
 ```cpp
@@ -135,7 +135,7 @@ vector<T>& operator=(vector<T>&& other)
 ```
 {{< /admonition >}}
 
-### std::move
+#### std::move
 
 `std::move` function mainly **converts a l-value into a r-value reference**.
 

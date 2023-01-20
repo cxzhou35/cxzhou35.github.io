@@ -175,9 +175,13 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
-    <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
-    <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
+    <li><a href="#operators">Operators</a>
+      <ul>
+        <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
+        <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
+        <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec10 Operator Overloading</h1><div class="post-meta">
@@ -199,27 +203,31 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
-    <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
-    <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
+    <li><a href="#operators">Operators</a>
+      <ul>
+        <li><a href="#operators-cant-be-overloaded">Operators can&rsquo;t be overloaded</a></li>
+        <li><a href="#the-way-of-overloading-operators">The way of overloading operators</a></li>
+        <li><a href="#rules-and-philosophy">Rules and Philosophy</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="operators" class="headerLink">
-    <a href="#operators" class="header-mark"></a>Operators</h1><ul>
+            </div><div class="content" id="content"><h2 id="operators" class="headerLink">
+    <a href="#operators" class="header-mark"></a>Operators</h2><ul>
 <li>Just like declaring functions in a class, we can declare operator functionality.</li>
 <li>When we use the operator with our new object, it <strong>performs a custom function or operation</strong>.</li>
 <li>Just like in function overloading, if we give it the same name, it will override the operator’s behavior.</li>
 </ul>
-<h2 id="operators-cant-be-overloaded" class="headerLink">
-    <a href="#operators-cant-be-overloaded" class="header-mark"></a>Operators can&rsquo;t be overloaded</h2><ul>
+<h3 id="operators-cant-be-overloaded" class="headerLink">
+    <a href="#operators-cant-be-overloaded" class="header-mark"></a>Operators can&rsquo;t be overloaded</h3><ul>
 <li>Scope Resolution: <code>::</code></li>
 <li>Ternary: <code>?</code></li>
 <li>Member Access: <code>.</code></li>
 <li>Pointer-to-member access: <code>.*</code></li>
 <li>Object size, type, and casting: <code>sizeof()</code>、<code>typeid()</code>、<code>cast()</code></li>
 </ul>
-<h2 id="the-way-of-overloading-operators" class="headerLink">
-    <a href="#the-way-of-overloading-operators" class="header-mark"></a>The way of overloading operators</h2><ul>
+<h3 id="the-way-of-overloading-operators" class="headerLink">
+    <a href="#the-way-of-overloading-operators" class="header-mark"></a>The way of overloading operators</h3><ul>
 <li>Member functions
 <ul>
 <li>With member function overloading, we <strong>have access to this-&gt; and its private variables</strong>.</li>
@@ -397,8 +405,8 @@
 </div>
         </div>
     </div>
-<h2 id="rules-and-philosophy" class="headerLink">
-    <a href="#rules-and-philosophy" class="header-mark"></a>Rules and Philosophy</h2><ul>
+<h3 id="rules-and-philosophy" class="headerLink">
+    <a href="#rules-and-philosophy" class="header-mark"></a>Rules and Philosophy</h3><ul>
 <li>Meaning should be obvious when you see it.</li>
 <li>Functionality should be <strong>reasonably similar</strong> to corresponding arithmetic operations</li>
 <li>When the meaning isn&rsquo;t obvious, give it a <strong>normal name</strong> instead.</li>

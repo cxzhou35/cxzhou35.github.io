@@ -4,7 +4,7 @@
 <!--more-->
 
 
-# Type safety
+## Type safety
 
 `Type Safety`: The extent to which a language prevents typing errors and guarantees the behavior of programs.
 

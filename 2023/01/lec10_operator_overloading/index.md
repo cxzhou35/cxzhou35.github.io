@@ -4,13 +4,13 @@
 <!--more-->
 
 
-# Operators
+## Operators
 
 - Just like declaring functions in a class, we can declare operator functionality.
 - When we use the operator with our new object, it **performs a custom function or operation**.
 - Just like in function overloading, if we give it the same name, it will override the operator’s behavior.
 
-## Operators can't be overloaded
+### Operators can't be overloaded
 
 - Scope Resolution: `::`
 - Ternary: `?`
@@ -18,7 +18,7 @@
 - Pointer-to-member access: `.*`
 - Object size, type, and casting: `sizeof()`、`typeid()`、`cast()`
 
-## The way of overloading operators
+### The way of overloading operators
 
 - Member functions
 	- With member function overloading, we **have access to this-> and its private variables**.
@@ -107,7 +107,7 @@ _ostream_insert(__out, __s,
 Certain operators, like `new` and `delete,` don’t require a specific type.
 {{< /admonition >}}
 
-## Rules and Philosophy
+### Rules and Philosophy
 
 - Meaning should be obvious when you see it.
 - Functionality should be **reasonably similar** to corresponding arithmetic operations

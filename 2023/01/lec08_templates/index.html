@@ -175,10 +175,14 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#function-template">Function Template</a></li>
-    <li><a href="#class-template">Class Template</a></li>
-    <li><a href="#generic-programming">Generic Programming</a></li>
-    <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
+    <li><a href="#template">Template</a>
+      <ul>
+        <li><a href="#function-template">Function Template</a></li>
+        <li><a href="#class-template">Class Template</a></li>
+        <li><a href="#generic-programming">Generic Programming</a></li>
+        <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec08 Templates</h1><div class="post-meta">
@@ -200,15 +204,19 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#function-template">Function Template</a></li>
-    <li><a href="#class-template">Class Template</a></li>
-    <li><a href="#generic-programming">Generic Programming</a></li>
-    <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
+    <li><a href="#template">Template</a>
+      <ul>
+        <li><a href="#function-template">Function Template</a></li>
+        <li><a href="#class-template">Class Template</a></li>
+        <li><a href="#generic-programming">Generic Programming</a></li>
+        <li><a href="#template-metaprogramming">Template Metaprogramming</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="template" class="headerLink">
-    <a href="#template" class="header-mark"></a>Template</h1><h2 id="function-template" class="headerLink">
-    <a href="#function-template" class="header-mark"></a>Function Template</h2><p><code>Function Template</code>: A function template defines a family of functions. The simple idea is to <strong>pass data type as a parameter</strong> so that we don’t need to write the same code for different data types.</p>
+            </div><div class="content" id="content"><h2 id="template" class="headerLink">
+    <a href="#template" class="header-mark"></a>Template</h2><h3 id="function-template" class="headerLink">
+    <a href="#function-template" class="header-mark"></a>Function Template</h3><p><code>Function Template</code>: A function template defines a family of functions. The simple idea is to <strong>pass data type as a parameter</strong> so that we don’t need to write the same code for different data types.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -276,8 +284,8 @@
 </div>
         </div>
     </div>
-<h2 id="class-template" class="headerLink">
-    <a href="#class-template" class="header-mark"></a>Class Template</h2><p><code>Class Template</code>: A class that is parametrized over some number of types. A class that is comprised of member variables of a general type/types. Use generic typenames as <strong>placeholders.</strong></p>
+<h3 id="class-template" class="headerLink">
+    <a href="#class-template" class="header-mark"></a>Class Template</h3><p><code>Class Template</code>: A class that is parametrized over some number of types. A class that is comprised of member variables of a general type/types. Use generic typenames as <strong>placeholders.</strong></p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -345,8 +353,8 @@
         </div>
     </div>
 <p>Templated code implementation <strong>should never be in a .cpp file</strong>: your compiler has to see them at the same time as it sees the code that calls them.</p>
-<h2 id="generic-programming" class="headerLink">
-    <a href="#generic-programming" class="header-mark"></a>Generic Programming</h2><p><strong>Generic Programming</strong> is a programming paradigm for developing <strong>efficient</strong>, <strong>reusable</strong> software libraries.</p>
+<h3 id="generic-programming" class="headerLink">
+    <a href="#generic-programming" class="header-mark"></a>Generic Programming</h3><p><strong>Generic Programming</strong> is a programming paradigm for developing <strong>efficient</strong>, <strong>reusable</strong> software libraries.</p>
 <p>Generics is the idea to <strong>allow type (Integer, String, … etc) to be a parameter</strong> to methods, classes and interfaces.</p>
 <p>Generics can be implemented in C++ using <a href="https://www.geeksforgeeks.org/templates-cpp/" target="_blank" rel="noopener noreffer">Templates</a>.</p>
 <p>The <strong>advantages</strong> of Generic Programming are</p>
@@ -355,8 +363,8 @@
 <li>Avoid Function Overloading</li>
 <li>Once written it can be used for multiple times and cases.</li>
 </ul>
-<h2 id="template-metaprogramming" class="headerLink">
-    <a href="#template-metaprogramming" class="header-mark"></a>Template Metaprogramming</h2><p>Normally, code runs during runtime. But with <code>template metaprogramming(TMP)</code>, code <strong>runs once during compile time</strong>. Something runs once during compiling and can be used as many times as you like during runtime.</p>
+<h3 id="template-metaprogramming" class="headerLink">
+    <a href="#template-metaprogramming" class="header-mark"></a>Template Metaprogramming</h3><p>Normally, code runs during runtime. But with <code>template metaprogramming(TMP)</code>, code <strong>runs once during compile time</strong>. Something runs once during compiling and can be used as many times as you like during runtime.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>

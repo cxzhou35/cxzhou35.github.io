@@ -3,7 +3,7 @@
 
 <!--more-->
 
-# Predicate Functions
+## Predicate Functions
 
 Any function that **returns a boolean** value is a `predicate.` A predicate can have **any amount of parameters**.
 
@@ -35,7 +35,7 @@ Here `UniPred` is called a `function pointer`.
 - They can be passed around like variables as parameters or in template functions.
 - They can be called like functions.
 
-# Lambdas
+## Lambdas
 
 `Lambdas` are **inline,** **anonymous** functions that can know about variables declared in their same scope.
 
@@ -82,7 +82,7 @@ public:
 ```
 {{< /admonition >}}
 
-# Functors
+## Functors
 
 A `functor` is any **class** that provides an implementation of **operator().** They can create **closures** of "customized" functions.
 

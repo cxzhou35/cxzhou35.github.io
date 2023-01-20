@@ -173,7 +173,13 @@
 <main class="main">
             <div class="container"><div class="toc" id="toc-auto">
         <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents"></nav></div>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#predicate-functions">Predicate Functions</a></li>
+    <li><a href="#lambdas">Lambdas</a></li>
+    <li><a href="#functors">Functors</a></li>
+  </ul>
+</nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec09 Functions and Lambdas</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
@@ -191,9 +197,15 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><h1 id="predicate-functions" class="headerLink">
-    <a href="#predicate-functions" class="header-mark"></a>Predicate Functions</h1><p>Any function that <strong>returns a boolean</strong> value is a <code>predicate.</code> A predicate can have <strong>any amount of parameters</strong>.</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#predicate-functions">Predicate Functions</a></li>
+    <li><a href="#lambdas">Lambdas</a></li>
+    <li><a href="#functors">Functors</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="predicate-functions" class="headerLink">
+    <a href="#predicate-functions" class="header-mark"></a>Predicate Functions</h2><p>Any function that <strong>returns a boolean</strong> value is a <code>predicate.</code> A predicate can have <strong>any amount of parameters</strong>.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -248,8 +260,8 @@
 <li>They can be passed around like variables as parameters or in template functions.</li>
 <li>They can be called like functions.</li>
 </ul>
-<h1 id="lambdas" class="headerLink">
-    <a href="#lambdas" class="header-mark"></a>Lambdas</h1><p><code>Lambdas</code> are <strong>inline,</strong> <strong>anonymous</strong> functions that can know about variables declared in their same scope.</p>
+<h2 id="lambdas" class="headerLink">
+    <a href="#lambdas" class="header-mark"></a>Lambdas</h2><p><code>Lambdas</code> are <strong>inline,</strong> <strong>anonymous</strong> functions that can know about variables declared in their same scope.</p>
 <p><img
         class="lazyload"
         data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png"
@@ -342,8 +354,8 @@
 </div></div>
         </div>
     </div>
-<h1 id="functors" class="headerLink">
-    <a href="#functors" class="header-mark"></a>Functors</h1><p>A <code>functor</code> is any <strong>class</strong> that provides an implementation of <strong>operator().</strong> They can create <strong>closures</strong> of &ldquo;customized&rdquo; functions.</p>
+<h2 id="functors" class="headerLink">
+    <a href="#functors" class="header-mark"></a>Functors</h2><p>A <code>functor</code> is any <strong>class</strong> that provides an implementation of <strong>operator().</strong> They can create <strong>closures</strong> of &ldquo;customized&rdquo; functions.</p>
 <div class="details admonition warning open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-exclamation-triangle fa-fw"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>

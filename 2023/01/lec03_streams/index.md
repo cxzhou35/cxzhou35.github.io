@@ -3,9 +3,11 @@
 
 <!--more-->
 
-# Stream
+<meta name="referrer" content="no-referrer" />
 
-## Stream Abstraction
+## Stream
+
+### Stream Abstraction
 
 Convert between **string-represented data** and the real thing.
 
@@ -14,14 +16,14 @@ Convert between **string-represented data** and the real thing.
 
 `stream`: an **abstraction** for input/output. Streams convert between data and the **string representation of data**.
 
-## Standard iostreams
+### Standard iostreams
 
 - `cin`: Standard input stream(buffered)
 - `cout`: Standard output stream(buffered)
 - `cerr`: Standard error stream(unbuffered)
 - `clog`: Standard error stream(buffered)
 
-### Output Streams
+#### Output Streams
 
 `std::out` is an output stream. It has type `std::ostream`.
 
@@ -37,7 +39,7 @@ std::cout << 5 << std::endl;
 ```
 {{< /admonition>}}
 
-### Input Streams
+#### Input Streams
 `std::cin` is an input stream. It has type `std::istream`.
 
 - Can only send data using the `>>` operator.
@@ -89,7 +91,7 @@ cout << "hourlyWage : " << hourlyWage << endl;
 
 When we first input 2.17, the `2` is read and put into variable `age`, but the std::istream is still reading(not meet whitespace), and save `.17` in buffer, when the second `std::cin >>` called, write `.17` into variable `hourlyWage`. 
 
-## State bits
+### State bits
 
 We can use state bits to check if the stream has errors.
 
@@ -111,7 +113,7 @@ cout << iss.bad() << endl;
 ```
 {{< /admonition>}}
 
-## std::getline()
+### std::getline()
 
 - Defined in header `<string>`
 - Used to read a string or a line from an **input stream**.
@@ -145,9 +147,9 @@ Compare `>>` with `geline`:
 - `>>` reads up to the next whitespace character and **does not go past that whitespace character.**
 - `getline` reads up to the next delimiter (by default, '\n'), and **does go past that delimiter.**
 
-## File Streams
+### File Streams
 
-### Output File Streams
+#### Output File Streams
 
 - Defined in header `<fstream>`
 - Have type `std::ofstream`
@@ -163,7 +165,7 @@ out_file << 5 << std::endl; // out.txt now contains 5
 ```
 {{< /admonition>}}
 
-### Input File Streams
+#### Input File Streams
 
 - Defined in header `<fstream>`
 - Have type `std::ifstream`.
@@ -182,7 +184,7 @@ in_file >> str; // first word in out.txt goes into str
 {{< /admonition>}}
 
 
-### File mode
+#### File mode
 
 - `ios::app`: append
 - `ios::ate`: at end
@@ -192,7 +194,7 @@ in_file >> str; // first word in out.txt goes into str
 - multi mode
 	- we can use `|` to combine two modes, like **ios::out | ios::ate**
 
-## String Streams
+### String Streams
 
 - Input stream: `std::istringstream`
 	- Give any data type to the **istringstream,** it’ll store it as a string. 

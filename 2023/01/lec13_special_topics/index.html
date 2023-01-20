@@ -173,7 +173,12 @@
 <main class="main">
             <div class="container"><div class="toc" id="toc-auto">
         <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents"></nav></div>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#rall">RALL</a></li>
+    <li><a href="#smart-pointers">Smart Pointers</a></li>
+  </ul>
+</nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec13 Special Topics</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
@@ -191,9 +196,14 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><h1 id="rall" class="headerLink">
-    <a href="#rall" class="header-mark"></a>RALL</h1><p><code>Code path</code>: A single run-through of the code that the computer would see.</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#rall">RALL</a></li>
+    <li><a href="#smart-pointers">Smart Pointers</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="rall" class="headerLink">
+    <a href="#rall" class="header-mark"></a>RALL</h2><p><code>Code path</code>: A single run-through of the code that the computer would see.</p>
 <p><img
         class="lazyload"
         data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171548872.png"
@@ -230,8 +240,8 @@ However, we can write code to handle these to let us continue.</li>
 <li>All resources used by a class <strong>should be released in the destructor</strong></li>
 <li>Avoid calling <code>new</code> and <code>delete</code> explicitly</li>
 </ul>
-<h1 id="smart-pointers" class="headerLink">
-    <a href="#smart-pointers" class="header-mark"></a>Smart Pointers</h1><p>There are three types of <code>smart (RAII-safe) pointers</code>:</p>
+<h2 id="smart-pointers" class="headerLink">
+    <a href="#smart-pointers" class="header-mark"></a>Smart Pointers</h2><p>There are three types of <code>smart (RAII-safe) pointers</code>:</p>
 <ul>
 <li>std::unique_ptr
 <ul>

@@ -175,13 +175,17 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#copy-and-copy-assignment">Copy and copy assignment</a></li>
-    <li><a href="#default-and-delete">Default and delete</a></li>
-    <li><a href="#move-and-move-assignment">Move and move assignment</a>
+    <li><a href="#special-member-functions">Special member functions</a>
       <ul>
-        <li><a href="#r-value-reference">r-value reference</a></li>
-        <li><a href="#move-assignment">move assignment</a></li>
-        <li><a href="#stdmove">std::move</a></li>
+        <li><a href="#copy-and-copy-assignment">Copy and copy assignment</a></li>
+        <li><a href="#default-and-delete">Default and delete</a></li>
+        <li><a href="#move-and-move-assignment">Move and move assignment</a>
+          <ul>
+            <li><a href="#r-value-reference">r-value reference</a></li>
+            <li><a href="#move-assignment">move assignment</a></li>
+            <li><a href="#stdmove">std::move</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -205,19 +209,23 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#copy-and-copy-assignment">Copy and copy assignment</a></li>
-    <li><a href="#default-and-delete">Default and delete</a></li>
-    <li><a href="#move-and-move-assignment">Move and move assignment</a>
+    <li><a href="#special-member-functions">Special member functions</a>
       <ul>
-        <li><a href="#r-value-reference">r-value reference</a></li>
-        <li><a href="#move-assignment">move assignment</a></li>
-        <li><a href="#stdmove">std::move</a></li>
+        <li><a href="#copy-and-copy-assignment">Copy and copy assignment</a></li>
+        <li><a href="#default-and-delete">Default and delete</a></li>
+        <li><a href="#move-and-move-assignment">Move and move assignment</a>
+          <ul>
+            <li><a href="#r-value-reference">r-value reference</a></li>
+            <li><a href="#move-assignment">move assignment</a></li>
+            <li><a href="#stdmove">std::move</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="special-member-functions" class="headerLink">
-    <a href="#special-member-functions" class="header-mark"></a>Special member functions</h1><p>There are six special member functions, These functions are generated only when they&rsquo;re called:</p>
+            </div><div class="content" id="content"><h2 id="special-member-functions" class="headerLink">
+    <a href="#special-member-functions" class="header-mark"></a>Special member functions</h2><p>There are six special member functions, These functions are generated only when they&rsquo;re called:</p>
 <ul>
 <li>Default constructor: Takes <strong>no parameters</strong> and creates a new object.</li>
 <li>Destructor: Called when an object goes out of scope.</li>
@@ -234,8 +242,8 @@
         alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301161055555.png"
         title="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301161055555.png"></p>
 <p>We don&rsquo;t have to write out any of these. They all have <strong>default versions</strong> that are generated automatically.</p>
-<h2 id="copy-and-copy-assignment" class="headerLink">
-    <a href="#copy-and-copy-assignment" class="header-mark"></a>Copy and copy assignment</h2><p>By default, the copy constructor will create <strong>copies of each member variable</strong>. This is <strong>member-wise copying</strong>. Many times, we will want to create a copy that <strong>does more than just copies the member variables</strong>.</p>
+<h3 id="copy-and-copy-assignment" class="headerLink">
+    <a href="#copy-and-copy-assignment" class="header-mark"></a>Copy and copy assignment</h3><p>By default, the copy constructor will create <strong>copies of each member variable</strong>. This is <strong>member-wise copying</strong>. Many times, we will want to create a copy that <strong>does more than just copies the member variables</strong>.</p>
 <p><code>Deep copy</code>: An object that is a complete, independent copy of the original.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -253,8 +261,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Type</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="default-and-delete" class="headerLink">
-    <a href="#default-and-delete" class="header-mark"></a>Default and delete</h2><p><code>default</code> and <code>delete</code> are key words  in c++.</p>
+</div><h3 id="default-and-delete" class="headerLink">
+    <a href="#default-and-delete" class="header-mark"></a>Default and delete</h3><p><code>default</code> and <code>delete</code> are key words  in c++.</p>
 <p>Declaring any user-deﬁned constructor will <strong>make the default disappear</strong>. If we need to use the default special member function we need add <code>=default</code>.
 <code>=default</code>  is only used for <strong>special member functions</strong> of the class that have <strong>no default parameters</strong>. Can be defined either inside the class body <strong>(inline)</strong> or outside the class body <strong>(out-of-line)</strong>.</p>
 <div class="details admonition example open">
@@ -369,8 +377,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="move-and-move-assignment" class="headerLink">
-    <a href="#move-and-move-assignment" class="header-mark"></a>Move and move assignment</h2><p>Move constructors and move assignment operators will perform <strong>&ldquo;memberwise moves&rdquo;</strong>.</p>
+<h3 id="move-and-move-assignment" class="headerLink">
+    <a href="#move-and-move-assignment" class="header-mark"></a>Move and move assignment</h3><p>Move constructors and move assignment operators will perform <strong>&ldquo;memberwise moves&rdquo;</strong>.</p>
 <p>Deﬁning a move assignment operator <strong>prevents generation of a move copy constructor</strong>, and vice versa.</p>
 <p>Move constructors and operators are only generated if:</p>
 <ul>
@@ -388,10 +396,10 @@
         title="f|C|650"></p>
 <p>When the item on the right of the <code>=</code> is an <strong>r-value</strong> we should use move assignment.</p>
 <p>r-values are always about to die, so we can steal their resources.</p>
-<h3 id="r-value-reference" class="headerLink">
-    <a href="#r-value-reference" class="header-mark"></a>r-value reference</h3><p>Different with l-value reference, we use <code>&amp;&amp;</code> to present <strong>r-value reference</strong>.</p>
-<h3 id="move-assignment" class="headerLink">
-    <a href="#move-assignment" class="header-mark"></a>move assignment</h3><div class="details admonition example open">
+<h4 id="r-value-reference" class="headerLink">
+    <a href="#r-value-reference" class="header-mark"></a>r-value reference</h4><p>Different with l-value reference, we use <code>&amp;&amp;</code> to present <strong>r-value reference</strong>.</p>
+<h4 id="move-assignment" class="headerLink">
+    <a href="#move-assignment" class="header-mark"></a>move assignment</h4><div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
@@ -427,8 +435,8 @@
 </div></div>
         </div>
     </div>
-<h3 id="stdmove" class="headerLink">
-    <a href="#stdmove" class="header-mark"></a>std::move</h3><p><code>std::move</code> function mainly <strong>converts a l-value into a r-value reference</strong>.</p>
+<h4 id="stdmove" class="headerLink">
+    <a href="#stdmove" class="header-mark"></a>std::move</h4><p><code>std::move</code> function mainly <strong>converts a l-value into a r-value reference</strong>.</p>
 <p>Use <code>std::move</code> to force the use of other <strong>types&rsquo; move assignments and constructors</strong>.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">

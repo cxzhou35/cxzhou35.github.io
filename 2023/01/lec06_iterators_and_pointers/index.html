@@ -175,14 +175,19 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-iterator">What is iterator</a></li>
-    <li><a href="#types-of-iterator">Types of iterator</a></li>
-    <li><a href="#ranges">Ranges</a></li>
-    <li><a href="#range-based-for-loop">Range based for loop</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#what-is-pointer">What is pointer</a></li>
+    <li><a href="#iterators">Iterators</a>
+      <ul>
+        <li><a href="#what-is-iterator">What is iterator</a></li>
+        <li><a href="#types-of-iterator">Types of iterator</a></li>
+        <li><a href="#ranges">Ranges</a></li>
+        <li><a href="#range-based-for-loop">Range based for loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#pointers">Pointers</a>
+      <ul>
+        <li><a href="#what-is-pointer">What is pointer</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec06 Iterators and Pointers</h1><div class="post-meta">
@@ -204,19 +209,24 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-iterator">What is iterator</a></li>
-    <li><a href="#types-of-iterator">Types of iterator</a></li>
-    <li><a href="#ranges">Ranges</a></li>
-    <li><a href="#range-based-for-loop">Range based for loop</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#what-is-pointer">What is pointer</a></li>
+    <li><a href="#iterators">Iterators</a>
+      <ul>
+        <li><a href="#what-is-iterator">What is iterator</a></li>
+        <li><a href="#types-of-iterator">Types of iterator</a></li>
+        <li><a href="#ranges">Ranges</a></li>
+        <li><a href="#range-based-for-loop">Range based for loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#pointers">Pointers</a>
+      <ul>
+        <li><a href="#what-is-pointer">What is pointer</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="iterators" class="headerLink">
-    <a href="#iterators" class="header-mark"></a>Iterators</h1><h2 id="what-is-iterator" class="headerLink">
-    <a href="#what-is-iterator" class="header-mark"></a>What is iterator</h2><p><strong>Iterator is a abstraction for a tool that accesses the next or previous element or random access.</strong></p>
+            </div><div class="content" id="content"><h2 id="iterators" class="headerLink">
+    <a href="#iterators" class="header-mark"></a>Iterators</h2><h3 id="what-is-iterator" class="headerLink">
+    <a href="#what-is-iterator" class="header-mark"></a>What is iterator</h3><p><strong>Iterator is a abstraction for a tool that accesses the next or previous element or random access.</strong></p>
 <p>How do we access elements in a container in order?</p>
 <p>Containers all implement something called an iterator to do this.</p>
 <ul>
@@ -310,8 +320,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="types-of-iterator" class="headerLink">
-    <a href="#types-of-iterator" class="header-mark"></a>Types of iterator</h2><ul>
+<h3 id="types-of-iterator" class="headerLink">
+    <a href="#types-of-iterator" class="header-mark"></a>Types of iterator</h3><ul>
 <li><code>Input and output iterators</code>: They can perform sequential single-pass input or output operations.</li>
 <li><code>Forward iterators</code>: They have all the functionality of input iterators and if they are not constant iterators also have the functionality of output iterators.</li>
 <li><code>Bidrectional iterators</code>: They are like forward iterators but can also be iterated through backwards.</li>
@@ -384,8 +394,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="ranges" class="headerLink">
-    <a href="#ranges" class="header-mark"></a>Ranges</h2><p>We can iterate through different ranges.</p>
+<h3 id="ranges" class="headerLink">
+    <a href="#ranges" class="header-mark"></a>Ranges</h3><p>We can iterate through different ranges.</p>
 <p><img
         class="lazyload"
         data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301131539497.png"
@@ -393,8 +403,8 @@
         data-sizes="auto"
         alt="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301131539497.png"
         title="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301131539497.png"></p>
-<h2 id="range-based-for-loop" class="headerLink">
-    <a href="#range-based-for-loop" class="header-mark"></a>Range based for loop</h2><p>A range based <code>for</code> loop is a shorthand for iterator code.</p>
+<h3 id="range-based-for-loop" class="headerLink">
+    <a href="#range-based-for-loop" class="header-mark"></a>Range based for loop</h3><p>A range based <code>for</code> loop is a shorthand for iterator code.</p>
 <p>All that is required is that the class contains the member functions <code>begin()</code> and <code>end()</code> and that its **return value type supports the operators <code>++,</code> <code>*</code> and <code>!=</code> **</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
@@ -442,9 +452,9 @@
 </div></div>
         </div>
     </div>
-<h1 id="pointers" class="headerLink">
-    <a href="#pointers" class="header-mark"></a>Pointers</h1><h2 id="what-is-pointer" class="headerLink">
-    <a href="#what-is-pointer" class="header-mark"></a>What is pointer</h2><p>Variables created in code take up space on the computer. They live in memory at speciﬁc addresses. Pointers reference those memory addresses and not the object themselves.</p>
+<h2 id="pointers" class="headerLink">
+    <a href="#pointers" class="header-mark"></a>Pointers</h2><h3 id="what-is-pointer" class="headerLink">
+    <a href="#what-is-pointer" class="header-mark"></a>What is pointer</h3><p>Variables created in code take up space on the computer. They live in memory at speciﬁc addresses. Pointers reference those memory addresses and not the object themselves.</p>
 <p>Pointer can access <strong>memory addresses with &amp;</strong> and <strong>the data at an address/pointer using *</strong>.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">

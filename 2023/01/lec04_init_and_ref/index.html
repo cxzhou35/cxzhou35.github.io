@@ -175,24 +175,30 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#uniform-initialization">Uniform initialization</a></li>
-    <li><a href="#structured-binding">Structured binding</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#l-values-and-r-values">L-values and R-values</a>
+    <li><a href="#initialization">Initialization</a>
       <ul>
-        <li><a href="#l-values">L-values</a></li>
-        <li><a href="#r-values">R-values</a></li>
+        <li><a href="#uniform-initialization">Uniform initialization</a></li>
+        <li><a href="#structured-binding">Structured binding</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#const-references">Const References</a></li>
-    <li><a href="#const-pointers">Const pointers</a></li>
-    <li><a href="#const-functions">Const functions</a></li>
-    <li><a href="#parameter-passing-rules">Parameter passing rules</a></li>
+    <li><a href="#references">References</a>
+      <ul>
+        <li><a href="#l-values-and-r-values">L-values and R-values</a>
+          <ul>
+            <li><a href="#l-values">L-values</a></li>
+            <li><a href="#r-values">R-values</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#const">Const</a>
+      <ul>
+        <li><a href="#const-references">Const References</a></li>
+        <li><a href="#const-pointers">Const pointers</a></li>
+        <li><a href="#const-functions">Const functions</a></li>
+        <li><a href="#parameter-passing-rules">Parameter passing rules</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec04 Initialization and Reference</h1><div class="post-meta">
@@ -214,30 +220,36 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#uniform-initialization">Uniform initialization</a></li>
-    <li><a href="#structured-binding">Structured binding</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#l-values-and-r-values">L-values and R-values</a>
+    <li><a href="#initialization">Initialization</a>
       <ul>
-        <li><a href="#l-values">L-values</a></li>
-        <li><a href="#r-values">R-values</a></li>
+        <li><a href="#uniform-initialization">Uniform initialization</a></li>
+        <li><a href="#structured-binding">Structured binding</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a>
+      <ul>
+        <li><a href="#l-values-and-r-values">L-values and R-values</a>
+          <ul>
+            <li><a href="#l-values">L-values</a></li>
+            <li><a href="#r-values">R-values</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#const">Const</a>
+      <ul>
+        <li><a href="#const-references">Const References</a></li>
+        <li><a href="#const-pointers">Const pointers</a></li>
+        <li><a href="#const-functions">Const functions</a></li>
+        <li><a href="#parameter-passing-rules">Parameter passing rules</a></li>
       </ul>
     </li>
   </ul>
-
-  <ul>
-    <li><a href="#const-references">Const References</a></li>
-    <li><a href="#const-pointers">Const pointers</a></li>
-    <li><a href="#const-functions">Const functions</a></li>
-    <li><a href="#parameter-passing-rules">Parameter passing rules</a></li>
-  </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="initialization" class="headerLink">
-    <a href="#initialization" class="header-mark"></a>Initialization</h1><p><strong>Initialization: How we provide initial values to variables.</strong></p>
-<h2 id="uniform-initialization" class="headerLink">
-    <a href="#uniform-initialization" class="header-mark"></a>Uniform initialization</h2><p>Initialization while we declare a variable.</p>
+            </div><div class="content" id="content"><h2 id="initialization" class="headerLink">
+    <a href="#initialization" class="header-mark"></a>Initialization</h2><p><strong>Initialization: How we provide initial values to variables.</strong></p>
+<h3 id="uniform-initialization" class="headerLink">
+    <a href="#uniform-initialization" class="header-mark"></a>Uniform initialization</h3><p>Initialization while we declare a variable.</p>
 <p><code>Uniform initialization</code>: Curly bracket initialization. Available for <strong>all types</strong>, immediate initialization on declaration!</p>
 <ul>
 <li>Use uniform initialization to initialize every ﬁeld of <strong>non-primitive typed variables</strong>.</li>
@@ -272,8 +284,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="structured-binding" class="headerLink">
-    <a href="#structured-binding" class="header-mark"></a>Structured binding</h2><p>Initialize dierctly from the contens of a struct.</p>
+<h3 id="structured-binding" class="headerLink">
+    <a href="#structured-binding" class="header-mark"></a>Structured binding</h3><p>Initialize dierctly from the contens of a struct.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -302,8 +314,8 @@
 </div></div>
         </div>
     </div>
-<h1 id="references" class="headerLink">
-    <a href="#references" class="header-mark"></a>References</h1><p><strong>References: An alias(another name) for a named variable.</strong></p>
+<h2 id="references" class="headerLink">
+    <a href="#references" class="header-mark"></a>References</h2><p><strong>References: An alias(another name) for a named variable.</strong></p>
 <ul>
 <li>We can only create references to <strong>variables</strong>.</li>
 <li>The cpp compiler does not allocate separate memory space for references.</li>
@@ -357,23 +369,23 @@
 </div></div>
         </div>
     </div>
-<h2 id="l-values-and-r-values" class="headerLink">
-    <a href="#l-values-and-r-values" class="header-mark"></a>L-values and R-values</h2><h3 id="l-values" class="headerLink">
-    <a href="#l-values" class="header-mark"></a>L-values</h3><ul>
+<h3 id="l-values-and-r-values" class="headerLink">
+    <a href="#l-values-and-r-values" class="header-mark"></a>L-values and R-values</h3><h4 id="l-values" class="headerLink">
+    <a href="#l-values" class="header-mark"></a>L-values</h4><ul>
 <li>L-values can appear on the <strong>left or right</strong> of an <code>=</code></li>
 <li>L-values <strong>have names</strong></li>
 <li>L-values are <strong>not temporary</strong></li>
 <li>L-values live until the <strong>end of the scope</strong></li>
 </ul>
-<h3 id="r-values" class="headerLink">
-    <a href="#r-values" class="header-mark"></a>R-values</h3><ul>
+<h4 id="r-values" class="headerLink">
+    <a href="#r-values" class="header-mark"></a>R-values</h4><ul>
 <li>R-values can only appear on the <strong>right</strong> of an <code>=</code></li>
 <li>R-values <strong>don&rsquo;t have names</strong></li>
 <li>R-values are <strong>temporary</strong></li>
 <li>R-values live until <strong>the end of the line</strong></li>
 </ul>
-<h1 id="const" class="headerLink">
-    <a href="#const" class="header-mark"></a>Const</h1><p><code>const</code>: keyword indicating a variable, function or parameter <strong>can&rsquo;t be modiﬁed</strong>.</p>
+<h2 id="const" class="headerLink">
+    <a href="#const" class="header-mark"></a>Const</h2><p><code>const</code>: keyword indicating a variable, function or parameter <strong>can&rsquo;t be modiﬁed</strong>.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -406,8 +418,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="const-references" class="headerLink">
-    <a href="#const-references" class="header-mark"></a>Const References</h2><p>Can&rsquo;t declare <strong>non-const reference to const variable</strong>.</p>
+<h3 id="const-references" class="headerLink">
+    <a href="#const-references" class="header-mark"></a>Const References</h3><p>Can&rsquo;t declare <strong>non-const reference to const variable</strong>.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -500,8 +512,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="const-pointers" class="headerLink">
-    <a href="#const-pointers" class="header-mark"></a>Const pointers</h2><p><strong>Const pointer means this pointer is unchangeable, but what the pointer points to is changeable.</strong></p>
+<h3 id="const-pointers" class="headerLink">
+    <a href="#const-pointers" class="header-mark"></a>Const pointers</h3><p><strong>Const pointer means this pointer is unchangeable, but what the pointer points to is changeable.</strong></p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -552,8 +564,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="const-functions" class="headerLink">
-    <a href="#const-functions" class="header-mark"></a>Const functions</h2><p><code>const-interface:</code> All member functions marked <strong>const</strong> in a class deﬁnition. Objects of type const ClassName may only use the <strong>const-interface.</strong>
+<h3 id="const-functions" class="headerLink">
+    <a href="#const-functions" class="header-mark"></a>Const functions</h3><p><code>const-interface:</code> All member functions marked <strong>const</strong> in a class deﬁnition. Objects of type const ClassName may only use the <strong>const-interface.</strong>
 <strong>Can&rsquo;t call a non-const function in a const function.</strong></p>
 <p>Every member function of a class that doesn&rsquo;t change its member variables should be marked const.</p>
 <div class="details admonition example open">
@@ -584,8 +596,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="parameter-passing-rules" class="headerLink">
-    <a href="#parameter-passing-rules" class="header-mark"></a>Parameter passing rules</h2><p>Basic parameter passing rules
+<h3 id="parameter-passing-rules" class="headerLink">
+    <a href="#parameter-passing-rules" class="header-mark"></a>Parameter passing rules</h3><p>Basic parameter passing rules
 <img
         class="lazyload"
         data-src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png"

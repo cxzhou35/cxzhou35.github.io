@@ -175,12 +175,16 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#namespaces">Namespaces</a></li>
-    <li><a href="#this-keyword">This keyword</a></li>
-    <li><a href="#constructors">Constructors</a></li>
-    <li><a href="#array">Array</a></li>
-    <li><a href="#destructors">Destructors</a></li>
-    <li><a href="#static-member">Static member</a></li>
+    <li><a href="#classes">Classes</a>
+      <ul>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#this-keyword">This keyword</a></li>
+        <li><a href="#constructors">Constructors</a></li>
+        <li><a href="#array">Array</a></li>
+        <li><a href="#destructors">Destructors</a></li>
+        <li><a href="#static-member">Static member</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS106L: Lec07 Classes</h1><div class="post-meta">
@@ -202,16 +206,20 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#namespaces">Namespaces</a></li>
-    <li><a href="#this-keyword">This keyword</a></li>
-    <li><a href="#constructors">Constructors</a></li>
-    <li><a href="#array">Array</a></li>
-    <li><a href="#destructors">Destructors</a></li>
-    <li><a href="#static-member">Static member</a></li>
+    <li><a href="#classes">Classes</a>
+      <ul>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#this-keyword">This keyword</a></li>
+        <li><a href="#constructors">Constructors</a></li>
+        <li><a href="#array">Array</a></li>
+        <li><a href="#destructors">Destructors</a></li>
+        <li><a href="#static-member">Static member</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="classes" class="headerLink">
-    <a href="#classes" class="header-mark"></a>Classes</h1><p><code>Class</code>: A programmerdeﬁned custom type. <strong>An abstraction of an object or data type</strong>.</p>
+            </div><div class="content" id="content"><h2 id="classes" class="headerLink">
+    <a href="#classes" class="header-mark"></a>Classes</h2><p><code>Class</code>: A programmerdeﬁned custom type. <strong>An abstraction of an object or data type</strong>.</p>
 <ul>
 <li>An <strong>Object</strong> is an instance of a <strong>Class.</strong></li>
 <li>When a class is deﬁned, no memory is allocated but when it is <strong>instantiated</strong> (i.e. an object is created) memory is allocated.</li>
@@ -265,8 +273,8 @@
 <li>Usually contains all member variables.</li>
 <li>Users <strong>can&rsquo;t access or modify anything</strong> in the private section.</li>
 </ul>
-<h2 id="namespaces" class="headerLink">
-    <a href="#namespaces" class="header-mark"></a>Namespaces</h2><ul>
+<h3 id="namespaces" class="headerLink">
+    <a href="#namespaces" class="header-mark"></a>Namespaces</h3><ul>
 <li>Put code into logical groups, to <strong>avoid name clashes</strong>.</li>
 <li>Each class has its own namespace.</li>
 <li>Syntax for calling/using something in a namespace:
@@ -278,8 +286,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="this-keyword" class="headerLink">
-    <a href="#this-keyword" class="header-mark"></a>This keyword</h2><p><code>this</code> is the pointer which points out the <strong>object that calls the member function</strong>. <code>this-&gt;element_name</code> means &ldquo;the item in this specific object with name <code>element_name</code>. Use this for avoiding naming conﬂicts.</p>
+<h3 id="this-keyword" class="headerLink">
+    <a href="#this-keyword" class="header-mark"></a>This keyword</h3><p><code>this</code> is the pointer which points out the <strong>object that calls the member function</strong>. <code>this-&gt;element_name</code> means &ldquo;the item in this specific object with name <code>element_name</code>. Use this for avoiding naming conﬂicts.</p>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>示例<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -300,8 +308,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="constructors" class="headerLink">
-    <a href="#constructors" class="header-mark"></a>Constructors</h2><ul>
+<h3 id="constructors" class="headerLink">
+    <a href="#constructors" class="header-mark"></a>Constructors</h3><ul>
 <li>The constructor is called every time <strong>a new instance is created</strong></li>
 <li>Deﬁne how the member variables of an object is initialized.</li>
 <li>Use <strong>initializer lists</strong> for speedier construction.</li>
@@ -332,8 +340,8 @@
 </div></div>
         </div>
     </div>
-<h2 id="array" class="headerLink">
-    <a href="#array" class="header-mark"></a>Array</h2><ul>
+<h3 id="array" class="headerLink">
+    <a href="#array" class="header-mark"></a>Array</h3><ul>
 <li>Arrays are a primitive type. They are the building blocks of all containers</li>
 <li>Think of array as lists of objects of <strong>ﬁxed size</strong> that you can <strong>index into</strong>.</li>
 </ul>
@@ -365,14 +373,14 @@
 </div></div>
         </div>
     </div>
-<h2 id="destructors" class="headerLink">
-    <a href="#destructors" class="header-mark"></a>Destructors</h2><ul>
+<h3 id="destructors" class="headerLink">
+    <a href="#destructors" class="header-mark"></a>Destructors</h3><ul>
 <li>Deleteing (almost) always happens in the destructor of a class.</li>
 <li>The destructor is deﬁned using <code>class_name::~class_name()</code></li>
 <li>the destructor is called when the <strong>object goes out of scope</strong>.</li>
 </ul>
-<h2 id="static-member" class="headerLink">
-    <a href="#static-member" class="header-mark"></a>Static member</h2><p><code>Static member</code> meas this member is <strong>belong to the class</strong> instead of the specific object.</p>
+<h3 id="static-member" class="headerLink">
+    <a href="#static-member" class="header-mark"></a>Static member</h3><p><code>Static member</code> meas this member is <strong>belong to the class</strong> instead of the specific object.</p>
 <blockquote>
 <p><strong>static variable must have definition.</strong></p>
 </blockquote>

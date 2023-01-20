@@ -3,7 +3,7 @@
 
 <!--more-->
 
-# RALL
+## RALL
 
 `Code path`: A single run-through of the code that the computer would see.
 
@@ -35,7 +35,7 @@ In RAII
 - All resources used by a class **should be released in the destructor**
 - Avoid calling `new` and `delete` explicitly
 
-# Smart Pointers
+## Smart Pointers
 
 There are three types of `smart (RAII-safe) pointers`:
 

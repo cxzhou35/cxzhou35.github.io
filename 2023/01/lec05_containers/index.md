@@ -4,7 +4,7 @@
 <!--more-->
 
 
-# STL
+## STL
 
 `Standard template library` includes
 - Algorithms
@@ -13,7 +13,7 @@
 - Containers
 - Adaptors
 
-# Container
+## Container
 
 `Container`: An object that allows us to collect other objects together and interact with them in some way.
 
@@ -21,7 +21,7 @@
 - Standardization: Common features are expected and implemented.
 - Abstraction: Complex ideas made easier to utilize by clients.
 
-## STL Containers
+### STL Containers
 
 - Familiar: vector, stack, queue, set, map
 - Unfamiliar:
@@ -41,7 +41,7 @@ Two types of containers
 	- More easily searched, like maps and sets.
 	- maps, sets, unordered maps/sets ...
 
-### Vector
+#### Vector
 
 At a high level, a vector is an **ordered collection of elements of the any same type** that can **grow and shrink** in size.
 
@@ -63,7 +63,7 @@ int a = vec1.at(0); // a = 3
 int b = vec1[1]; // b = 5
 ```
 
-### Deque
+#### Deque
 
 A deque is a double ended queue, can do everything a vector can do, unlike vector, it is possible and fast to `push_front` and `pop_front`.
 
@@ -93,7 +93,7 @@ vector is the type of sequence that should be used by **default**, deque is the 
 
 ![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png)
 
-### Map
+#### Map
 
 Maps are implemented with **key-value pairs with unique keys**, `std::pair<const key, value>`
 
@@ -109,7 +109,7 @@ str = mymap[key]; // will not throw error if the key not exists.
 ```
 {{< /admonition >}}
 
-### Multimap
+#### Multimap
 
 Multimap is an associative container that contains a sorted list of key-value pairs, while **permitting multiple entries with the same key**.
 
@@ -123,7 +123,7 @@ cout << myMMap.count(3) << endl; // 2
 ```
 {{< /admonition >}}
 
-### Set
+#### Set
 
 Sets contains a sorted set of **unique objects** of type `Key`.
 
@@ -144,7 +144,7 @@ myset.earse("milk"); // {"game"}
 ```
 {{< /admonition >}}
 
-## Container Adaptors
+### Container Adaptors
 
 Container adaptors are "wrappers" to existing containers
 
@@ -154,11 +154,11 @@ Container adaptors are "wrappers" to existing containers
 - Can use different backing containers based on use type.
 - Container adaptors wrap existing containers to permit new/restrict access to the interface for the clients.
 
-### Stack
+#### Stack
 
 Stack just limits the functionality of a vector/deque to only allow `push_back` and `pop_back`.
 
-### Queue
+#### Queue
 
 Queue just limits the functionality of a deque to only allow `push_back`  and `pop_front`.
 

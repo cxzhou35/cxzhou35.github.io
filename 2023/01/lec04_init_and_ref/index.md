@@ -3,11 +3,11 @@
 
 <!--more-->
 
-# Initialization
+## Initialization
 
 **Initialization: How we provide initial values to variables.**
 
-## Uniform initialization
+### Uniform initialization
 
 Initialization while we declare a variable.
 
@@ -27,7 +27,7 @@ string str{"Name"}; //string
 ```
 {{< /admonition >}}
 
-## Structured binding
+### Structured binding
 
 Initialize dierctly from the contens of a struct.
 
@@ -43,7 +43,7 @@ auto [name, age, staff] = s;
 ```
 {{< /admonition >}}
 
-# References
+## References
 
 **References: An alias(another name) for a named variable.**
 
@@ -73,23 +73,23 @@ std::vector<int>& ref = original;
 ```
 {{< /admonition >}}
 
-## L-values and R-values
+### L-values and R-values
 
-### L-values
+#### L-values
 
 - L-values can appear on the **left or right** of an `=`
 - L-values **have names**
 - L-values are **not temporary**
 - L-values live until the **end of the scope**
 
-### R-values
+#### R-values
 
 - R-values can only appear on the **right** of an `=`
 - R-values **don't have names**
 - R-values are **temporary**
 - R-values live until **the end of the line**
 
-# Const 
+## Const 
 
 `const`: keyword indicating a variable, function or parameter **can't be modiﬁed**.
 
@@ -107,7 +107,7 @@ c_ref.push_back(3); // BAD - const
 ```
 {{< /admonition >}}
 
-## Const References
+### Const References
 
 Can't declare **non-const reference to const variable**.
 
@@ -157,7 +157,7 @@ int main(void){
 ```
 {{< /admonition >}}
 
-## Const pointers
+### Const pointers
 
 **Const pointer means this pointer is unchangeable, but what the pointer points to is changeable.**
 
@@ -184,7 +184,7 @@ cout << *c_it << endl;
 ```
 {{< /admonition >}}
 
-## Const functions
+### Const functions
 
 `const-interface:` All member functions marked **const** in a class deﬁnition. Objects of type const ClassName may only use the **const-interface.**
 **Can't call a non-const function in a const function.**
@@ -203,7 +203,7 @@ class Str {
 ```
 {{< /admonition >}}
 
-## Parameter passing rules
+### Parameter passing rules
 
 Basic parameter passing rules
 ![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301110920860.png)
