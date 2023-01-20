@@ -368,7 +368,7 @@ sudo apt install figlet  # 字符串转字符画
 
 
 {{< admonition info >}}
-想要了解更多**其他系统**的配置内容，可以到这个[Github Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki) 查看哦🫰🏼
+想要了解更多**其他系统**的配置内容，可以到这个 [Github Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki) 查看哦🫰🏼
 {{< /admonition >}}
 
 
