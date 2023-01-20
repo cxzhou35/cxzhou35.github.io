@@ -44,7 +44,7 @@ Weakness
 - Do not waste time or space
 - **Enforce safety at compile time whenever possible**
 
-{{< admonition tip>}}
+{{< admonition note>}}
 C++: Basic Syntax + the STL
 
 Standard C++: Basic Syntax + std(standard) library
