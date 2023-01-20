@@ -26,7 +26,7 @@ char character = str[1]; // 'a'
 
 ## Dynamic vs Static typing
 
-```ad-note
+{{< admonition note>}}
 C++ is a **statically typed language.**
 
 `statically typed`:
@@ -38,7 +38,7 @@ type at runtime** based on the thing’s current value.(Python)
 
 `Runtime`:
 Period when program is executing commands (after compilation, if compiled).
-```
+{{< /admonition >}}
 
 ```python
 # CRASH during runtime, can’t divide a string
@@ -63,13 +63,14 @@ div_3("hello");
 **Deﬁne two functions with the same name but diﬀerent types.**
 
 {{< admonition example>}}
-```cpp int half(int x) { 
-	std::cout << “1” << endl; 
+```cpp
+int half(int x) { 
+	std::cout << "1" << endl; 
 	return x / 2;
 }
 
 double half(double x) {
-	cout << “2” << endl;
+	cout << "2" << endl;
 	return x / 2;
 }
 ```
