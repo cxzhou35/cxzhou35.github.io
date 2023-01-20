@@ -103,8 +103,8 @@ _ostream_insert(__out, __s,
 
 {{< admonition warning >}}
 **Be careful with non-member overloading.**
+
 Certain operators, like `new` and `delete,` don’t require a specific type.
-```
 {{< /admonition >}}
 
 ## Rules and Philosophy
