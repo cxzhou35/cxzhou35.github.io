@@ -88,11 +88,11 @@ A `functor` is any **class** that provides an implementation of **operator().** 
 
 {{< admonition warning >}}
 **Actually, this name never appears in the standard c++, we usually call it `function object`.**
-```
 
 `Closure`: a single instantiation of a functor object.
 
 **The STL  standard function object:**
+
 ```cpp
 std::function<return_type(param_types)> func;
 ```
