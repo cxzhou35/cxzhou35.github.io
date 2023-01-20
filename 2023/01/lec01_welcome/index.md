@@ -16,11 +16,13 @@
 ## Assembly
 
 Benefits
+
 - Unbelievably **simple** instructions
 - Extremely **fast** (when well-written)
 - **Complete control** over your program
 
 Drawbacks
+
 - A lot of code to do simple tasks
 - Very hard to understand
 - Extremely unportable (hard to make work across all systems)
@@ -28,11 +30,13 @@ Drawbacks
 ## Invention of C
 
 C made it easy to write code that was
+
 - Fast
 - Simple
 - Cross-platform
 
 Weakness
+
 - **No objects or classes**
 - Diﬃcult to write **generic code**
 - **Tedious** when writing large programs
@@ -40,6 +44,7 @@ Weakness
 ## Design Philosophy of C++
 
 [Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+
 - **Only add features if they solve an actual problem**
 - Express ideas and intent directly in code
 - **Compartmentalization(区块化)** is key
