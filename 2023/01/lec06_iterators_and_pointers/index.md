@@ -71,7 +71,7 @@ for(auto iter = mmap.begin(); iter != mmap.end(); ++iter){
 - `Bidrectional iterators`: They are like forward iterators but can also be iterated through backwards.
 - `Random-access iterators`: They implement all the functionality of bidirectional iterators, and also have the ability to access ranges non-sequentially.
 
-![f|C|300](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301120954809.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301120954809.png)
 
 - Forward iterators are the **minimum level** of functionality for standard containers.
 	- Input iterators can appear on the **RHS (right hand side)** of an `=` operator, like `auto elem = *it;`
@@ -81,11 +81,11 @@ for(auto iter = mmap.begin(); iter != mmap.end(); ++iter){
 	- `--it;`
 - Random-access iterators allow you to **directly access values** without visiting all elements sequentially.
 	- `it += 5;`
- ![f|C|300](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301120958920.png) 
+ ![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301120958920.png) 
 
 **Collected by [xyx](https://xuan-insr.github.io/cpp/%E7%90%86%E8%A7%A3%20STL%20-%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1/):**
 
-![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151450358.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151450358.png)
 
 {{< admonition example >}}
 ```cpp
@@ -102,7 +102,7 @@ const auto& elem = *iter;
 
 We can iterate through different ranges.
 
-![f|C|550](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301131539497.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301131539497.png)
 
 ## Range based for loop
 

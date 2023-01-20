@@ -14,7 +14,7 @@ There are six special member functions, These functions are generated only when 
 - Move constructor
 - Move assignment operator
 
-![f|C|650](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301161055555.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301161055555.png)
 
 We don't have to write out any of these. They all have **default versions** that are generated automatically.
 

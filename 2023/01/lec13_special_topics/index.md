@@ -7,7 +7,7 @@
 
 `Code path`: A single run-through of the code that the computer would see.
 
-![f|C|600](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171548872.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171548872.png)
 
 When a function has an error, it can crash the program.
 
@@ -25,7 +25,7 @@ There are (at least) 23 code paths in the code before
 
 There are many resources that need to be returned after use.
 
-![f|C|550](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171552097.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301171552097.png)
 
 `RAII`: Resource Acquisition is Initialization
 

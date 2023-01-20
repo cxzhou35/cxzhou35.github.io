@@ -9,7 +9,7 @@
 
 Convert between **string-represented data** and the real thing.
 
-![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301101510893.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301101510893.png)
 
 
 `stream`: an **abstraction** for input/output. Streams convert between data and the **string representation of data**.

@@ -91,7 +91,7 @@ vector is the type of sequence that should be used by **default**, deque is the 
 
 **Choosing sequence containers**
 
-![image.png](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301111034175.png)
 
 ### Map
 

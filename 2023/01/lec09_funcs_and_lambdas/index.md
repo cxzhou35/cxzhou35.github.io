@@ -39,7 +39,7 @@ Here `UniPred` is called a `function pointer`.
 
 `Lambdas` are **inline,** **anonymous** functions that can know about variables declared in their same scope.
 
-![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151254010.png)
 
 {{< admonition example >}}
 ```cpp
@@ -64,7 +64,7 @@ auto func = funa;   // ok, copy is permitted
 
 Lambdas can capture any outside variable by using `[]`, **both by reference and by value**.
 
-![f|C|500](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png)
+![](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301151529087.png)
 
 - Use a lambda when you need a **short function or to access local variables in your function**.
 - If you need more logic or overloading, use function pointers.
