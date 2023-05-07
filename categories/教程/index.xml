@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>教程 - 分类 - Zicx の Blog</title>
-        <link>https://xuer04.github.io/categories/%E6%95%99%E7%A8%8B/</link>
+        <link>https://cxzhou35.github.io/categories/%E6%95%99%E7%A8%8B/</link>
         <description>教程 - 分类 - Zicx の Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
-            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</lastBuildDate><atom:link href="https://xuer04.github.io/categories/%E6%95%99%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</lastBuildDate><atom:link href="https://cxzhou35.github.io/categories/%E6%95%99%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
     <title>从零开始搭建 Ubuntu 开发环境</title>
-    <link>https://xuer04.github.io/2022/08/setup_ubuntu/</link>
+    <link>https://cxzhou35.github.io/2022/08/setup_ubuntu/</link>
     <pubDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2022/08/setup_ubuntu/</guid>
+                    <name>Zicx</name><uri>https://cxzhou35.github.io/authors/zicx</uri></author><guid>https://cxzhou35.github.io/2022/08/setup_ubuntu/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/image/setup_ubuntu/ubuntu.jpg" referrerpolicy="no-referrer">
             </div>这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 Ubuntu 20.04 为例）]]></description>
 </item><item>
     <title>Markdown 教程与 Hugo 中的简单应用</title>
-    <link>https://xuer04.github.io/2022/08/markdown_use/</link>
+    <link>https://cxzhou35.github.io/2022/08/markdown_use/</link>
     <pubDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://xuer04.github.io/authors/zicx</uri></author><guid>https://xuer04.github.io/2022/08/markdown_use/</guid>
+                    <name>Zicx</name><uri>https://cxzhou35.github.io/authors/zicx</uri></author><guid>https://cxzhou35.github.io/2022/08/markdown_use/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/image/markdown_use/markdown.png" referrerpolicy="no-referrer">
             </div>这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。]]></description>
