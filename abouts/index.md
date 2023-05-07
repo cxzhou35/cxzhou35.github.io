@@ -3,16 +3,15 @@
 
 ## Hi 👋, I'm Zicx! <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50">
 
-
-[![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/Xuer04)
+[![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/cxzhou35)
 [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:zjajzcx3566@gmail.com)
-[![Telegram](https://img.shields.io/badge/-Telegram-022?style=flat&logo=Telegram&logoColor=white)](https://telegram.me/Xuer04)
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=http%3A%2F%2Fs%2F%2Ftwitter.com%2FVercent5)](https://twitter.com/Vercent5)
-
+[![Telegram](https://img.shields.io/badge/-Telegram-022?style=flat&logo=Telegram&logoColor=white)](https://telegram.me/cxzhou35)
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=http%3A%2F%2Fs%2F%2Ftwitter.com%2FVercent5)](https://twitter.com/cxzhou35)
 
 ---
 
-### :man_technologist: About Me :
+### :man_technologist: About Me
+
 I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
 
 - :telescope: Working on computer vision research. 🖥️
@@ -25,7 +24,8 @@ I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).
 
 ---
 
-### :hammer_and_wrench: Languages and Tools :
+### :hammer_and_wrench: Languages and Tools
+
 <div>
   <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="80" height="80"/>
   <img src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="github" width="80" height="80"/>
@@ -44,12 +44,9 @@ I am an undergraduate in [Zhejiang University](https://www.zju.edu.cn/english/).
 
 ---
 
-### :fire: My Github Stats :
+### :fire: My Github Stats
 
-<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=Xuer04&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a>
+<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=cxzhou35&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a>
 
-<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Xuer04&layout=compact&theme=buefy&hide_border=true" /></a>
-
-
-
+<a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cxzhou35&layout=compact&theme=buefy&hide_border=true" /></a>
 
