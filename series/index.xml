@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Series - 系列 - Zicx の Blog</title>
+        <link>https://cxzhou35.github.io/series/</link>
+        <description>Series - 系列 - Zicx の Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
+            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://cxzhou35.github.io/series/" rel="self" type="application/rss+xml" /></channel>
+</rss>

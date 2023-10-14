@@ -1,7 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - 分类 - Zicx&#39;s Blog</title>
-        <link>https://xuer04.github.io/categories/</link>
-        <description>Categories - 分类 - Zicx&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="https://xuer04.github.io/categories/" rel="self" type="application/rss+xml" /></channel>
+        <title>Categories - 分类 - Zicx の Blog</title>
+        <link>https://cxzhou35.github.io/categories/</link>
+        <description>Categories - 分类 - Zicx の Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
+            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</lastBuildDate><atom:link href="https://cxzhou35.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>CS106L</title>
+    <link>https://cxzhou35.github.io/categories/cs106l/</link>
+    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
+        <name>Zicx</name>
+    </author><guid>https://cxzhou35.github.io/categories/cs106l/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>教程</title>
+    <link>https://cxzhou35.github.io/categories/%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</pubDate><author>
+        <name>Zicx</name>
+    </author><guid>https://cxzhou35.github.io/categories/%E6%95%99%E7%A8%8B/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>
