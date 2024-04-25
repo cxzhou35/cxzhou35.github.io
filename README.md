@@ -1,3 +1,3 @@
-# Chenxu's Homepage
+# Chenxu's Blog
 
-Chenxu's Homepage 🏠: <https://zicx.top>
+Chenxu's Blog 🏠: <https://zicx.top>
