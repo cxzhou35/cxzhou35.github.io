@@ -4,34 +4,29 @@
     <title>Markdown on Chenxu&#39;s Homepage</title>
     <link>https://zicx.top/tags/markdown/</link>
     <description>Recent content in Markdown on Chenxu&#39;s Homepage</description>
-    <image>
-      <title>Chenxu&#39;s Homepage</title>
-      <url>https://zicx.top/images/papermod-cover.png</url>
-      <link>https://zicx.top/images/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- 0.125.3</generator>
     <language>en</language>
     <copyright>2024 Chenxu&amp;rsquo;s Homepage</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://zicx.top/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Syntax Guide</title>
       <link>https://zicx.top/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0800</pubDate>
       <guid>https://zicx.top/posts/markdown-syntax/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
     </item>
     <item>
       <title>Code Syntax Guide</title>
       <link>https://zicx.top/posts/code_syntax/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0800</pubDate>
       <guid>https://zicx.top/posts/code_syntax/</guid>
       <description>Sample article showcasing basic code syntax and formatting for HTML elements.</description>
     </item>
     <item>
       <title>Rich Content and Shortcodes</title>
       <link>https://zicx.top/posts/rich-content/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0800</pubDate>
       <guid>https://zicx.top/posts/rich-content/</guid>
       <description>A brief description of Hugo Shortcodes</description>
     </item>
