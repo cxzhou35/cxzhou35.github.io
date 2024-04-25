@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Setup your awesome Ubuntu. - Zicx の Blog</title><meta name="Description" content="这是一篇 Ubuntu 安装之后的配置教程（以 Ubuntu 20.04 为例）"><meta property="og:title" content="Setup your awesome Ubuntu." />
+<meta property="og:description" content="这是一篇 Ubuntu 安装之后的配置教程（以 Ubuntu 20.04 为例）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xuer04.github.io/setup_ubuntu/" /><meta property="og:image" content="https://xuer04.github.io/image/fig.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-18T10:43:12+08:00" />
+<meta property="article:modified_time" content="2022-08-18T10:43:12+08:00" /><meta property="og:site_name" content="Zicx" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xuer04.github.io/image/fig.png"/>
+
+<meta name="twitter:title" content="Setup your awesome Ubuntu."/>
+<meta name="twitter:description" content="这是一篇 Ubuntu 安装之后的配置教程（以 Ubuntu 20.04 为例）"/>
+<meta name="application-name" content="Zicx の Blog">
+<meta name="apple-mobile-web-app-title" content="Zicx の Blog">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="%3ci%20class=%27far%20fa-blog%27%3e%3c/i%3e"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://xuer04.github.io/setup_ubuntu/" /><link rel="prev" href="https://xuer04.github.io/page-1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Setup your awesome Ubuntu.",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xuer04.github.io\/setup_ubuntu\/"
+        },"image": ["https:\/\/xuer04.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Linux, 安装配置, Shell","wordcount":  1792 ,
+        "url": "https:\/\/xuer04.github.io\/setup_ubuntu\/","datePublished": "2022-08-18T10:43:12+08:00","dateModified": "2022-08-18T10:43:12+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Zicx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/xuer04.github.io\/images\/avatar.webp",
+                    "width":  528 ,
+                    "height":  560 
+                }},"authors": [{
+                    "@type": "Person",
+                    "name": "Zicx"
+                }],"description": "这是一篇 Ubuntu 安装之后的配置教程（以 Ubuntu 20.04 为例）"
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('light' === 'light' || 'light' === 'dark' || 'light' === 'black') setTheme('light'), saveTheme('light'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Zicx の Blog"><img
+        class="lazyload logo"
+        data-src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        data-srcset="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 1.5x, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 2x"
+        data-sizes="auto"
+        alt="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        title="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"><i class='fas fa-book-open'></i> 文章 </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tag'></i> 标签 </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-shapes'></i> 分类 </a><a class="menu-item" href="/abouts/" title="关于"><i class='fab fa-envira'></i> 关于 </a><a class="menu-item" href="/links/" title="友链"><i class='fas fa-link'></i> 友链 </a><a class="menu-item" href="https://github.com/Xuer04" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Zicx の Blog"><img
+        class="lazyload logo"
+        data-src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        data-srcset="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 1.5x, https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif 2x"
+        data-sizes="auto"
+        alt="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"
+        title="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="文章"><i class='fas fa-book-open'></i>文章</a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tag'></i>标签</a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-shapes'></i>分类</a><a class="menu-item" href="/abouts/" title="关于"><i class='fab fa-envira'></i>关于</a><a class="menu-item" href="/links/" title="友链"><i class='fas fa-link'></i>友链</a><a class="menu-item" href="https://github.com/Xuer04" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-换源">1. 换源</a></li>
+        <li><a href="#2-基本环境和常用工具">2. 基本环境和常用工具</a></li>
+        <li><a href="#3-zsh--oh-my-zsh">3. Zsh &amp; oh-my-zsh</a></li>
+        <li><a href="#4-git">4. Git</a></li>
+        <li><a href="#5-vim">5. Vim</a></li>
+        <li><a href="#6-tmux">6. Tmux</a></li>
+        <li><a href="#7-python">7. Python</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#9-其他命令行工具">9. 其他命令行工具</a></li>
+        <li><a href="#番外">番外</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Setup your awesome Ubuntu.</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class='author'><i class="author fas fa-user-circle fa-fw"></i><span class='screen-reader-text'>  </span><a href='https://xuer04.github.io/authors/zicx'>Zicx</a></span>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"><i class="far fa-folder fa-fw"></i>技术文档</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-08-18">2022-08-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1792 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/setup_ubuntu/" class="leancloud_visitors" data-flag-title="Setup your awesome Ubuntu.">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;次阅读
+                    </span>&nbsp;<span id="/setup_ubuntu/" class="comment_count" data-flag-title="Setup your awesome Ubuntu.">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        data-src="/image/setup_ubuntu/ubuntu.jpg"
+        data-srcset="/image/setup_ubuntu/ubuntu.jpg, /image/setup_ubuntu/ubuntu.jpg 1.5x, /image/setup_ubuntu/ubuntu.jpg 2x"
+        data-sizes="auto"
+        alt="/image/setup_ubuntu/ubuntu.jpg"
+        title="这是一篇 Ubuntu 安装之后的配置教程（以 Ubuntu 20.04 为例）" height="auto" width="auto"></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-换源">1. 换源</a></li>
+        <li><a href="#2-基本环境和常用工具">2. 基本环境和常用工具</a></li>
+        <li><a href="#3-zsh--oh-my-zsh">3. Zsh &amp; oh-my-zsh</a></li>
+        <li><a href="#4-git">4. Git</a></li>
+        <li><a href="#5-vim">5. Vim</a></li>
+        <li><a href="#6-tmux">6. Tmux</a></li>
+        <li><a href="#7-python">7. Python</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#9-其他命令行工具">9. 其他命令行工具</a></li>
+        <li><a href="#番外">番外</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw"></i>摘要<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这是一篇 Ubuntu 的安装与配置教程，帮助你快速搭建新的系统环境（以 ubuntu20.04 为例）</div>
+        </div>
+    </div>
+<h3 id="1-换源" class="headerLink">
+    <a href="#1-%e6%8d%a2%e6%ba%90" class="header-mark"></a>1. 换源</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /etc/apt
+</span></span><span class="line"><span class="cl"><span class="c1"># 备份原来的源</span>
+</span></span><span class="line"><span class="cl">sudo cp sources.list sources.list.back
+</span></span><span class="line"><span class="cl">sudo vim sources.list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果没有 vim 可以使用 nano
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除原来的源，把下面的源加进去</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal universe
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal-updates universe
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal-updates multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal-security universe
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ focal-security multiverse
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 保存退出(vim)</span>
+</span></span><span class="line"><span class="cl">:wq
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 更新一下源</span>
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade   <span class="c1"># 有提示输入 Y</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-基本环境和常用工具" class="headerLink">
+    <a href="#2-%e5%9f%ba%e6%9c%ac%e7%8e%af%e5%a2%83%e5%92%8c%e5%b8%b8%e7%94%a8%e5%b7%a5%e5%85%b7" class="header-mark"></a>2. 基本环境和常用工具</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install gcc gdb cmake build-essential
+</span></span><span class="line"><span class="cl">sudo apt install wget htop aptitude neofetch
+</span></span><span class="line"><span class="cl">sudo apt install curl perl zip unzip aptitude
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-zsh--oh-my-zsh" class="headerLink">
+    <a href="#3-zsh--oh-my-zsh" class="header-mark"></a>3. Zsh &amp; oh-my-zsh</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看当前的sehll</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$SHELL</span>
+</span></span><span class="line"><span class="cl">/bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 下载 zsh</span>
+</span></span><span class="line"><span class="cl">sudo apt install zsh -y  <span class="c1"># -y 参数会自动安装依赖</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将默认的shell换成zsh</span>
+</span></span><span class="line"><span class="cl">chsh -s /bin/zsh
+</span></span><span class="line"><span class="cl"><span class="c1"># 重启加载(如果是WSL的话shutdown再进就行)</span>
+</span></span><span class="line"><span class="cl">reboot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 再次查看当前的sehll</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$SHELL</span>
+</span></span><span class="line"><span class="cl">/bin/zsh  <span class="c1"># 出现则说明完成安装</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 下载 oh-my-zsh</span>
+</span></span><span class="line"><span class="cl">sh -c <span class="s2">&#34;</span><span class="k">$(</span>wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 下载完之后配置文件在.zshrc, 家目录下会有一个.oh-my-zsh 的文件夹</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">vim .zshrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改主题</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&#34;ys&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置插件</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1. zsh-syntax-highlighting</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-syntax-highlighting
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. zsh-autosuggestions</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/zsh-users/zsh-autosuggestions <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. git-open</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/paulirish/git-open.git <span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/git-open
+</span></span><span class="line"><span class="cl"><span class="c1"># 在配置文件中添加插件</span>
+</span></span><span class="line"><span class="cl">vim .zshrc
+</span></span><span class="line"><span class="cl"><span class="nv">plugins</span><span class="o">=(</span>git z sudo extract zsh-syntax-highlighting zsh-autosuggestions git-open<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> .zshrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 禁止自动更新</span>
+</span></span><span class="line"><span class="cl">vim .zshrc
+</span></span><span class="line"><span class="cl"><span class="nv">DISABLE_AUTO_UPDATE</span><span class="o">=</span><span class="s2">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> .zshrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-git" class="headerLink">
+    <a href="#4-git" class="header-mark"></a>4. Git</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 安装 git</span>
+</span></span><span class="line"><span class="cl">sudo apt install git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加git信息</span>
+</span></span><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;XXXX&#34;</span>      <span class="o">(</span>换成自己的github账户<span class="o">)</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;xxxxxxx@gmail.com&#34;</span>     <span class="o">(</span>换成自己的github邮箱<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 重置 ssh</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.ssh
+</span></span><span class="line"><span class="cl">rm known_hosts
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置 ssh-key</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s2">&#34;xxxxxxx@gmail.com&#34;</span>      <span class="o">(</span>换成自己的github邮箱<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 一直回车就可以</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 打开 github  https://github.com/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将 ~/.ssh/id_rsa.pub 中的内容添加到ssh key中</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ssh -T  git@github.com
+</span></span><span class="line"><span class="cl"><span class="c1"># 输入 yes 后回车</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-vim" class="headerLink">
+    <a href="#5-vim" class="header-mark"></a>5. Vim</h3><p>vim 的配置文件有两个，分别对应 User 和 root，位于家目录下的 ~/.vimrc 和 /etc/vim/vimrc，一般普通用户修改 ~/.vimrc.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 可以 clone 我的配置</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles
+</span></span><span class="line"><span class="cl">mkdir -p ~/.vim/autoload
+</span></span><span class="line"><span class="cl">cp ~/dotfiles/vim/plug.vim  ~/.vim/autoload/
+</span></span><span class="line"><span class="cl">cp ~/dotfiles/vim/.vimrc ~
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 打开 vim</span>
+</span></span><span class="line"><span class="cl">vim
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装配置</span>
+</span></span><span class="line"><span class="cl">:PlugInstall  <span class="c1"># 会自动安装插件</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 更换主题</span>
+</span></span><span class="line"><span class="cl">cp ~/dotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><code>nvim</code> 集成了 <code>vim</code> 的特性，是一个比较好的 <code>vim</code> 替代品，而且支持用 <code>lua</code> 语言配置。</p>
+<p>链接🔗 在这里: <a href="https://neovim.io/" target="_blank" rel="noopener noreffer">neovim</a></p>
+</div>
+        </div>
+    </div>
+<h3 id="6-tmux" class="headerLink">
+    <a href="#6-tmux" class="header-mark"></a>6. Tmux</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 安装 tmux</span>
+</span></span><span class="line"><span class="cl">sudo apt install tmux
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles <span class="c1"># 前面操作中 clone 过的不需要再 clone</span>
+</span></span><span class="line"><span class="cl">cp -r ~/dotfiles/tmux ~/.tmux
+</span></span><span class="line"><span class="cl">ln -s -f ~/.tmux/.tmux.conf
+</span></span><span class="line"><span class="cl">cp ~/dotfiles/tmux/.tmux.conf.local ~
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 测试</span>
+</span></span><span class="line"><span class="cl">tmux 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">https://github.com/ryanoasis/nerd-fonts  <span class="c1"># 在这里下载</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>如果有乱码的话，是字体的问题，推荐安装 <code>Nerd Font</code></p>
+<p>链接🔗 在这里: <a href="https://github.com/ryanoasis/nerd-fonts" target="_blank" rel="noopener noreffer">Nerd Font</a></p>
+</div>
+        </div>
+    </div>
+<h3 id="7-python" class="headerLink">
+    <a href="#7-python" class="header-mark"></a>7. Python</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install python3 python3-dev python3-pip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置 pip 的镜像源</span>
+</span></span><span class="line"><span class="cl">mkdir ~/.pip
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.pip
+</span></span><span class="line"><span class="cl">touch pip.conf
+</span></span><span class="line"><span class="cl">sudo vi ~/.pip/pip.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加以下内容</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>global<span class="o">]</span>
+</span></span><span class="line"><span class="cl">index-url<span class="o">=</span>http://mirrors.aliyun.com/pypi/simple/
+</span></span><span class="line"><span class="cl"><span class="o">[</span>install<span class="o">]</span>
+</span></span><span class="line"><span class="cl">trusted-host<span class="o">=</span>mirrors.aliyun.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="8-conda-optional" class="headerLink">
+    <a href="#8-conda-optional" class="header-mark"></a>8. Conda (optional)</h1><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+</span></span><span class="line"><span class="cl">chmod +x Miniconda3-latest-Linux-x86_64.sh
+</span></span><span class="line"><span class="cl">./Miniconda3-latest-Linux-x86_64.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 在 .zshrc 中添加环境变量
+</span></span><span class="line"><span class="cl"># 1. 一般conda会写到你的shell里面
+</span></span><span class="line"><span class="cl">source .zshrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 2. 如果没有，手动添加以下内容  注意：zicx 改成自己的username，查看miniconda安装的路径是否一致
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;
+</span></span><span class="line"><span class="cl"># !! Contents within this block are managed by &#39;conda init&#39; !!
+</span></span><span class="line"><span class="cl">__conda_setup=&#34;$(&#39;/home/zicx/miniconda3/bin/conda&#39; &#39;shell.zsh&#39; &#39;hook&#39; 2&gt; /dev/null)&#34;
+</span></span><span class="line"><span class="cl">if [ $? -eq 0 ]; then
+</span></span><span class="line"><span class="cl">    eval &#34;$__conda_setup&#34;
+</span></span><span class="line"><span class="cl">else
+</span></span><span class="line"><span class="cl">    if [ -f &#34;/home/zicx/miniconda3/etc/profile.d/conda.sh&#34; ]; then
+</span></span><span class="line"><span class="cl">        . &#34;/home/zicx/miniconda3/etc/profile.d/conda.sh&#34;
+</span></span><span class="line"><span class="cl">    else
+</span></span><span class="line"><span class="cl">        export PATH=&#34;/home/zicx/miniconda3/bin:$PATH&#34;
+</span></span><span class="line"><span class="cl">    fi
+</span></span><span class="line"><span class="cl">fi
+</span></span><span class="line"><span class="cl">unset __conda_setup
+</span></span><span class="line"><span class="cl"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 更换miniconda的源
+</span></span><span class="line"><span class="cl">cd ~/.conda 
+</span></span><span class="line"><span class="cl">vim .condarc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 添加以下内容
+</span></span><span class="line"><span class="cl">auto_activate_base: false
+</span></span><span class="line"><span class="cl">ssl_verify: true
+</span></span><span class="line"><span class="cl">channels:
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/main
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/r
+</span></span><span class="line"><span class="cl">  - http://mirrors.aliyun.com/anaconda/pkgs/msys2
+</span></span><span class="line"><span class="cl">show_channel_urls: true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 清理缓存
+</span></span><span class="line"><span class="cl">conda clean -a
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="9-其他命令行工具" class="headerLink">
+    <a href="#9-%e5%85%b6%e4%bb%96%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%b7%a5%e5%85%b7" class="header-mark"></a>9. 其他命令行工具</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. thefuck</span>
+</span></span><span class="line"><span class="cl">sudo pip3 install thefuck
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置 zsh 的环境变量</span>
+</span></span><span class="line"><span class="cl">vim .zshrc
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>thefuck --alias fuck<span class="k">)</span><span class="s2">&#34;</span>  <span class="c1"># 添加缩写</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> .zshrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. fdfind</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Downloads
+</span></span><span class="line"><span class="cl">wget https://github.com/sharkdp/fd/releases/download/v8.3.2/fd_8.3.2_amd64.deb
+</span></span><span class="line"><span class="cl">sudo dpkg -i fd_8.3.2_amd64.deb
+</span></span><span class="line"><span class="cl">rm fd_8.3.2_amd64.deb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. bat</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Downloads
+</span></span><span class="line"><span class="cl">wget https://github.com/sharkdp/bat/releases/download/v0.21.0/bat_0.21.0_amd64.deb
+</span></span><span class="line"><span class="cl">sudo dpkg -i bat_0.21.0_amd64.deb   
+</span></span><span class="line"><span class="cl"><span class="c1">## ubuntu18.04 用musl版本的</span>
+</span></span><span class="line"><span class="cl">wget https://github.com/sharkdp/bat/releases/download/v0.21.0/bat-musl_0.21.0_amd64.deb
+</span></span><span class="line"><span class="cl">rm bat_0.21.0_amd64.deb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 在 zsh 中添加配置</span>
+</span></span><span class="line"><span class="cl">vim .zshrc
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">cat</span><span class="o">=</span><span class="s2">&#34;bat&#34;</span>  <span class="c1"># 添加缩写</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">BAT_THEME</span><span class="o">=</span><span class="s2">&#34;Solarized (light)&#34;</span>  <span class="c1"># 更改主题</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> .zshrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. fzf (结合 vim 使用无敌)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## 通过 git 安装</span>
+</span></span><span class="line"><span class="cl">git clone --depth <span class="m">1</span> https://github.com/junegunn/fzf.git ~/.fzf
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.fzf/ 
+</span></span><span class="line"><span class="cl">./install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## 通过 dpkg 安装</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Downloads
+</span></span><span class="line"><span class="cl">wget http://cn.archive.ubuntu.com/ubuntu/pool/universe/f/fzf/fzf_0.30.0-1_amd64.deb
+</span></span><span class="line"><span class="cl">sudo dpkg -i fzf_0.30.0-1_amd64.deb
+</span></span><span class="line"><span class="cl">rm fzf_0.30.0-1_amd64.deb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## 更新fzf</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.fzf <span class="o">&amp;&amp;</span> git pull <span class="o">&amp;&amp;</span> ./install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 5. ncdu</span>
+</span></span><span class="line"><span class="cl">sudo apt install ncdu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 6. nnn</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Downloads
+</span></span><span class="line"><span class="cl">git clone https://github.com/jarun/nnn.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> nnn
+</span></span><span class="line"><span class="cl">sudo make <span class="nv">O_NERD</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">./nnn
+</span></span><span class="line"><span class="cl">sudo mv ~/Downloads/nnn/nnn /bin/ 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 7. tldr</span>
+</span></span><span class="line"><span class="cl">sudo apt install tldr
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 8. exa</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## 安装 rust</span>
+</span></span><span class="line"><span class="cl">curl --proto <span class="s1">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs <span class="p">|</span> sh
+</span></span><span class="line"><span class="cl">mkdir ~/Downloads/exa
+</span></span><span class="line"><span class="cl">wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip ~/Downloads/exa
+</span></span><span class="line"><span class="cl">unzip exa-linux-x86_64-v0.10.1.zip
+</span></span><span class="line"><span class="cl">sudo mv exa /usr/local/bin/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 验证exa</span>
+</span></span><span class="line"><span class="cl">exa -v
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 替换ls</span>
+</span></span><span class="line"><span class="cl">vim .zshrc
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s2">&#34;exa&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> .zshrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 9. ranger</span>
+</span></span><span class="line"><span class="cl">pip install ranger-fm  or  sudo apt install ranger
+</span></span><span class="line"><span class="cl">ranger --copy-config<span class="o">=</span>all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装预览插件</span>
+</span></span><span class="line"><span class="cl">sudo apt install poppler
+</span></span><span class="line"><span class="cl">sudo apt install highlight
+</span></span><span class="line"><span class="cl">sudo apt install mediainfo
+</span></span><span class="line"><span class="cl">sudo apt install ueberzug
+</span></span><span class="line"><span class="cl">sudo apt install w3m-img
+</span></span><span class="line"><span class="cl">sudo apt install libx11-dev
+</span></span><span class="line"><span class="cl">sudo apt install libxext-dev
+</span></span><span class="line"><span class="cl">sudo pip3 install ueberzug
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置环境变量</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">RANGER_LOAD_DEFAULT_RC</span><span class="o">=</span>FALSE
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 图标显示</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+</span></span><span class="line"><span class="cl">git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles  <span class="c1"># 前面操作中clone过的不需要再clone</span>
+</span></span><span class="line"><span class="cl">cp ~/dotfiles/ranger/rc.conf ~/.config/ranger/conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 10. lazygit</span>
+</span></span><span class="line"><span class="cl"><span class="sb">```</span>bash
+</span></span><span class="line"><span class="cl">sudo add-apt-repository ppa:lazygit-team/release
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install lazygit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加缩写</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;alias lg=&#34;</span>lazygit<span class="s2">&#34;&#34;</span> &gt;&gt; ~/.zshrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="番外" class="headerLink">
+    <a href="#%e7%95%aa%e5%a4%96" class="header-mark"></a>番外</h3><p><strong>一些有意思的终端工具</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install sl  <span class="c1"># 小火车</span>
+</span></span><span class="line"><span class="cl">sudo apt install cmatrix  <span class="c1"># 字符雨</span>
+</span></span><span class="line"><span class="cl">sudo apt install xcowsay  <span class="c1"># 奶牛</span>
+</span></span><span class="line"><span class="cl">sudo apt install aview  <span class="c1"># ascii格式打开图片</span>
+</span></span><span class="line"><span class="cl">asciiview test.png
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo apt install lolcat  <span class="c1"># 终端颜色真值输出</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">neofetch <span class="p">|</span> lolcat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo apt install figlet  <span class="c1"># 字符串转字符画</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>持续更新中&hellip;&hellip; 📆</p>
+</blockquote>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>信息<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">想要了解更多<strong>其他系统</strong>的配置内容，可以到这个<a href="https://github.com/Xuer04/Awesome-dotfiles/wiki" target="_blank" rel="noopener noreffer">Github Wiki</a> 查看哦🫰🏼</div>
+        </div>
+    </div></div>
+
+        
+
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-08-18</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://xuer04.github.io/setup_ubuntu/" data-title="Setup your awesome Ubuntu." data-via="Zicx3566" data-hashtags="Linux,安装配置,Shell"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://xuer04.github.io/setup_ubuntu/" data-title="Setup your awesome Ubuntu." data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">安装配置</a>,&nbsp;<a href="/tags/shell/">Shell</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/page-1/" class="prev" rel="prev" title="Page 1"><i class="fas fa-angle-left fa-fw"></i>Page 1</a></div>
+</div>
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/Xuer04" target="_blank" rel="noopener noreferrer">Zicx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://doit-docs-comment-twikoo.vercel.app/","lang":"zh-cn"}},"data":{"desktop-header-typeit":"Zicx の Blog","mobile-header-typeit":"Zicx の Blog"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script></div>
+</body>
+
+</html>

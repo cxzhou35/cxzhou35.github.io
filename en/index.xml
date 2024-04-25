@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Zicx&#39;s Blog</title>
+        <link>https://xuer04.github.io/en/</link>
+        <description>Welcome to Zicx&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
+            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+            <atom:link href="https://xuer04.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
+</rss>

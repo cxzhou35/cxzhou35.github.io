@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
@@ -30,3 +31,14 @@
     </item>
   </channel>
 </rss>
+||||||| empty tree
+=======
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Series - 系列 - Zicx の Blog</title>
+        <link>https://cxzhou35.github.io/series/</link>
+        <description>Series - 系列 - Zicx の Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
+            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://cxzhou35.github.io/series/" rel="self" type="application/rss+xml" /></channel>
+</rss>
+>>>>>>> c84d28fab952fb150dd5258b55551b96481b20b5
