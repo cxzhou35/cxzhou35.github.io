@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zicx.top/posts/papermod/papermod-installation/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+    <loc>https://zicx.top/posts/markdown-syntax.fa/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zicx.top/posts/papermod/papermod-features/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+    <loc>https://zicx.top/categories/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zicx.top/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -17,53 +17,9 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fa"
-                href="https://zicx.top/fa/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="en"
                 href="https://zicx.top/"
                 />
-  </url><url>
-    <loc>https://zicx.top/tags/docs/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zicx.top/tags/papermod/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zicx.top/series/papermod/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zicx.top/posts/papermod/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zicx.top/posts/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://zicx.top/fr/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="https://zicx.top/fa/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://zicx.top/posts/"
-                />
-  </url><url>
-    <loc>https://zicx.top/series/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zicx.top/tags/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zicx.top/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zicx.top/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -83,16 +39,30 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fa"
-                href="https://zicx.top/fa/posts/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="en"
                 href="https://zicx.top/posts/markdown-syntax/"
                 />
   </url><url>
+    <loc>https://zicx.top/posts/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://zicx.top/fr/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://zicx.top/posts/"
+                />
+  </url><url>
+    <loc>https://zicx.top/series/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://zicx.top/categories/syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zicx.top/tags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zicx.top/tags/themes/</loc>
@@ -133,6 +103,8 @@
   </url><url>
     <loc>https://zicx.top/posts/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zicx.top/about/</loc>
   </url><url>
     <loc>https://zicx.top/archives/</loc>
     <xhtml:link
