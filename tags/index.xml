@@ -1,57 +1,102 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tags - 标签 - Zicx の Blog</title>
-        <link>https://cxzhou35.github.io/tags/</link>
-        <description>Tags - 标签 - Zicx の Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
-            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</lastBuildDate><atom:link href="https://cxzhou35.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>Cpp</title>
-    <link>https://cxzhou35.github.io/tags/cpp/</link>
-    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
-        <name>Zicx</name>
-    </author><guid>https://cxzhou35.github.io/tags/cpp/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>公开课</title>
-    <link>https://cxzhou35.github.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/</link>
-    <pubDate>Fri, 20 Jan 2023 10:22:46 &#43;0800</pubDate><author>
-        <name>Zicx</name>
-    </author><guid>https://cxzhou35.github.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Linux</title>
-    <link>https://cxzhou35.github.io/tags/linux/</link>
-    <pubDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</pubDate><author>
-        <name>Zicx</name>
-    </author><guid>https://cxzhou35.github.io/tags/linux/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Shell</title>
-    <link>https://cxzhou35.github.io/tags/shell/</link>
-    <pubDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</pubDate><author>
-        <name>Zicx</name>
-    </author><guid>https://cxzhou35.github.io/tags/shell/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Tool</title>
-    <link>https://cxzhou35.github.io/tags/tool/</link>
-    <pubDate>Thu, 18 Aug 2022 10:43:12 &#43;0800</pubDate><author>
-        <name>Zicx</name>
-    </author><guid>https://cxzhou35.github.io/tags/tool/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Hugo</title>
-    <link>https://cxzhou35.github.io/tags/hugo/</link>
-    <pubDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</pubDate><author>
-        <name>Zicx</name>
-    </author><guid>https://cxzhou35.github.io/tags/hugo/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Markdown</title>
-    <link>https://cxzhou35.github.io/tags/markdown/</link>
-    <pubDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</pubDate><author>
-        <name>Zicx</name>
-    </author><guid>https://cxzhou35.github.io/tags/markdown/</guid>
-    <description><![CDATA[]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Chenxu&#39;s Homepage</title>
+    <link>https://zicx.top/tags/</link>
+    <description>Recent content in Tags on Chenxu&#39;s Homepage</description>
+    <image>
+      <title>Chenxu&#39;s Homepage</title>
+      <url>https://zicx.top/images/papermod-cover.png</url>
+      <link>https://zicx.top/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.125.3</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://zicx.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docs</title>
+      <link>https://zicx.top/tags/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/docs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PaperMod</title>
+      <link>https://zicx.top/tags/papermod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/papermod/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>https://zicx.top/tags/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>https://zicx.top/tags/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://zicx.top/tags/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Themes</title>
+      <link>https://zicx.top/tags/themes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/themes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code</title>
+      <link>https://zicx.top/tags/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gist</title>
+      <link>https://zicx.top/tags/gist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/gist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>https://zicx.top/tags/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcodes</title>
+      <link>https://zicx.top/tags/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Syntax</title>
+      <link>https://zicx.top/tags/syntax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/syntax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emoji</title>
+      <link>https://zicx.top/tags/emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/tags/emoji/</guid>
+      <description></description>
+    </item>
+  </channel>
 </rss>

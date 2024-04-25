@@ -1,16 +1,39 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Markdown - 标签 - Zicx の Blog</title>
-        <link>https://cxzhou35.github.io/tags/markdown/</link>
-        <description>Markdown - 标签 - Zicx の Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>zjajzcx3566@gmail.com (Zicx)</managingEditor>
-            <webMaster>zjajzcx3566@gmail.com (Zicx)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</lastBuildDate><atom:link href="https://cxzhou35.github.io/tags/markdown/" rel="self" type="application/rss+xml" /><item>
-    <title>Markdown 教程与 Hugo 中的简单应用</title>
-    <link>https://cxzhou35.github.io/2022/08/markdown_use/</link>
-    <pubDate>Thu, 18 Aug 2022 09:43:12 &#43;0800</pubDate><author>
-                    <name>Zicx</name><uri>https://cxzhou35.github.io/authors/zicx</uri></author><guid>https://cxzhou35.github.io/2022/08/markdown_use/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/image/markdown_use/markdown.png" referrerpolicy="no-referrer">
-            </div>这是一篇 Markdown 的简易教程，本人在写博客的过程中，经常发现自己会忘记一些语法，因此专门写下这篇文章来记录一下，以便以后遇到问题时能够更快速地查阅。]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Markdown on Chenxu&#39;s Homepage</title>
+    <link>https://zicx.top/tags/markdown/</link>
+    <description>Recent content in Markdown on Chenxu&#39;s Homepage</description>
+    <image>
+      <title>Chenxu&#39;s Homepage</title>
+      <url>https://zicx.top/images/papermod-cover.png</url>
+      <link>https://zicx.top/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.125.3</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://zicx.top/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://zicx.top/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/posts/markdown-syntax/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Code Syntax Guide</title>
+      <link>https://zicx.top/posts/code_syntax/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/posts/code_syntax/</guid>
+      <description>Sample article showcasing basic code syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Rich Content and Shortcodes</title>
+      <link>https://zicx.top/posts/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://zicx.top/posts/rich-content/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+  </channel>
 </rss>
