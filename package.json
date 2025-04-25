@@ -15,7 +15,7 @@
         "deploy": "gh-pages -d build"
     },
     "author": "Chenxu Zhou<cxzhou35@zju.edu.cn>",
-    "homepage": "https://cxzhou35.github.io/",
+    "homepage": "https://zicx.top/",
     "license": "MIT",
     "dependencies": {
         "@chakra-ui/icons": "^2.1.1",
