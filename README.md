@@ -2,13 +2,16 @@
 
 Homepage 🏠: [zicx.top](https://zicx.top)
 
-This website is built based on the <a href='https://www.craftz.dog/' target='_blank'>Takuya Matsuyama's website</a>. Thanks the author for open source.
+This website is built based on the <a href='https://www.craftz.dog/' target='_blank'>Takuya Matsuyama's website</a>. Thanks to Takuya for open source.
 
 ## TODOs
 
-- [ ] Create a 3D model just like the voxel dog used in Takuya's homepage.
-- [ ] Add support for paper lists (cover, button, hover, links).
-- [ ] Update my portrait.
+- [x] Create a 3D model just like the voxel dog used in Takuya's homepage.
+> The Hollow Knight 3D model is designed by [@Guilherme Lé](https://sketchfab.com/3d-models/hollow-knight-fanart-aee54b0967114f4699ba25a77d467eac)
+- [x] Add support for paper lists (cover, button, hover, links).
+- [x] Update my portrait.
+- [ ] Upspeed the loading of the 3D model.
+- [ ] Update poses content.
 
 ## File structure
 
