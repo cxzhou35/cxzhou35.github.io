@@ -35,7 +35,7 @@ export const PaperItem = ({
                     <Text as="span" fontWeight={author.includes('Chenxu Zhou') ? 'bold' : 'normal'}>
                         {displayAuthor}
                         {symbol && (
-                            <Text as="sup" fontWeight="bold" color={tagColor}>
+                            <Text as="sup" fontWeight="bold">
                                 {symbol}
                             </Text>
                         )}
