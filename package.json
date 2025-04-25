@@ -1,0 +1,42 @@
+{
+    "name": "homepage",
+    "version": "1.0.0",
+    "description": "Zicx's Homepage",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "dev": "next dev -H 0.0.0.0",
+        "build": "next build",
+        "start": "next start",
+        "prettier": "prettier --write .",
+        "lint": "next lint",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "keywords": [],
+    "author": "Chenxu Zhou<cxzhou35@zju.edu.cn>",
+    "license": "MIT",
+    "dependencies": {
+        "@chakra-ui/icons": "^2.1.1",
+        "@chakra-ui/react": "^2.8.1",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@fortawesome/free-solid-svg-icons": "^6.7.2",
+        "@fortawesome/react-fontawesome": "^0.2.2",
+        "@vercel/analytics": "^1.1.1",
+        "fortawesome": "^0.0.1-security",
+        "framer-motion": "^10.16.4",
+        "next": "^13.5.6",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.12.0",
+        "three": "^0.157.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.52.0",
+        "eslint-config-next": "^13.5.6",
+        "gh-pages": "^6.3.0",
+        "prettier": "^3.0.3"
+    }
+}
