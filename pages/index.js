@@ -92,7 +92,7 @@ const Home = () =>
                     My research interests lie in the fields of 3D/4D reconstruction and generative models.
                     My long-term goal is to <b>create immersive, interactive environments that seamlessly integrate digital and physical worlds</b>—experiences akin to the virtual realms envisioned in film {' '}
                     <Link href="https://www.imdb.com/title/tt1677720/" scroll={false} target='_blank'>
-                        Ready Player One <ExternalLinkIcon mx="2px" />
+                        Ready Player One <ExternalLinkIcon mx="1px" mb="1" />
                     </Link>.
                 </Paragraph>
 
