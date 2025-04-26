@@ -12,7 +12,7 @@
         "prettier": "prettier --write .",
         "lint": "next lint",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d out"
     },
     "author": "Chenxu Zhou<cxzhou35@zju.edu.cn>",
     "homepage": "https://zicx.top/",
