@@ -34,7 +34,8 @@ const Papers = () => (
                     ]}
                     conference="CVPR"
                     year="2025"
-                    thumbnail="https://raw.githubusercontent.com/cxzhou35/projects/main/homepage/videos/papers/lidar_rt.mp4"
+                    // thumbnail="https://raw.githubusercontent.com/cxzhou35/projects/main/homepage/videos/papers/lidar_rt.mp4"
+                    thumbnail="/images/papers/lidar_rt.mp4"
                     projectPage="https://zju3dv.github.io/lidar-rt/"
                     paperLink="https://arxiv.org/abs/2412.15199"
                     codeLink="https://github.com/zju3dv/LiDAR-RT"
@@ -57,7 +58,8 @@ const Papers = () => (
                     ]}
                     conference="ECCV"
                     year="2024"
-                    thumbnail="https://raw.githubusercontent.com/cxzhou35/projects/main/homepage/videos/papers/street_gaussians.mp4"
+                    // thumbnail="https://raw.githubusercontent.com/cxzhou35/projects/main/homepage/videos/papers/street_gaussians.mp4"
+                    thumbnail="/images/papers/street_gaussians.mp4"
                     projectPage="https://zju3dv.github.io/street_gaussians"
                     paperLink="https://arxiv.org/abs/2401.01339"
                     codeLink="https://github.com/zju3dv/street_gaussians"

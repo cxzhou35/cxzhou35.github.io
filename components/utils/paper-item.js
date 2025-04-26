@@ -77,6 +77,7 @@ export const PaperItem = ({
                                 src={thumbnail}
                                 autoPlay
                                 loop
+                                playsinline
                                 preload="metadata"
                                 style={{
                                     objectFit: 'cover',
