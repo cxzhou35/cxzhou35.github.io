@@ -125,15 +125,16 @@ export const PaperItem = ({
                     <HStack spacing={4}>
                         {projectPage && (
                             <Link href={projectPage} color={linkColor} isExternal>
-                                <HStack>
+                                <HStack spacing={1}>
                                     <IoHome />
-                                    <Text>Project Page</Text>
+                                    {/* <Text>Project Page</Text> */}
+                                    <Text>Project</Text>
                                 </HStack>
                             </Link>
                         )}
                         {paperLink && (
                             <Link href={paperLink} color={linkColor} isExternal>
-                                <HStack>
+                                <HStack spacing={1}>
                                     <FaFilePdf />
                                     <Text>Paper</Text>
                                 </HStack>
@@ -141,7 +142,7 @@ export const PaperItem = ({
                         )}
                         {codeLink && (
                             <Link href={codeLink} color={linkColor} isExternal>
-                                <HStack>
+                                <HStack spacing={1}>
                                     <FaGithub />
                                     <Text>Code</Text>
                                 </HStack>
