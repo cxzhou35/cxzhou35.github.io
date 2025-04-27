@@ -17,8 +17,8 @@ export const BioAddress = styled.span`
 `
 
 export const BioLogo = styled.img`
-    margin-left: 1em;
-    margin-right: 1em;
-    width: 80px;
-    height: 80px;
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 80px;
+  height: 80px;
 `
