@@ -14,8 +14,9 @@ const HKModel = () => {
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
   const urlModelGLB =
-    'https://raw.githubusercontent.com/cxzhou35/projects/main/homepage/models/hollow_knight_fanart.glb'
-  // const urlModelGLB = '/hollow_knight_fanart.glb'
+    (process.env.NODE_ENV === 'production'
+      ? 'https://raw.githubusercontent.com/cxzhou35/projects/main/homepage/models/hollow_knight_fanart.glb'
+      : '') + '/hollow_knight_fanart.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
