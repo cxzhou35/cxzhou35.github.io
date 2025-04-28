@@ -4,6 +4,13 @@ Homepage 🏠: [zicx.top](https://zicx.top)
 
 This website is built based on the <a href='https://www.craftz.dog/' target='_blank'>Takuya Matsuyama's website</a>. Thanks to Takuya for open source.
 
+---
+
+<div style="display: flex; gap: 10px;">
+  <img src="./assets/home_dark.png" alt="Dark theme homepage" width="49%"/>
+  <img src="./assets/home_light.png" alt="Light theme homepage" width="49%"/>
+</div>
+
 ## TODOs
 
 - [x] ~~Create a 3D model just like the voxel dog used in Takuya's homepage.~~
