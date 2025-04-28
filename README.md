@@ -7,11 +7,8 @@ This website is built based on the <a href='https://www.craftz.dog/' target='_bl
 ---
 
 <div style="display: flex; gap: 10px;">
-  <!-- <img src="./assets/home_dark.png" alt="Dark theme homepage" width="49%"/>
-  <img src="./assets/home_light.png" alt="Light theme homepage" width="49%"/> -->
-  <video autoplay loop muted playsinline width="100%">
-    <source src="./assets/preview.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+  <img src="./assets/home_dark.png" alt="Dark theme homepage" width="49%"/>
+  <img src="./assets/home_light.png" alt="Light theme homepage" width="49%"/>
 </div>
 
 ## TODOs
